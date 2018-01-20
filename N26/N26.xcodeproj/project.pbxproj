@@ -48,6 +48,7 @@
 		D5A468232012C9CB006AAB58 /* RealTimeResponse.Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468222012C9CB006AAB58 /* RealTimeResponse.Codable.swift */; };
 		D5A468252012CA08006AAB58 /* HistoricalResponse.Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468242012CA08006AAB58 /* HistoricalResponse.Codable.swift */; };
 		D5A468282012CB68006AAB58 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468272012CB68006AAB58 /* ModelTests.swift */; };
+		D5A4682B2012D0B8006AAB58 /* ModelSerializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4682A2012D0B8006AAB58 /* ModelSerializationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		D5A468222012C9CB006AAB58 /* RealTimeResponse.Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeResponse.Codable.swift; sourceTree = "<group>"; };
 		D5A468242012CA08006AAB58 /* HistoricalResponse.Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalResponse.Codable.swift; sourceTree = "<group>"; };
 		D5A468272012CB68006AAB58 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		D5A4682A2012D0B8006AAB58 /* ModelSerializationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSerializationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,9 +318,18 @@
 		D5A468262012CB59006AAB58 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D5A468292012D09D006AAB58 /* Serialization */,
 				D5A468272012CB68006AAB58 /* ModelTests.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D5A468292012D09D006AAB58 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				D5A4682A2012D0B8006AAB58 /* ModelSerializationTests.swift */,
+			);
+			path = Serialization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,6 +479,7 @@
 				D5A4680F2012BD51006AAB58 /* BitcoinAPIClientTests.swift in Sources */,
 				D5A468282012CB68006AAB58 /* ModelTests.swift in Sources */,
 				D5A467F32012A673006AAB58 /* DataStructureTests.swift in Sources */,
+				D5A4682B2012D0B8006AAB58 /* ModelSerializationTests.swift in Sources */,
 				D5A468152012C2CE006AAB58 /* JsonParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
