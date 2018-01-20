@@ -62,7 +62,7 @@ class JsonParserTests: XCTestCase {
         """
 
         let result: Result<Sample> = JsonParser.decode(jsonString.data(using: .utf8)!)
-        guard case let .error(_) = result else {
+        guard case .error = result else {
             XCTFail("Unexpected parser success: \(result)")
             return
         }

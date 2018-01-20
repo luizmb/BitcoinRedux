@@ -49,6 +49,23 @@
 		D5A468252012CA08006AAB58 /* HistoricalResponse.Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468242012CA08006AAB58 /* HistoricalResponse.Codable.swift */; };
 		D5A468282012CB68006AAB58 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468272012CB68006AAB58 /* ModelTests.swift */; };
 		D5A4682B2012D0B8006AAB58 /* ModelSerializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4682A2012D0B8006AAB58 /* ModelSerializationTests.swift */; };
+		D5A4683120135BC8006AAB58 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683020135BC8006AAB58 /* Store.swift */; };
+		D5A4683320135BFB006AAB58 /* StateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683220135BFB006AAB58 /* StateProvider.swift */; };
+		D5A4683520135C49006AAB58 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683420135C49006AAB58 /* AppState.swift */; };
+		D5A4683720135C79006AAB58 /* EntryPointReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683620135C79006AAB58 /* EntryPointReducer.swift */; };
+		D5A4683B20135D6F006AAB58 /* RouterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683A20135D6F006AAB58 /* RouterReducer.swift */; };
+		D5A4683D20135DD4006AAB58 /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683C20135DD4006AAB58 /* NavigationState.swift */; };
+		D5A4683F20135DED006AAB58 /* NavigationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683E20135DED006AAB58 /* NavigationRoute.swift */; };
+		D5A4684120135E14006AAB58 /* NavigationTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4684020135E14006AAB58 /* NavigationTree.swift */; };
+		D5A4684320135F96006AAB58 /* RouterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4684220135F96006AAB58 /* RouterAction.swift */; };
+		D5A4684620136664006AAB58 /* InjectorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4684520136664006AAB58 /* InjectorProtocol.swift */; };
+		D5A46848201366A3006AAB58 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A46847201366A3006AAB58 /* Injector.swift */; };
+		D5A4684A201366D3006AAB58 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A46849201366D3006AAB58 /* Mapper.swift */; };
+		D5A4684C201366EE006AAB58 /* ConstructorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4684B201366EE006AAB58 /* ConstructorType.swift */; };
+		D5A4684E2013675F006AAB58 /* DefaultMapResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4684D2013675F006AAB58 /* DefaultMapResolver.swift */; };
+		D5A468512013684E006AAB58 /* InjectorServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468502013684E006AAB58 /* InjectorServices.swift */; };
+		D5A4685320136ABF006AAB58 /* NavigationActionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4685220136ABF006AAB58 /* NavigationActionRequest.swift */; };
+		D5A4685520136AFE006AAB58 /* KnownRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4685420136AFE006AAB58 /* KnownRoute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +125,23 @@
 		D5A468242012CA08006AAB58 /* HistoricalResponse.Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalResponse.Codable.swift; sourceTree = "<group>"; };
 		D5A468272012CB68006AAB58 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		D5A4682A2012D0B8006AAB58 /* ModelSerializationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSerializationTests.swift; sourceTree = "<group>"; };
+		D5A4683020135BC8006AAB58 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		D5A4683220135BFB006AAB58 /* StateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateProvider.swift; sourceTree = "<group>"; };
+		D5A4683420135C49006AAB58 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		D5A4683620135C79006AAB58 /* EntryPointReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPointReducer.swift; sourceTree = "<group>"; };
+		D5A4683A20135D6F006AAB58 /* RouterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterReducer.swift; sourceTree = "<group>"; };
+		D5A4683C20135DD4006AAB58 /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
+		D5A4683E20135DED006AAB58 /* NavigationRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRoute.swift; sourceTree = "<group>"; };
+		D5A4684020135E14006AAB58 /* NavigationTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTree.swift; sourceTree = "<group>"; };
+		D5A4684220135F96006AAB58 /* RouterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterAction.swift; sourceTree = "<group>"; };
+		D5A4684520136664006AAB58 /* InjectorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorProtocol.swift; sourceTree = "<group>"; };
+		D5A46847201366A3006AAB58 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
+		D5A46849201366D3006AAB58 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		D5A4684B201366EE006AAB58 /* ConstructorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorType.swift; sourceTree = "<group>"; };
+		D5A4684D2013675F006AAB58 /* DefaultMapResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMapResolver.swift; sourceTree = "<group>"; };
+		D5A468502013684E006AAB58 /* InjectorServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorServices.swift; sourceTree = "<group>"; };
+		D5A4685220136ABF006AAB58 /* NavigationActionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationActionRequest.swift; sourceTree = "<group>"; };
+		D5A4685420136AFE006AAB58 /* KnownRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnownRoute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +187,7 @@
 				D5A467C120129593006AAB58 /* Common */,
 				D5A468162012C8CB006AAB58 /* Model */,
 				D5A468002012B4B5006AAB58 /* Service */,
+				D5A4682C20135AFC006AAB58 /* State */,
 			);
 			path = N26;
 			sourceTree = "<group>";
@@ -183,6 +218,7 @@
 			children = (
 				D5A467CB20129697006AAB58 /* CocoaEx */,
 				D5A467D820129737006AAB58 /* DataStructures */,
+				D5A4684F201367C0006AAB58 /* DependencyInjection */,
 				D5A467CA201295F8006AAB58 /* Redux */,
 			);
 			path = Common;
@@ -260,6 +296,7 @@
 		D5A468002012B4B5006AAB58 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				D5A468442013664D006AAB58 /* DependencyInjection */,
 				D5A468102012C297006AAB58 /* Json */,
 				D5A468052012B501006AAB58 /* WebClient */,
 				D5A468012012B4CE006AAB58 /* BitcoinEndpoint.swift */,
@@ -330,6 +367,60 @@
 				D5A4682A2012D0B8006AAB58 /* ModelSerializationTests.swift */,
 			);
 			path = Serialization;
+			sourceTree = "<group>";
+		};
+		D5A4682C20135AFC006AAB58 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				D5A4682D20135B0D006AAB58 /* Action */,
+				D5A4682E20135B17006AAB58 /* Reducer */,
+				D5A4683220135BFB006AAB58 /* StateProvider.swift */,
+				D5A4683020135BC8006AAB58 /* Store.swift */,
+				D5A4683420135C49006AAB58 /* AppState.swift */,
+				D5A4683C20135DD4006AAB58 /* NavigationState.swift */,
+				D5A4683E20135DED006AAB58 /* NavigationRoute.swift */,
+				D5A4684020135E14006AAB58 /* NavigationTree.swift */,
+				D5A4685420136AFE006AAB58 /* KnownRoute.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		D5A4682D20135B0D006AAB58 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				D5A4684220135F96006AAB58 /* RouterAction.swift */,
+				D5A4685220136ABF006AAB58 /* NavigationActionRequest.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		D5A4682E20135B17006AAB58 /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				D5A4683620135C79006AAB58 /* EntryPointReducer.swift */,
+				D5A4683A20135D6F006AAB58 /* RouterReducer.swift */,
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
+		D5A468442013664D006AAB58 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				D5A4684D2013675F006AAB58 /* DefaultMapResolver.swift */,
+				D5A468502013684E006AAB58 /* InjectorServices.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		D5A4684F201367C0006AAB58 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				D5A4684B201366EE006AAB58 /* ConstructorType.swift */,
+				D5A46847201366A3006AAB58 /* Injector.swift */,
+				D5A4684520136664006AAB58 /* InjectorProtocol.swift */,
+				D5A46849201366D3006AAB58 /* Mapper.swift */,
+			);
+			path = DependencyInjection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,19 +524,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5A4683120135BC8006AAB58 /* Store.swift in Sources */,
 				D5A4680D2012BCC3006AAB58 /* BitcoinAPIClient.swift in Sources */,
 				D5A467D520129711006AAB58 /* UIWindowEx.swift in Sources */,
+				D5A468512013684E006AAB58 /* InjectorServices.swift in Sources */,
 				D5A468232012C9CB006AAB58 /* RealTimeResponse.Codable.swift in Sources */,
 				D5A468202012C97E006AAB58 /* DateEx.swift in Sources */,
 				D5A467D620129711006AAB58 /* UIViewControllerEx.swift in Sources */,
 				D5A4681C2012C947006AAB58 /* Rate.swift in Sources */,
 				D5A467EA20129737006AAB58 /* CancelableAsync.swift in Sources */,
+				D5A4684E2013675F006AAB58 /* DefaultMapResolver.swift in Sources */,
 				D5A467ED20129737006AAB58 /* ConfigurableCell.swift in Sources */,
+				D5A4683D20135DD4006AAB58 /* NavigationState.swift in Sources */,
 				D5A4681E2012C955006AAB58 /* HistoricalResponse.swift in Sources */,
 				D5A4681A2012C92B006AAB58 /* Currency.swift in Sources */,
+				D5A4683B20135D6F006AAB58 /* RouterReducer.swift in Sources */,
 				D5A467D420129711006AAB58 /* URLSessionTask+CancelableTask.swift in Sources */,
 				D5A468022012B4CE006AAB58 /* BitcoinEndpoint.swift in Sources */,
 				D5A467EC20129737006AAB58 /* Atomic.swift in Sources */,
+				D5A4685520136AFE006AAB58 /* KnownRoute.swift in Sources */,
+				D5A4683320135BFB006AAB58 /* StateProvider.swift in Sources */,
+				D5A4684C201366EE006AAB58 /* ConstructorType.swift in Sources */,
 				D5A468122012C2A3006AAB58 /* JsonParser.swift in Sources */,
 				D5A467C6201295D2006AAB58 /* ActionAsync.swift in Sources */,
 				D5A467E920129737006AAB58 /* Disposable.swift in Sources */,
@@ -453,18 +552,27 @@
 				D5A467E720129737006AAB58 /* Result.swift in Sources */,
 				D5A467D220129711006AAB58 /* UICollectionReusableViewEx.swift in Sources */,
 				D5A467D320129711006AAB58 /* UIViewEx.swift in Sources */,
+				D5A4684320135F96006AAB58 /* RouterAction.swift in Sources */,
 				D5A468182012C8F7006AAB58 /* RealTimeResponse.swift in Sources */,
 				D5A467C8201295D2006AAB58 /* StoreBase.swift in Sources */,
 				D5A467C9201295D2006AAB58 /* Action.swift in Sources */,
 				D5A468092012B535006AAB58 /* BitcoinEndpoint.URLEndpoint.swift in Sources */,
+				D5A4684620136664006AAB58 /* InjectorProtocol.swift in Sources */,
 				D5A467EB20129737006AAB58 /* Async.swift in Sources */,
 				D5A468072012B521006AAB58 /* URLEndpoint.swift in Sources */,
+				D5A4683720135C79006AAB58 /* EntryPointReducer.swift in Sources */,
 				D5A467FF2012B495006AAB58 /* URLRequest.swift in Sources */,
 				D5A468042012B4E8006AAB58 /* BitcoinRateAPI.swift in Sources */,
+				D5A4684120135E14006AAB58 /* NavigationTree.swift in Sources */,
+				D5A4683520135C49006AAB58 /* AppState.swift in Sources */,
 				D5A467C7201295D2006AAB58 /* Reducer.swift in Sources */,
 				D5A467D720129711006AAB58 /* UITableViewCellEx.swift in Sources */,
 				D5A467E520129737006AAB58 /* CancelableTask.swift in Sources */,
+				D5A4684A201366D3006AAB58 /* Mapper.swift in Sources */,
+				D5A46848201366A3006AAB58 /* Injector.swift in Sources */,
+				D5A4683F20135DED006AAB58 /* NavigationRoute.swift in Sources */,
 				D5A467E820129737006AAB58 /* SignalProtocol.swift in Sources */,
+				D5A4685320136ABF006AAB58 /* NavigationActionRequest.swift in Sources */,
 				D5A468252012CA08006AAB58 /* HistoricalResponse.Codable.swift in Sources */,
 				D5A467EE20129737006AAB58 /* Signal.swift in Sources */,
 			);
