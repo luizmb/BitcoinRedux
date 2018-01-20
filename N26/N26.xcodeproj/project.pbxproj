@@ -240,12 +240,12 @@
 		D5A467B420129459006AAB58 /* N26Tests */ = {
 			isa = PBXGroup;
 			children = (
-				D5F6CD822013CC860005E972 /* TestHelper */,
 				D5A467B720129459006AAB58 /* Info.plist */,
 				D5F6CD792013B7210005E972 /* Bootstrap */,
 				D5A467EF2012A06A006AAB58 /* Common */,
 				D5A468262012CB59006AAB58 /* Model */,
 				D5A467F42012B2CF006AAB58 /* Service */,
+				D5F6CD822013CC860005E972 /* TestHelper */,
 			);
 			path = N26Tests;
 			sourceTree = "<group>";
