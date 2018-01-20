@@ -11,9 +11,11 @@ import XCTest
 @testable import N26
 
 class UnitTest: XCTestCase {
+    var injector: MockInjector!
+
     override func setUp() {
-        let injector = MockInjector()
-        MockInjector.getInjector = { injector }
+        injector = MockInjector()
+        MockInjector.getInjector = { [unowned self] in self.injector }
     }
 
     override func tearDown() {

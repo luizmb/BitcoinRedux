@@ -10,7 +10,7 @@ import Foundation
 import XCTest
 @testable import N26
 
-class MockActionDispatcher {
+class MockActionDispatcher: ActionDispatcher {
     var actions: [Action] = []
     var asyncActions: [Any] = []
 
