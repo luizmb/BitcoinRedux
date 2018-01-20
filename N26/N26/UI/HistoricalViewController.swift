@@ -14,6 +14,7 @@ final class HistoricalViewController: UIViewController {
     private var dataSource: HistoricalDataSource!
 
     override func viewDidLoad() {
+        self.title = "Bitcoin Rates"
         dataSource = HistoricalDataSource(tableView: tableView)
         stateProvider[\.bitcoinState].subscribe { [weak self] state in
             self?.update(state: state)

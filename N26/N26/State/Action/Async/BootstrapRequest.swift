@@ -23,6 +23,9 @@ enum BootstrapRequest: AppActionAsync {
             window.setup(with: navigationController)
 
             dispatch(RouterAction.didStart(application, navigationController))
+
+            BitcoinRateRequest.realtimeRefresh.execute(getState: getState, dispatch: dispatch)
+            BitcoinRateRequest.historicalDataRefresh.execute(getState: getState, dispatch: dispatch)
         }
     }
 }

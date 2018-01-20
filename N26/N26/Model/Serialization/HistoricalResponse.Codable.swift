@@ -45,6 +45,6 @@ extension HistoricalResponse: Decodable {
             rates.append(Rate(date: date, rate: rate))
         }
 
-        self.init(updatedTime: updatedTime, disclaimer: disclaimer, bpi: rates.sorted(by: { $0.date < $1.date }))
+        self.init(updatedTime: updatedTime, disclaimer: disclaimer, bpi: rates.sorted(by: { $0.date > $1.date }))
     }
 }
