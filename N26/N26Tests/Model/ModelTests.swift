@@ -11,8 +11,56 @@ import Foundation
 @testable import N26
 
 class ModelTests: UnitTest {
+    func testBitcoinRealTimeRateEquatable() {
+        let dateA = Date()
+        let dateB = Date(timeIntervalSinceReferenceDate: 0)
+        let sutA = BitcoinRealTimeRate(currency: Currency(code: "A", name: "A"),
+                                       lastUpdate: dateA,
+                                       rate: 1.0)
+        let sutA2 = BitcoinRealTimeRate(currency: Currency(code: "A", name: "A"),
+                                        lastUpdate: dateA,
+                                        rate: 1.0)
+        let sutB = BitcoinRealTimeRate(currency: Currency(code: "B", name: "A"),
+                                       lastUpdate: dateA,
+                                       rate: 1.0)
+        let sutC = BitcoinRealTimeRate(currency: Currency(code: "A", name: "A"),
+                                       lastUpdate: dateB,
+                                       rate: 1.0)
+        let sutD = BitcoinRealTimeRate(currency: Currency(code: "A", name: "A"),
+                                       lastUpdate: dateA,
+                                       rate: 1.1)
+        XCTAssertTrue(sutA == sutA2)
+        XCTAssertFalse(sutA == sutB)
+        XCTAssertFalse(sutA == sutC)
+        XCTAssertFalse(sutA == sutD)
+    }
+
+    func testBitcoinHistoricalRateEquatable() {
+        let dateA = Date()
+        let dateB = Date(timeIntervalSinceReferenceDate: 0)
+        let sutA = BitcoinHistoricalRate(currency: Currency(code: "A", name: "A"),
+                                         closedDate: dateA,
+                                         rate: 1.0)
+        let sutA2 = BitcoinHistoricalRate(currency: Currency(code: "A", name: "A"),
+                                          closedDate: dateA,
+                                          rate: 1.0)
+        let sutB = BitcoinHistoricalRate(currency: Currency(code: "B", name: "A"),
+                                         closedDate: dateA,
+                                         rate: 1.0)
+        let sutC = BitcoinHistoricalRate(currency: Currency(code: "A", name: "A"),
+                                         closedDate: dateB,
+                                         rate: 1.0)
+        let sutD = BitcoinHistoricalRate(currency: Currency(code: "A", name: "A"),
+                                         closedDate: dateA,
+                                         rate: 1.1)
+        XCTAssertTrue(sutA == sutA2)
+        XCTAssertFalse(sutA == sutB)
+        XCTAssertFalse(sutA == sutC)
+        XCTAssertFalse(sutA == sutD)
+    }
+
     func testCurrencyEquatable() {
-        let currency_ab1 = Currency(code: "A", name: "B")
+        let currency_ab1 = Currency(code: "A", name: "B", symbol: "$")
         let currency_ab2 = Currency(code: "A", name: "B")
         let currency_aa = Currency(code: "A", name: "A")
         let currency_bb = Currency(code: "B", name: "B")
