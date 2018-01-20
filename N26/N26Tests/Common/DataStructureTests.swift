@@ -24,28 +24,50 @@ class DataStructureTests: XCTestCase {
         XCTAssertEqual(array.atomicProperty, ["a", "b"])
     }
 
-    func testCancelableAsync() {
+    func testSyncableResult() {
         struct Cancelable: CancelableTask { func cancel() { } }
-        let notLoaded1: CancelableAsync<String> = .notLoaded
-        let notLoaded2: CancelableAsync<String> = .notLoaded
-        let loading1: CancelableAsync<String> = .loading(Cancelable())
-        let loading2: CancelableAsync<String> = .loading(Cancelable())
-        let loadedA1: CancelableAsync<String> = .loaded("a")
-        let loadedA2: CancelableAsync<String> = .loaded("a")
-        let loadedB1: CancelableAsync<String> = .loaded("b")
-        let loadedB2: CancelableAsync<String> = .loaded("b")
+        class AnyError: Error { }
 
-        XCTAssertTrue(notLoaded1 == notLoaded2)
+        let neverLoaded1: SyncableResult<String> = .neverLoaded
+        let neverLoaded2: SyncableResult<String> = .neverLoaded
+        let loading1: SyncableResult<String> = .syncing(task: Cancelable(), oldValue: nil)
+        let loading2: SyncableResult<String> = .syncing(task: Cancelable(), oldValue: nil)
+        let loading3: SyncableResult<String> = .syncing(task: Cancelable(), oldValue: .success("A"))
+        let loading4: SyncableResult<String> = .syncing(task: Cancelable(), oldValue: .error(AnyError()))
+        let loadedA1: SyncableResult<String> = .loaded(.success("a"))
+        let loadedA2: SyncableResult<String> = .loaded(.success("a"))
+        let loadedB1: SyncableResult<String> = .loaded(.success("b"))
+        let loadedB2: SyncableResult<String> = .loaded(.success("b"))
+        let loadedError1: SyncableResult<String> = .loaded(.error(AnyError()))
+        let loadedError2: SyncableResult<String> = .loaded(.error(AnyError()))
+
+        XCTAssertTrue(neverLoaded1 == neverLoaded2)
         XCTAssertTrue(loading1 == loading2)
         XCTAssertTrue(loadedA1 == loadedA2)
         XCTAssertTrue(loadedB1 == loadedB2)
+        XCTAssertTrue(loadedError1 == loadedError2)
 
-        XCTAssertFalse(notLoaded1 == loading1)
-        XCTAssertFalse(notLoaded1 == loadedA1)
-        XCTAssertFalse(notLoaded1 == loadedB1)
+        XCTAssertFalse(neverLoaded1 == loading1)
+        XCTAssertFalse(neverLoaded1 == loading3)
+        XCTAssertFalse(neverLoaded1 == loading4)
+        XCTAssertFalse(neverLoaded1 == loadedA1)
+        XCTAssertFalse(neverLoaded1 == loadedB1)
+        XCTAssertFalse(neverLoaded1 == loadedError1)
+        XCTAssertFalse(loading1 == loading3)
+        XCTAssertFalse(loading1 == loading4)
         XCTAssertFalse(loading1 == loadedA1)
         XCTAssertFalse(loading1 == loadedB1)
+        XCTAssertFalse(loading1 == loadedError1)
+        XCTAssertFalse(loading3 == loading4)
+        XCTAssertFalse(loading3 == loadedA1)
+        XCTAssertFalse(loading3 == loadedB1)
+        XCTAssertFalse(loading3 == loadedError1)
+        XCTAssertFalse(loading4 == loadedA1)
+        XCTAssertFalse(loading4 == loadedB1)
+        XCTAssertFalse(loading4 == loadedError1)
         XCTAssertFalse(loadedA1 == loadedB1)
+        XCTAssertFalse(loadedA1 == loadedError1)
+        XCTAssertFalse(loadedB1 == loadedError1)
     }
 
     func testDisposable() {
