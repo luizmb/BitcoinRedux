@@ -38,7 +38,7 @@
 		D5A468092012B535006AAB58 /* BitcoinEndpoint.URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468082012B535006AAB58 /* BitcoinEndpoint.URLEndpoint.swift */; };
 		D5A4680B2012B789006AAB58 /* BitcoinEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4680A2012B789006AAB58 /* BitcoinEndpointTests.swift */; };
 		D5A4680D2012BCC3006AAB58 /* BitcoinAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4680C2012BCC3006AAB58 /* BitcoinAPIClient.swift */; };
-		D5A4680F2012BD51006AAB58 /* BitcoinAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4680E2012BD51006AAB58 /* BitcoinAPIClientTests.swift */; };
+		D5A4680F2012BD51006AAB58 /* IntegrationBitcoinAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4680E2012BD51006AAB58 /* IntegrationBitcoinAPIClientTests.swift */; };
 		D5A468122012C2A3006AAB58 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468112012C2A3006AAB58 /* JsonParser.swift */; };
 		D5A468152012C2CE006AAB58 /* JsonParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468142012C2CE006AAB58 /* JsonParserTests.swift */; };
 		D5A468182012C8F7006AAB58 /* RealTimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468172012C8F7006AAB58 /* RealTimeResponse.swift */; };
@@ -137,7 +137,7 @@
 		D5A468082012B535006AAB58 /* BitcoinEndpoint.URLEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinEndpoint.URLEndpoint.swift; sourceTree = "<group>"; };
 		D5A4680A2012B789006AAB58 /* BitcoinEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinEndpointTests.swift; sourceTree = "<group>"; };
 		D5A4680C2012BCC3006AAB58 /* BitcoinAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinAPIClient.swift; sourceTree = "<group>"; };
-		D5A4680E2012BD51006AAB58 /* BitcoinAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinAPIClientTests.swift; sourceTree = "<group>"; };
+		D5A4680E2012BD51006AAB58 /* IntegrationBitcoinAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationBitcoinAPIClientTests.swift; sourceTree = "<group>"; };
 		D5A468112012C2A3006AAB58 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		D5A468142012C2CE006AAB58 /* JsonParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParserTests.swift; sourceTree = "<group>"; };
 		D5A468172012C8F7006AAB58 /* RealTimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeResponse.swift; sourceTree = "<group>"; };
@@ -341,7 +341,7 @@
 		D5A467F92012B346006AAB58 /* WebClient */ = {
 			isa = PBXGroup;
 			children = (
-				D5A4680E2012BD51006AAB58 /* BitcoinAPIClientTests.swift */,
+				D5A4680E2012BD51006AAB58 /* IntegrationBitcoinAPIClientTests.swift */,
 				D5A4680A2012B789006AAB58 /* BitcoinEndpointTests.swift */,
 			);
 			path = WebClient;
@@ -705,7 +705,7 @@
 				D5F6CD7B2013B7450005E972 /* AppDelegateTests.swift in Sources */,
 				D5A467F12012A079006AAB58 /* CocoaExTests.swift in Sources */,
 				D5A4680B2012B789006AAB58 /* BitcoinEndpointTests.swift in Sources */,
-				D5A4680F2012BD51006AAB58 /* BitcoinAPIClientTests.swift in Sources */,
+				D5A4680F2012BD51006AAB58 /* IntegrationBitcoinAPIClientTests.swift in Sources */,
 				D5A468282012CB68006AAB58 /* ModelTests.swift in Sources */,
 				D5F6CD8A2013D5B20005E972 /* ThemeTests.swift in Sources */,
 				D5A467F32012A673006AAB58 /* DataStructureTests.swift in Sources */,
