@@ -16,3 +16,9 @@ public class DefaultMapResolver {
         injector.mapper.mapSingleton(StateProvider.self) { Store.shared }
     }
 }
+
+extension DefaultMapResolver {
+    static func map() {
+        mapServices()
+    }
+}

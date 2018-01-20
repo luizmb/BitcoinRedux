@@ -66,6 +66,8 @@
 		D5A468512013684E006AAB58 /* InjectorServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468502013684E006AAB58 /* InjectorServices.swift */; };
 		D5A4685320136ABF006AAB58 /* NavigationActionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4685220136ABF006AAB58 /* NavigationActionRequest.swift */; };
 		D5A4685520136AFE006AAB58 /* KnownRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4685420136AFE006AAB58 /* KnownRoute.swift */; };
+		D5A4685820136D68006AAB58 /* BootstrapRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4685720136D68006AAB58 /* BootstrapRequest.swift */; };
+		D5A4685A20136DE7006AAB58 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4685920136DE7006AAB58 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,8 @@
 		D5A468502013684E006AAB58 /* InjectorServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorServices.swift; sourceTree = "<group>"; };
 		D5A4685220136ABF006AAB58 /* NavigationActionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationActionRequest.swift; sourceTree = "<group>"; };
 		D5A4685420136AFE006AAB58 /* KnownRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnownRoute.swift; sourceTree = "<group>"; };
+		D5A4685720136D68006AAB58 /* BootstrapRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapRequest.swift; sourceTree = "<group>"; };
+		D5A4685920136DE7006AAB58 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,7 @@
 				D5A467A720129459006AAB58 /* Assets.xcassets */,
 				D5A467AC20129459006AAB58 /* Info.plist */,
 				D5A467A020129459006AAB58 /* AppDelegate.swift */,
+				D5A4685920136DE7006AAB58 /* Theme.swift */,
 			);
 			path = Bootstrap;
 			sourceTree = "<group>";
@@ -388,8 +393,8 @@
 		D5A4682D20135B0D006AAB58 /* Action */ = {
 			isa = PBXGroup;
 			children = (
+				D5A4685620136D39006AAB58 /* Async */,
 				D5A4684220135F96006AAB58 /* RouterAction.swift */,
-				D5A4685220136ABF006AAB58 /* NavigationActionRequest.swift */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -421,6 +426,15 @@
 				D5A46849201366D3006AAB58 /* Mapper.swift */,
 			);
 			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		D5A4685620136D39006AAB58 /* Async */ = {
+			isa = PBXGroup;
+			children = (
+				D5A4685220136ABF006AAB58 /* NavigationActionRequest.swift */,
+				D5A4685720136D68006AAB58 /* BootstrapRequest.swift */,
+			);
+			path = Async;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,6 +566,7 @@
 				D5A467E720129737006AAB58 /* Result.swift in Sources */,
 				D5A467D220129711006AAB58 /* UICollectionReusableViewEx.swift in Sources */,
 				D5A467D320129711006AAB58 /* UIViewEx.swift in Sources */,
+				D5A4685820136D68006AAB58 /* BootstrapRequest.swift in Sources */,
 				D5A4684320135F96006AAB58 /* RouterAction.swift in Sources */,
 				D5A468182012C8F7006AAB58 /* RealTimeResponse.swift in Sources */,
 				D5A467C8201295D2006AAB58 /* StoreBase.swift in Sources */,
@@ -567,6 +582,7 @@
 				D5A4683520135C49006AAB58 /* AppState.swift in Sources */,
 				D5A467C7201295D2006AAB58 /* Reducer.swift in Sources */,
 				D5A467D720129711006AAB58 /* UITableViewCellEx.swift in Sources */,
+				D5A4685A20136DE7006AAB58 /* Theme.swift in Sources */,
 				D5A467E520129737006AAB58 /* CancelableTask.swift in Sources */,
 				D5A4684A201366D3006AAB58 /* Mapper.swift in Sources */,
 				D5A46848201366A3006AAB58 /* Injector.swift in Sources */,
