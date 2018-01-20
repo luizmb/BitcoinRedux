@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D53930082013E3B200C8D658 /* BitcoinRealTimeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930072013E3B200C8D658 /* BitcoinRealTimeRate.swift */; };
+		D539300D2013EAB300C8D658 /* BitcoinRateReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539300C2013EAB300C8D658 /* BitcoinRateReducerTests.swift */; };
+		D539300F2013F04B00C8D658 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539300E2013F04B00C8D658 /* Mocks.swift */; };
+		D5393011201405CB00C8D658 /* RouterReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5393010201405CB00C8D658 /* RouterReducerTests.swift */; };
 		D5A467A120129459006AAB58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467A020129459006AAB58 /* AppDelegate.swift */; };
 		D5A467A820129459006AAB58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5A467A720129459006AAB58 /* Assets.xcassets */; };
 		D5A467C6201295D2006AAB58 /* ActionAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467C2201295D2006AAB58 /* ActionAsync.swift */; };
@@ -86,7 +89,6 @@
 		D5A4687920139E2C006AAB58 /* BitcoinRateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687820139E2C006AAB58 /* BitcoinRateReducer.swift */; };
 		D5F6CD7B2013B7450005E972 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6CD7A2013B7450005E972 /* AppDelegateTests.swift */; };
 		D5F6CD842013CC9A0005E972 /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6CD832013CC9A0005E972 /* UnitTest.swift */; };
-		D5F6CD862013CCC30005E972 /* MockActionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6CD852013CCC30005E972 /* MockActionDispatcher.swift */; };
 		D5F6CD882013CF2C0005E972 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6CD872013CF2C0005E972 /* main.swift */; };
 		D5F6CD8A2013D5B20005E972 /* ThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6CD892013D5B20005E972 /* ThemeTests.swift */; };
 /* End PBXBuildFile section */
@@ -103,6 +105,9 @@
 
 /* Begin PBXFileReference section */
 		D53930072013E3B200C8D658 /* BitcoinRealTimeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRealTimeRate.swift; sourceTree = "<group>"; };
+		D539300C2013EAB300C8D658 /* BitcoinRateReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateReducerTests.swift; sourceTree = "<group>"; };
+		D539300E2013F04B00C8D658 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		D5393010201405CB00C8D658 /* RouterReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterReducerTests.swift; sourceTree = "<group>"; };
 		D5A4679D20129459006AAB58 /* N26.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = N26.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A467A020129459006AAB58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5A467A720129459006AAB58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -185,7 +190,6 @@
 		D5A4687820139E2C006AAB58 /* BitcoinRateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateReducer.swift; sourceTree = "<group>"; };
 		D5F6CD7A2013B7450005E972 /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		D5F6CD832013CC9A0005E972 /* UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTest.swift; sourceTree = "<group>"; };
-		D5F6CD852013CCC30005E972 /* MockActionDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockActionDispatcher.swift; sourceTree = "<group>"; };
 		D5F6CD872013CF2C0005E972 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D5F6CD892013D5B20005E972 /* ThemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +212,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D53930092013EA4900C8D658 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				D539300C2013EAB300C8D658 /* BitcoinRateReducerTests.swift */,
+				D5393010201405CB00C8D658 /* RouterReducerTests.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
 		D5A4679420129459006AAB58 = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +260,7 @@
 				D5A467EF2012A06A006AAB58 /* Common */,
 				D5A468262012CB59006AAB58 /* Model */,
 				D5A467F42012B2CF006AAB58 /* Service */,
+				D53930092013EA4900C8D658 /* State */,
 				D5F6CD822013CC860005E972 /* TestHelper */,
 			);
 			path = N26Tests;
@@ -518,8 +532,8 @@
 		D5F6CD822013CC860005E972 /* TestHelper */ = {
 			isa = PBXGroup;
 			children = (
+				D539300E2013F04B00C8D658 /* Mocks.swift */,
 				D5F6CD832013CC9A0005E972 /* UnitTest.swift */,
-				D5F6CD852013CCC30005E972 /* MockActionDispatcher.swift */,
 			);
 			path = TestHelper;
 			sourceTree = "<group>";
@@ -711,8 +725,10 @@
 				D5A467F32012A673006AAB58 /* DataStructureTests.swift in Sources */,
 				D5F6CD842013CC9A0005E972 /* UnitTest.swift in Sources */,
 				D5A4682B2012D0B8006AAB58 /* ModelSerializationTests.swift in Sources */,
-				D5F6CD862013CCC30005E972 /* MockActionDispatcher.swift in Sources */,
+				D5393011201405CB00C8D658 /* RouterReducerTests.swift in Sources */,
 				D5A468152012C2CE006AAB58 /* JsonParserTests.swift in Sources */,
+				D539300D2013EAB300C8D658 /* BitcoinRateReducerTests.swift in Sources */,
+				D539300F2013F04B00C8D658 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,9 +25,6 @@ class DataStructureTests: UnitTest {
     }
 
     func testSyncableResult() {
-        struct Cancelable: CancelableTask { func cancel() { } }
-        class AnyError: Error { }
-
         let neverLoaded1: SyncableResult<String> = .neverLoaded
         let neverLoaded2: SyncableResult<String> = .neverLoaded
         let loading1: SyncableResult<String> = .syncing(task: Cancelable(), oldValue: nil)
@@ -126,7 +123,6 @@ class DataStructureTests: UnitTest {
     }
 
     func testResultMap() {
-        class AnyError: Error { }
         let successfulInt1: Result<Int> = .success(1)
         let successfulInt2: Result<Int> = .success(2)
         let e = AnyError()
@@ -137,7 +133,6 @@ class DataStructureTests: UnitTest {
     }
 
     func testResultFlatMap() {
-        class AnyError: Error { }
         let successfulInt1: Result<Int> = .success(1)
         let successfulInt2: Result<Int> = .success(2)
         let e = AnyError()

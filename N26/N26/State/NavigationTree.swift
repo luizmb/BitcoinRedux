@@ -9,11 +9,10 @@
 import Foundation
 
 public enum NavigationTree {
-    case realtime
-    case historical
+    case listHistoricalAndRealtime
 
     static func root() -> NavigationTree {
-        return .realtime
+        return .listHistoricalAndRealtime
     }
 }
 

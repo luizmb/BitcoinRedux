@@ -15,8 +15,8 @@ class IntegrationBitcoinAPIClientTests: UnitTest {
         let shouldGetValidResponse: XCTestExpectation = expectation(description: "Valid response")
         let client = BitcoinAPIClient(session: URLSession.shared)
 
-        client.request(.realtime(currency: "EUR")) { r in
-            switch r {
+        client.request(.realtime(currency: "EUR")) { httpResult in
+            switch httpResult {
             case .success(let data):
                 XCTAssertGreaterThan(data.count, 10)
                 shouldGetValidResponse.fulfill()
@@ -31,8 +31,8 @@ class IntegrationBitcoinAPIClientTests: UnitTest {
         let shouldGetInvalidResponse: XCTestExpectation = expectation(description: "Invalid response")
         let client = BitcoinAPIClient(session: URLSession.shared)
 
-        client.request(.realtime(currency: "MMMMMMMM")) { r in
-            switch r {
+        client.request(.realtime(currency: "MMMMMMMM")) { httpResult in
+            switch httpResult {
             case .success(let data):
                 XCTFail("Unexpected data: \(String(data: data, encoding: .utf8)!)")
             case .error:
@@ -48,8 +48,8 @@ class IntegrationBitcoinAPIClientTests: UnitTest {
 
         client.request(.historical(currency: "EUR",
                                    startDate: Date().backToMidnight.addingDays(-2),
-                                   endDate: Date())) { r in
-            switch r {
+                                   endDate: Date())) { httpResult in
+            switch httpResult {
             case .success(let data):
                 XCTAssertGreaterThan(data.count, 10)
                 shouldGetValidResponse.fulfill()
@@ -66,8 +66,8 @@ class IntegrationBitcoinAPIClientTests: UnitTest {
 
         client.request(.historical(currency: "MMMMMMMM",
                                    startDate: Date().backToMidnight.addingDays(-2),
-                                   endDate: Date())) { r in
-            switch r {
+                                   endDate: Date())) { httpResult in
+            switch httpResult {
             case .success(let data):
                 XCTFail("Unexpected data: \(String(data: data, encoding: .utf8)!)")
             case .error:
@@ -81,9 +81,9 @@ class IntegrationBitcoinAPIClientTests: UnitTest {
         let shouldGetValidResponse: XCTestExpectation = expectation(description: "Valid response")
         let client = BitcoinAPIClient(session: URLSession.shared)
 
-        client.request(.realtime(currency: "EUR")) { r in
-            let sut: Result<RealTimeResponse> = r.flatMap(JsonParser.decode)
-            switch sut {
+        client.request(.realtime(currency: "EUR")) { httpResult in
+            let jsonResult: Result<RealTimeResponse> = httpResult.flatMap(JsonParser.decode)
+            switch jsonResult {
             case .success(let realtimeResponse):
                 XCTAssertTrue(realtimeResponse.updatedTime.backToMidnight == Date().backToMidnight)
                 XCTAssertNotNil(realtimeResponse.disclaimer)
@@ -105,13 +105,13 @@ class IntegrationBitcoinAPIClientTests: UnitTest {
 
         client.request(.historical(currency: "EUR",
                        startDate: Date().backToMidnight.addingDays(-14),
-                       endDate: Date())) { r in
-            let sut: Result<HistoricalResponse> = r.flatMap(JsonParser.decode)
-            switch sut {
+                       endDate: Date())) { httpResult in
+            let jsonResult: Result<HistoricalResponse> = httpResult.flatMap(JsonParser.decode)
+            switch jsonResult {
             case .success(let historicalResponse):
                 XCTAssertTrue(historicalResponse.updatedTime.backToMidnight == Date().backToMidnight)
                 XCTAssertNotNil(historicalResponse.disclaimer)
-                XCTAssertEqual(historicalResponse.bpi.count, 14)
+                XCTAssertGreaterThanOrEqual(historicalResponse.bpi.count, 13)
                 historicalResponse.bpi.forEach { day in
                     XCTAssertLessThan(day.date, Date())
                     XCTAssertGreaterThan(day.date, Date().backToMidnight.addingDays(-15))

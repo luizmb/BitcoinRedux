@@ -6,8 +6,6 @@
 //  Copyright © 2018 Luiz Rodrigo Martins Barbosa. All rights reserved.
 //
 
-import Foundation
-
 import XCTest
 import Foundation
 @testable import N26
