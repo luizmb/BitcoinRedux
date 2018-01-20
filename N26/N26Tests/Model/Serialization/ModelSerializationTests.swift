@@ -10,7 +10,7 @@ import XCTest
 import Foundation
 @testable import N26
 
-class ModelSerializationTests: XCTestCase {
+class ModelSerializationTests: UnitTest {
     private let realTimeResponse = """
         {
             "time": {

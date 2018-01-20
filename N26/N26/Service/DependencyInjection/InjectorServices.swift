@@ -19,11 +19,11 @@ public protocol HasActionDispatcher { }
 
 extension HasActionDispatcher {
     public static var actionDispatcher: ActionDispatcher {
-        return Injector.shared.actionDispatcher
+        return injector().actionDispatcher
     }
 
     public var actionDispatcher: ActionDispatcher {
-        return Injector.shared.actionDispatcher
+        return injector().actionDispatcher
     }
 }
 
@@ -32,11 +32,11 @@ public protocol HasBitcoinRateAPI { }
 
 extension HasBitcoinRateAPI {
     public static var bitcoinRateAPI: BitcoinRateAPI {
-        return Injector.shared.bitcoinRateAPI
+        return injector().bitcoinRateAPI
     }
 
     public var bitcoinRateAPI: BitcoinRateAPI {
-        return Injector.shared.bitcoinRateAPI
+        return injector().bitcoinRateAPI
     }
 }
 
@@ -45,10 +45,10 @@ public protocol HasStateProvider { }
 
 extension HasStateProvider {
     public static var stateProvider: StateProvider {
-        return Injector.shared.stateProvider
+        return injector().stateProvider
     }
 
     public var stateProvider: StateProvider {
-        return Injector.shared.stateProvider
+        return injector().stateProvider
     }
 }

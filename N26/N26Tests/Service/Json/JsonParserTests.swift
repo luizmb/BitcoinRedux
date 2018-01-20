@@ -28,7 +28,7 @@ extension Sample: Equatable {
     }
 }
 
-class JsonParserTests: XCTestCase {
+class JsonParserTests: UnitTest {
     func testValidDecode() {
         let jsonString = """
         {

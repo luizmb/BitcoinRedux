@@ -10,7 +10,7 @@ import XCTest
 import Foundation
 @testable import N26
 
-class DataStructureTests: XCTestCase {
+class DataStructureTests: UnitTest {
     func testAtomic() {
         let array = Atomic<[String]>([])
         XCTAssertTrue(array.atomicProperty.isEmpty)

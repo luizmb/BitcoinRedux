@@ -10,7 +10,7 @@ import XCTest
 import Foundation
 @testable import N26
 
-class BitcoinAPIClientTests: XCTestCase {
+class BitcoinAPIClientTests: UnitTest {
     func testAPIValidResponse() {
         let shouldGetValidResponse: XCTestExpectation = expectation(description: "Valid response")
         let client = BitcoinAPIClient(session: URLSession.shared)

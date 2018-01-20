@@ -9,6 +9,5 @@
 import Foundation
 
 public protocol InjectorProtocol {
-    static var shared: InjectorProtocol { get }
     var mapper: Mapper { get }
 }

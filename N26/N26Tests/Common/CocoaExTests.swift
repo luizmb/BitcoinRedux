@@ -15,7 +15,7 @@ class AnotherTableViewCell: UITableViewCell { }
 class AnotherView: UIView { }
 class AnotherViewController: UIViewController { }
 
-class CocoaExTests: XCTestCase {
+class CocoaExTests: UnitTest {
     func testReuseIdentifier() {
         XCTAssertEqual(UICollectionReusableView.reuseIdentifier(), "UICollectionReusableView")
         XCTAssertEqual(AnotherCollectionReusableView.reuseIdentifier(), "AnotherCollectionReusableView")

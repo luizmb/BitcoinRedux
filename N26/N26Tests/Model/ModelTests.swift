@@ -10,7 +10,7 @@ import XCTest
 import Foundation
 @testable import N26
 
-class ModelTests: XCTestCase {
+class ModelTests: UnitTest {
     func testCurrencyEquatable() {
         let currency_ab1 = Currency(code: "A", name: "B")
         let currency_ab2 = Currency(code: "A", name: "B")

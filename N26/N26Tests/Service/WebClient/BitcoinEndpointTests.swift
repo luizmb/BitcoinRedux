@@ -10,7 +10,7 @@ import XCTest
 import Foundation
 @testable import N26
 
-class BitcoinEndpointTests: XCTestCase {
+class BitcoinEndpointTests: UnitTest {
     func testURLEndpoint_URLRequestFactory() {
         let realtimeEuro = BitcoinEndpoint.realtime(currency: "EUR").urlRequest
         let realtimeDolar = BitcoinEndpoint.realtime(currency: "USD").urlRequest
