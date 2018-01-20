@@ -9,6 +9,8 @@
 import UIKit
 
 public struct AppState: Equatable {
+    var bitcoinState = BitcoinState()
+
     var navigation = NavigationState.still(at: .root())
     weak var application: UIApplication?
     weak var navigationController: UINavigationController?

@@ -68,6 +68,17 @@
 		D5A4685520136AFE006AAB58 /* KnownRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4685420136AFE006AAB58 /* KnownRoute.swift */; };
 		D5A4685820136D68006AAB58 /* BootstrapRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4685720136D68006AAB58 /* BootstrapRequest.swift */; };
 		D5A4685A20136DE7006AAB58 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4685920136DE7006AAB58 /* Theme.swift */; };
+		D5A4685D20136F25006AAB58 /* HistoricalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A4685C20136F25006AAB58 /* HistoricalView.xib */; };
+		D5A4685F20136F35006AAB58 /* HistoricalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4685E20136F35006AAB58 /* HistoricalView.swift */; };
+		D5A4686120136F5F006AAB58 /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4686020136F5F006AAB58 /* HistoricalViewController.swift */; };
+		D5A4686320137055006AAB58 /* Startable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4686220137055006AAB58 /* Startable.swift */; };
+		D5A46865201370B6006AAB58 /* HistoricalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A46864201370B6006AAB58 /* HistoricalDataSource.swift */; };
+		D5A4686720137201006AAB58 /* HistoricalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4686620137201006AAB58 /* HistoricalViewModel.swift */; };
+		D5A46869201374FB006AAB58 /* ArrayEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A46868201374FB006AAB58 /* ArrayEx.swift */; };
+		D5A4686B201377D1006AAB58 /* HistoricalRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4686A201377D1006AAB58 /* HistoricalRecordTableViewCell.swift */; };
+		D5A4686D201377F7006AAB58 /* HistoricalRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A4686C201377F7006AAB58 /* HistoricalRecordTableViewCell.xib */; };
+		D5A4686F20137D23006AAB58 /* BitcoinState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4686E20137D23006AAB58 /* BitcoinState.swift */; };
+		D5A4687120137DD0006AAB58 /* BitcoinRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687020137DD0006AAB58 /* BitcoinRate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +157,17 @@
 		D5A4685420136AFE006AAB58 /* KnownRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnownRoute.swift; sourceTree = "<group>"; };
 		D5A4685720136D68006AAB58 /* BootstrapRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapRequest.swift; sourceTree = "<group>"; };
 		D5A4685920136DE7006AAB58 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D5A4685C20136F25006AAB58 /* HistoricalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricalView.xib; sourceTree = "<group>"; };
+		D5A4685E20136F35006AAB58 /* HistoricalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalView.swift; sourceTree = "<group>"; };
+		D5A4686020136F5F006AAB58 /* HistoricalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewController.swift; sourceTree = "<group>"; };
+		D5A4686220137055006AAB58 /* Startable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Startable.swift; sourceTree = "<group>"; };
+		D5A46864201370B6006AAB58 /* HistoricalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalDataSource.swift; sourceTree = "<group>"; };
+		D5A4686620137201006AAB58 /* HistoricalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewModel.swift; sourceTree = "<group>"; };
+		D5A46868201374FB006AAB58 /* ArrayEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayEx.swift; sourceTree = "<group>"; };
+		D5A4686A201377D1006AAB58 /* HistoricalRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalRecordTableViewCell.swift; sourceTree = "<group>"; };
+		D5A4686C201377F7006AAB58 /* HistoricalRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricalRecordTableViewCell.xib; sourceTree = "<group>"; };
+		D5A4686E20137D23006AAB58 /* BitcoinState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinState.swift; sourceTree = "<group>"; };
+		D5A4687020137DD0006AAB58 /* BitcoinRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +214,7 @@
 				D5A468162012C8CB006AAB58 /* Model */,
 				D5A468002012B4B5006AAB58 /* Service */,
 				D5A4682C20135AFC006AAB58 /* State */,
+				D5A4685B20136EC2006AAB58 /* UI */,
 			);
 			path = N26;
 			sourceTree = "<group>";
@@ -243,7 +266,9 @@
 		D5A467CB20129697006AAB58 /* CocoaEx */ = {
 			isa = PBXGroup;
 			children = (
+				D5A46868201374FB006AAB58 /* ArrayEx.swift */,
 				D5A4681F2012C97E006AAB58 /* DateEx.swift */,
+				D5A4686220137055006AAB58 /* Startable.swift */,
 				D5A467CC20129711006AAB58 /* UICollectionReusableViewEx.swift */,
 				D5A467D120129711006AAB58 /* UITableViewCellEx.swift */,
 				D5A467D020129711006AAB58 /* UIViewControllerEx.swift */,
@@ -339,6 +364,7 @@
 		D5A468162012C8CB006AAB58 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D5A4687020137DD0006AAB58 /* BitcoinRate.swift */,
 				D5A468192012C92B006AAB58 /* Currency.swift */,
 				D5A4681D2012C955006AAB58 /* HistoricalResponse.swift */,
 				D5A4681B2012C947006AAB58 /* Rate.swift */,
@@ -382,6 +408,7 @@
 				D5A4683220135BFB006AAB58 /* StateProvider.swift */,
 				D5A4683020135BC8006AAB58 /* Store.swift */,
 				D5A4683420135C49006AAB58 /* AppState.swift */,
+				D5A4686E20137D23006AAB58 /* BitcoinState.swift */,
 				D5A4683C20135DD4006AAB58 /* NavigationState.swift */,
 				D5A4683E20135DED006AAB58 /* NavigationRoute.swift */,
 				D5A4684020135E14006AAB58 /* NavigationTree.swift */,
@@ -435,6 +462,20 @@
 				D5A4685720136D68006AAB58 /* BootstrapRequest.swift */,
 			);
 			path = Async;
+			sourceTree = "<group>";
+		};
+		D5A4685B20136EC2006AAB58 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D5A46864201370B6006AAB58 /* HistoricalDataSource.swift */,
+				D5A4686A201377D1006AAB58 /* HistoricalRecordTableViewCell.swift */,
+				D5A4686C201377F7006AAB58 /* HistoricalRecordTableViewCell.xib */,
+				D5A4685E20136F35006AAB58 /* HistoricalView.swift */,
+				D5A4685C20136F25006AAB58 /* HistoricalView.xib */,
+				D5A4686020136F5F006AAB58 /* HistoricalViewController.swift */,
+				D5A4686620137201006AAB58 /* HistoricalViewModel.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,6 +561,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5A4685D20136F25006AAB58 /* HistoricalView.xib in Resources */,
+				D5A4686D201377F7006AAB58 /* HistoricalRecordTableViewCell.xib in Resources */,
 				D5A467A820129459006AAB58 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,15 +588,19 @@
 				D5A468232012C9CB006AAB58 /* RealTimeResponse.Codable.swift in Sources */,
 				D5A468202012C97E006AAB58 /* DateEx.swift in Sources */,
 				D5A467D620129711006AAB58 /* UIViewControllerEx.swift in Sources */,
+				D5A46865201370B6006AAB58 /* HistoricalDataSource.swift in Sources */,
 				D5A4681C2012C947006AAB58 /* Rate.swift in Sources */,
 				D5A467EA20129737006AAB58 /* CancelableAsync.swift in Sources */,
 				D5A4684E2013675F006AAB58 /* DefaultMapResolver.swift in Sources */,
 				D5A467ED20129737006AAB58 /* ConfigurableCell.swift in Sources */,
+				D5A4687120137DD0006AAB58 /* BitcoinRate.swift in Sources */,
 				D5A4683D20135DD4006AAB58 /* NavigationState.swift in Sources */,
+				D5A4686320137055006AAB58 /* Startable.swift in Sources */,
 				D5A4681E2012C955006AAB58 /* HistoricalResponse.swift in Sources */,
 				D5A4681A2012C92B006AAB58 /* Currency.swift in Sources */,
 				D5A4683B20135D6F006AAB58 /* RouterReducer.swift in Sources */,
 				D5A467D420129711006AAB58 /* URLSessionTask+CancelableTask.swift in Sources */,
+				D5A4685F20136F35006AAB58 /* HistoricalView.swift in Sources */,
 				D5A468022012B4CE006AAB58 /* BitcoinEndpoint.swift in Sources */,
 				D5A467EC20129737006AAB58 /* Atomic.swift in Sources */,
 				D5A4685520136AFE006AAB58 /* KnownRoute.swift in Sources */,
@@ -561,7 +608,9 @@
 				D5A4684C201366EE006AAB58 /* ConstructorType.swift in Sources */,
 				D5A468122012C2A3006AAB58 /* JsonParser.swift in Sources */,
 				D5A467C6201295D2006AAB58 /* ActionAsync.swift in Sources */,
+				D5A4686720137201006AAB58 /* HistoricalViewModel.swift in Sources */,
 				D5A467E920129737006AAB58 /* Disposable.swift in Sources */,
+				D5A46869201374FB006AAB58 /* ArrayEx.swift in Sources */,
 				D5A467A120129459006AAB58 /* AppDelegate.swift in Sources */,
 				D5A467E720129737006AAB58 /* Result.swift in Sources */,
 				D5A467D220129711006AAB58 /* UICollectionReusableViewEx.swift in Sources */,
@@ -579,6 +628,7 @@
 				D5A467FF2012B495006AAB58 /* URLRequest.swift in Sources */,
 				D5A468042012B4E8006AAB58 /* BitcoinRateAPI.swift in Sources */,
 				D5A4684120135E14006AAB58 /* NavigationTree.swift in Sources */,
+				D5A4686B201377D1006AAB58 /* HistoricalRecordTableViewCell.swift in Sources */,
 				D5A4683520135C49006AAB58 /* AppState.swift in Sources */,
 				D5A467C7201295D2006AAB58 /* Reducer.swift in Sources */,
 				D5A467D720129711006AAB58 /* UITableViewCellEx.swift in Sources */,
@@ -587,9 +637,11 @@
 				D5A4684A201366D3006AAB58 /* Mapper.swift in Sources */,
 				D5A46848201366A3006AAB58 /* Injector.swift in Sources */,
 				D5A4683F20135DED006AAB58 /* NavigationRoute.swift in Sources */,
+				D5A4686120136F5F006AAB58 /* HistoricalViewController.swift in Sources */,
 				D5A467E820129737006AAB58 /* SignalProtocol.swift in Sources */,
 				D5A4685320136ABF006AAB58 /* NavigationActionRequest.swift in Sources */,
 				D5A468252012CA08006AAB58 /* HistoricalResponse.Codable.swift in Sources */,
+				D5A4686F20137D23006AAB58 /* BitcoinState.swift in Sources */,
 				D5A467EE20129737006AAB58 /* Signal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

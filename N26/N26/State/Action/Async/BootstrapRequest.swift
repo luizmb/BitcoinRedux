@@ -19,10 +19,10 @@ enum BootstrapRequest: AppActionAsync {
             Theme.apply()
             UIApplication.shared.isIdleTimerDisabled = true
 
-//            let navigationController = UINavigationController(rootViewController: MainViewController.start()!)
-//            window.setup(with: navigationController)
+            let navigationController = UINavigationController(rootViewController: HistoricalViewController.start()!)
+            window.setup(with: navigationController)
 
-//            dispatch(RouterAction.didStart(application, navigationController))
+            dispatch(RouterAction.didStart(application, navigationController))
         }
     }
 }
