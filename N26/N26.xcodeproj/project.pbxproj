@@ -23,7 +23,7 @@
 		D5A467E720129737006AAB58 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467DC20129737006AAB58 /* Result.swift */; };
 		D5A467E820129737006AAB58 /* SignalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467DD20129737006AAB58 /* SignalProtocol.swift */; };
 		D5A467E920129737006AAB58 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467DE20129737006AAB58 /* Disposable.swift */; };
-		D5A467EA20129737006AAB58 /* CancelableAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467DF20129737006AAB58 /* CancelableAsync.swift */; };
+		D5A467EA20129737006AAB58 /* SyncableResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467DF20129737006AAB58 /* SyncableResult.swift */; };
 		D5A467EB20129737006AAB58 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467E020129737006AAB58 /* Async.swift */; };
 		D5A467EC20129737006AAB58 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467E120129737006AAB58 /* Atomic.swift */; };
 		D5A467ED20129737006AAB58 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467E220129737006AAB58 /* ConfigurableCell.swift */; };
@@ -79,6 +79,10 @@
 		D5A4686D201377F7006AAB58 /* HistoricalRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A4686C201377F7006AAB58 /* HistoricalRecordTableViewCell.xib */; };
 		D5A4686F20137D23006AAB58 /* BitcoinState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4686E20137D23006AAB58 /* BitcoinState.swift */; };
 		D5A4687120137DD0006AAB58 /* BitcoinRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687020137DD0006AAB58 /* BitcoinRate.swift */; };
+		D5A4687320138777006AAB58 /* BitcoinRateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687220138777006AAB58 /* BitcoinRateRequest.swift */; };
+		D5A4687520138B02006AAB58 /* BitcoinRateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687420138B02006AAB58 /* BitcoinRateAction.swift */; };
+		D5A4687720139CCA006AAB58 /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A4687620139CCA006AAB58 /* SplashView.xib */; };
+		D5A4687920139E2C006AAB58 /* BitcoinRateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687820139E2C006AAB58 /* BitcoinRateReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +116,7 @@
 		D5A467DC20129737006AAB58 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		D5A467DD20129737006AAB58 /* SignalProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalProtocol.swift; sourceTree = "<group>"; };
 		D5A467DE20129737006AAB58 /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
-		D5A467DF20129737006AAB58 /* CancelableAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelableAsync.swift; sourceTree = "<group>"; };
+		D5A467DF20129737006AAB58 /* SyncableResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncableResult.swift; sourceTree = "<group>"; };
 		D5A467E020129737006AAB58 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		D5A467E120129737006AAB58 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		D5A467E220129737006AAB58 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
@@ -168,6 +172,10 @@
 		D5A4686C201377F7006AAB58 /* HistoricalRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricalRecordTableViewCell.xib; sourceTree = "<group>"; };
 		D5A4686E20137D23006AAB58 /* BitcoinState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinState.swift; sourceTree = "<group>"; };
 		D5A4687020137DD0006AAB58 /* BitcoinRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRate.swift; sourceTree = "<group>"; };
+		D5A4687220138777006AAB58 /* BitcoinRateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateRequest.swift; sourceTree = "<group>"; };
+		D5A4687420138B02006AAB58 /* BitcoinRateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateAction.swift; sourceTree = "<group>"; };
+		D5A4687620139CCA006AAB58 /* SplashView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
+		D5A4687820139E2C006AAB58 /* BitcoinRateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +245,7 @@
 				D5A467AC20129459006AAB58 /* Info.plist */,
 				D5A467A020129459006AAB58 /* AppDelegate.swift */,
 				D5A4685920136DE7006AAB58 /* Theme.swift */,
+				D5A4687620139CCA006AAB58 /* SplashView.xib */,
 			);
 			path = Bootstrap;
 			sourceTree = "<group>";
@@ -286,12 +295,12 @@
 				D5A467E020129737006AAB58 /* Async.swift */,
 				D5A467E120129737006AAB58 /* Atomic.swift */,
 				D5A467DA20129737006AAB58 /* CancelableTask.swift */,
-				D5A467DF20129737006AAB58 /* CancelableAsync.swift */,
 				D5A467E220129737006AAB58 /* ConfigurableCell.swift */,
 				D5A467DE20129737006AAB58 /* Disposable.swift */,
 				D5A467DC20129737006AAB58 /* Result.swift */,
 				D5A467E320129737006AAB58 /* Signal.swift */,
 				D5A467DD20129737006AAB58 /* SignalProtocol.swift */,
+				D5A467DF20129737006AAB58 /* SyncableResult.swift */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -421,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				D5A4685620136D39006AAB58 /* Async */,
+				D5A4687420138B02006AAB58 /* BitcoinRateAction.swift */,
 				D5A4684220135F96006AAB58 /* RouterAction.swift */,
 			);
 			path = Action;
@@ -429,6 +439,7 @@
 		D5A4682E20135B17006AAB58 /* Reducer */ = {
 			isa = PBXGroup;
 			children = (
+				D5A4687820139E2C006AAB58 /* BitcoinRateReducer.swift */,
 				D5A4683620135C79006AAB58 /* EntryPointReducer.swift */,
 				D5A4683A20135D6F006AAB58 /* RouterReducer.swift */,
 			);
@@ -458,8 +469,9 @@
 		D5A4685620136D39006AAB58 /* Async */ = {
 			isa = PBXGroup;
 			children = (
-				D5A4685220136ABF006AAB58 /* NavigationActionRequest.swift */,
+				D5A4687220138777006AAB58 /* BitcoinRateRequest.swift */,
 				D5A4685720136D68006AAB58 /* BootstrapRequest.swift */,
+				D5A4685220136ABF006AAB58 /* NavigationActionRequest.swift */,
 			);
 			path = Async;
 			sourceTree = "<group>";
@@ -562,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5A4685D20136F25006AAB58 /* HistoricalView.xib in Resources */,
+				D5A4687720139CCA006AAB58 /* SplashView.xib in Resources */,
 				D5A4686D201377F7006AAB58 /* HistoricalRecordTableViewCell.xib in Resources */,
 				D5A467A820129459006AAB58 /* Assets.xcassets in Resources */,
 			);
@@ -584,13 +597,14 @@
 				D5A4683120135BC8006AAB58 /* Store.swift in Sources */,
 				D5A4680D2012BCC3006AAB58 /* BitcoinAPIClient.swift in Sources */,
 				D5A467D520129711006AAB58 /* UIWindowEx.swift in Sources */,
+				D5A4687320138777006AAB58 /* BitcoinRateRequest.swift in Sources */,
 				D5A468512013684E006AAB58 /* InjectorServices.swift in Sources */,
 				D5A468232012C9CB006AAB58 /* RealTimeResponse.Codable.swift in Sources */,
 				D5A468202012C97E006AAB58 /* DateEx.swift in Sources */,
 				D5A467D620129711006AAB58 /* UIViewControllerEx.swift in Sources */,
 				D5A46865201370B6006AAB58 /* HistoricalDataSource.swift in Sources */,
 				D5A4681C2012C947006AAB58 /* Rate.swift in Sources */,
-				D5A467EA20129737006AAB58 /* CancelableAsync.swift in Sources */,
+				D5A467EA20129737006AAB58 /* SyncableResult.swift in Sources */,
 				D5A4684E2013675F006AAB58 /* DefaultMapResolver.swift in Sources */,
 				D5A467ED20129737006AAB58 /* ConfigurableCell.swift in Sources */,
 				D5A4687120137DD0006AAB58 /* BitcoinRate.swift in Sources */,
@@ -607,6 +621,7 @@
 				D5A4683320135BFB006AAB58 /* StateProvider.swift in Sources */,
 				D5A4684C201366EE006AAB58 /* ConstructorType.swift in Sources */,
 				D5A468122012C2A3006AAB58 /* JsonParser.swift in Sources */,
+				D5A4687920139E2C006AAB58 /* BitcoinRateReducer.swift in Sources */,
 				D5A467C6201295D2006AAB58 /* ActionAsync.swift in Sources */,
 				D5A4686720137201006AAB58 /* HistoricalViewModel.swift in Sources */,
 				D5A467E920129737006AAB58 /* Disposable.swift in Sources */,
@@ -616,6 +631,7 @@
 				D5A467D220129711006AAB58 /* UICollectionReusableViewEx.swift in Sources */,
 				D5A467D320129711006AAB58 /* UIViewEx.swift in Sources */,
 				D5A4685820136D68006AAB58 /* BootstrapRequest.swift in Sources */,
+				D5A4687520138B02006AAB58 /* BitcoinRateAction.swift in Sources */,
 				D5A4684320135F96006AAB58 /* RouterAction.swift in Sources */,
 				D5A468182012C8F7006AAB58 /* RealTimeResponse.swift in Sources */,
 				D5A467C8201295D2006AAB58 /* StoreBase.swift in Sources */,

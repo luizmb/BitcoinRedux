@@ -10,6 +10,8 @@ import UIKit
 
 public struct AppState: Equatable {
     var bitcoinState = BitcoinState()
+    var currency = Currency(code: "EUR", name: "Euro", symbol: "€")
+    var historicalDays = 14
 
     var navigation = NavigationState.still(at: .root())
     weak var application: UIApplication?

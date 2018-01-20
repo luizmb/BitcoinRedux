@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol BitcoinRateAPI {
+public protocol BitcoinRateAPI {
     func request(_ endpoint: BitcoinEndpoint, completion: @escaping (Result<Data>) -> ()) -> CancelableTask
 }

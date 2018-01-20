@@ -9,21 +9,13 @@
 import Foundation
 
 public struct BitcoinRealTimeRate {
-    var currency: String
+    var currency: Currency
     var lastUpdate: Date
     var rate: Float
 }
 
-extension BitcoinRealTimeRate {
-    init() {
-        currency = ""
-        lastUpdate = Date.distantPast
-        rate = 0.0
-    }
-}
-
 public struct BitcoinHistoricalRate {
-    var currency: String
+    var currency: Currency
     var closedDate: Date
     var rate: Float
 }

@@ -21,9 +21,20 @@ final class HistoricalViewController: UIViewController {
     }
 
     private func update(state: BitcoinState) {
-        let sections = [HistoricalTableViewSection(state.realtimeRate),
-                        HistoricalTableViewSection(state.historicalRates)]
+        var sections: [HistoricalTableViewSection] = []
+
+        if let realtimeSection = state.realtimeRate.possibleValue().flatMap(HistoricalTableViewSection.init) {
+            sections.append(realtimeSection)
+        }
+
+        if let historicalSection = state.historicalRates.possibleValue().flatMap(HistoricalTableViewSection.init) {
+            sections.append(historicalSection)
+        }
+
         dataSource.viewModel = sections
+        if sections.count < 0 {
+            // TODO: Fallback for no results
+        }
     }
 }
 

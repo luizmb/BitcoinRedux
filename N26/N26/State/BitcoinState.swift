@@ -9,8 +9,8 @@
 import Foundation
 
 public struct BitcoinState {
-    public var realtimeRate: BitcoinRealTimeRate = BitcoinRealTimeRate()
-    public var historicalRates: [BitcoinHistoricalRate] = []
+    public var realtimeRate: SyncableResult<BitcoinRealTimeRate> = .neverLoaded
+    public var historicalRates: SyncableArrayResult<BitcoinHistoricalRate> = .neverLoaded
 }
 
 extension BitcoinState: Equatable {

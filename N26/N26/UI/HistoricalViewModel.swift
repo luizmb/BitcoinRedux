@@ -9,7 +9,7 @@
 import Foundation
 
 struct HistoricalViewModel {
-    let sections: [HistoricalTableViewSection]
+    let sections: [HistoricalTableViewSection]?
 }
 
 struct HistoricalTableViewSection {
@@ -41,7 +41,8 @@ extension HistoricalTableViewRow {
         dateFormatter.timeStyle = .medium
 
         let numberFormatter = NumberFormatter()
-        numberFormatter.currencyCode = state.currency
+        numberFormatter.currencyCode = state.currency.code
+        numberFormatter.currencySymbol = state.currency.symbol
         numberFormatter.numberStyle = .currency
 
         self.date = dateFormatter.string(from: state.lastUpdate)
@@ -54,7 +55,8 @@ extension HistoricalTableViewRow {
         dateFormatter.timeStyle = .none
 
         let numberFormatter = NumberFormatter()
-        numberFormatter.currencyCode = state.currency
+        numberFormatter.currencyCode = state.currency.code
+        numberFormatter.currencySymbol = state.currency.symbol
         numberFormatter.numberStyle = .currency
 
         self.date = dateFormatter.string(from: state.closedDate)

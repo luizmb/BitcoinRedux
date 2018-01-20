@@ -9,6 +9,11 @@
 import Foundation
 
 public class BitcoinAPIClient: BitcoinRateAPI {
+    static let shared: BitcoinRateAPI = {
+        let global = BitcoinAPIClient(session: URLSession.shared)
+        return global
+    }()
+
     enum BitcoinAPIClientError: Error {
         case invalidResponse
         case statusCodeError(statusCode: Int, data: Data?)
@@ -20,7 +25,7 @@ public class BitcoinAPIClient: BitcoinRateAPI {
         self.session = session
     }
 
-    @discardableResult func request(_ endpoint: BitcoinEndpoint, completion: @escaping (Result<Data>) -> ()) -> CancelableTask {
+    @discardableResult public func request(_ endpoint: BitcoinEndpoint, completion: @escaping (Result<Data>) -> ()) -> CancelableTask {
         let task = session.dataTask(with: endpoint.urlRequest) { data, response, error in
             if let error = error {
                 completion(.error(error))
