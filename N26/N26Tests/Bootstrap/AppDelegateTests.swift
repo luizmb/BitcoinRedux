@@ -12,10 +12,6 @@ import Foundation
 
 class AppDelegateTests: UnitTest {
 
-    override func setUp() {
-        super.setUp()
-    }
-
     func testApplicationLaunchedExpectedActions() {
         let sut = AppDelegate()
 

@@ -87,6 +87,7 @@
 		D5F6CD842013CC9A0005E972 /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6CD832013CC9A0005E972 /* UnitTest.swift */; };
 		D5F6CD862013CCC30005E972 /* MockActionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6CD852013CCC30005E972 /* MockActionDispatcher.swift */; };
 		D5F6CD882013CF2C0005E972 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6CD872013CF2C0005E972 /* main.swift */; };
+		D5F6CD8A2013D5B20005E972 /* ThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6CD892013D5B20005E972 /* ThemeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,7 @@
 		D5F6CD832013CC9A0005E972 /* UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTest.swift; sourceTree = "<group>"; };
 		D5F6CD852013CCC30005E972 /* MockActionDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockActionDispatcher.swift; sourceTree = "<group>"; };
 		D5F6CD872013CF2C0005E972 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D5F6CD892013D5B20005E972 /* ThemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -505,6 +507,7 @@
 			isa = PBXGroup;
 			children = (
 				D5F6CD7A2013B7450005E972 /* AppDelegateTests.swift */,
+				D5F6CD892013D5B20005E972 /* ThemeTests.swift */,
 			);
 			path = Bootstrap;
 			sourceTree = "<group>";
@@ -700,6 +703,7 @@
 				D5A4680B2012B789006AAB58 /* BitcoinEndpointTests.swift in Sources */,
 				D5A4680F2012BD51006AAB58 /* BitcoinAPIClientTests.swift in Sources */,
 				D5A468282012CB68006AAB58 /* ModelTests.swift in Sources */,
+				D5F6CD8A2013D5B20005E972 /* ThemeTests.swift in Sources */,
 				D5A467F32012A673006AAB58 /* DataStructureTests.swift in Sources */,
 				D5F6CD842013CC9A0005E972 /* UnitTest.swift in Sources */,
 				D5A4682B2012D0B8006AAB58 /* ModelSerializationTests.swift in Sources */,

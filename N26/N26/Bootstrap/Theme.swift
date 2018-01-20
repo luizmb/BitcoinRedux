@@ -10,8 +10,13 @@ import UIKit
 
 extension UIColor {
     enum Named: String {
+        case cellBackground = "CellBackground"
+        case cellHighlightText = "CellHighlightText"
+        case cellText = "CellText"
         case chromeBackground = "ChromeBackground"
         case chromeText = "ChromeText"
+        case listBackground = "ListBackground"
+        case listSeparator = "ListSeparator"
 
         var color: UIColor {
             return .of(self)
@@ -24,7 +29,6 @@ extension UIColor {
 }
 
 final class Theme {
-
     static func apply() {
         let navigationBarAppearance = UINavigationBar.appearance()
         navigationBarAppearance.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.of(.chromeText)]
