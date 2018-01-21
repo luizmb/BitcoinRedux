@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D527DC562014D99800D4F2FB"
-               BuildableName = "BitcoinLibrary_iOS.framework"
+               BuildableName = "BitcoinLibrary.framework"
                BlueprintName = "BitcoinLibrary iOS"
                ReferencedContainer = "container:N26.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D527DC562014D99800D4F2FB"
-            BuildableName = "BitcoinLibrary_iOS.framework"
+            BuildableName = "BitcoinLibrary.framework"
             BlueprintName = "BitcoinLibrary iOS"
             ReferencedContainer = "container:N26.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D527DC562014D99800D4F2FB"
-            BuildableName = "BitcoinLibrary_iOS.framework"
+            BuildableName = "BitcoinLibrary.framework"
             BlueprintName = "BitcoinLibrary iOS"
             ReferencedContainer = "container:N26.xcodeproj">
          </BuildableReference>

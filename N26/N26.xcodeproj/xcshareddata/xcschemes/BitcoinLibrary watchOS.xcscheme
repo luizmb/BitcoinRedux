@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D527DC642014D9AC00D4F2FB"
-               BuildableName = "BitcoinLibrary_watchOS.framework"
+               BuildableName = "BitcoinLibrary.framework"
                BlueprintName = "BitcoinLibrary watchOS"
                ReferencedContainer = "container:N26.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D527DC642014D9AC00D4F2FB"
-            BuildableName = "BitcoinLibrary_watchOS.framework"
+            BuildableName = "BitcoinLibrary.framework"
             BlueprintName = "BitcoinLibrary watchOS"
             ReferencedContainer = "container:N26.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D527DC642014D9AC00D4F2FB"
-            BuildableName = "BitcoinLibrary_watchOS.framework"
+            BuildableName = "BitcoinLibrary.framework"
             BlueprintName = "BitcoinLibrary watchOS"
             ReferencedContainer = "container:N26.xcodeproj">
          </BuildableReference>
