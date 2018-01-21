@@ -8,6 +8,7 @@
 
 import UIKit
 @testable import N26
+@testable import BitcoinLibrary
 @testable import CommonLibrary
 
 private func defaultDate() -> Date { return Date(timeIntervalSinceReferenceDate: 0) }

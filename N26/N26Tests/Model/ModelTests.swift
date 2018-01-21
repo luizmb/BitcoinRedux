@@ -9,6 +9,7 @@
 import XCTest
 import Foundation
 @testable import N26
+@testable import BitcoinLibrary
 @testable import CommonLibrary
 
 class ModelTests: UnitTest {
