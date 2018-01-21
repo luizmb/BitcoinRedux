@@ -28,28 +28,17 @@ public class BitcoinAPIClient: BitcoinRateAPI {
 
     @discardableResult public func request(_ endpoint: BitcoinEndpoint, completion: @escaping (Result<Data>) -> ()) -> CancelableTask {
         let task = session.dataTask(with: endpoint.urlRequest) { data, response, error in
-            if let error = error {
-                completion(.error(error))
-                return
+            switch (error, response as? HTTPURLResponse) {
+            case (.some(let err), _): completion(.error(err)); return
+            case (.none, .none): completion(.error(BitcoinAPIClientError.invalidResponse)); return
+            case (.none, .some(let httpResponse)):
+                guard httpResponse.statusCode < 300 else {
+                    completion(.error(BitcoinAPIClientError.statusCodeError(statusCode: httpResponse.statusCode,
+                                                                            data: data)))
+                    return
+                }
+                completion(.success(data!))
             }
-
-            guard let response = response as? HTTPURLResponse else {
-                completion(.error(BitcoinAPIClientError.invalidResponse))
-                return
-            }
-
-            guard response.statusCode < 300 else {
-                completion(.error(BitcoinAPIClientError.statusCodeError(statusCode: response.statusCode,
-                                                                        data: data)))
-                return
-            }
-
-            if let data = data {
-                completion(.success(data))
-                return
-            }
-
-            fatalError("No data and no error")
         }
         task.resume()
         return task
