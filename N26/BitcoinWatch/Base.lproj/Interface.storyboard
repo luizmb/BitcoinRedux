@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BitcoinWatch" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="center" layout="vertical" id="BR6-xs-4QQ">
+                            <items>
+                                <group width="1" alignment="left" radius="0.0" spacing="9" id="Guo-4U-Doy">
+                                    <items>
+                                        <label alignment="left" text="Live" textAlignment="left" baselineAdjustment="alignCenters" id="PIl-js-Gxp">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                        <label alignment="left" text="09/09 09:09:09" textAlignment="right" baselineAdjustment="alignCenters" id="0oE-86-tyM">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <label alignment="center" text="10,000,000.00" textAlignment="center" baselineAdjustment="alignCenters" id="4x6-Hd-zTA">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                            </items>
+                        </group>
+                        <table alignment="left" id="UTJ-G6-ZdM">
+                            <items>
+                                <tableRow id="xUB-Fi-nhK">
+                                    <group key="rootItem" width="1" alignment="left" id="Pbf-ng-gWn"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="historicalTable" destination="UTJ-G6-ZdM" id="oEf-W7-FZh"/>
+                        <outlet property="realtimeDateLabel" destination="0oE-86-tyM" id="llA-Yt-gpq"/>
+                        <outlet property="realtimeRateLabel" destination="4x6-Hd-zTA" id="M5w-mT-IPO"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
