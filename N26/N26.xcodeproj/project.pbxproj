@@ -25,6 +25,66 @@
 		D53930372014B12B00C8D658 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930362014B12B00C8D658 /* ExtensionDelegate.swift */; };
 		D53930392014B12B00C8D658 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53930382014B12B00C8D658 /* Assets.xcassets */; };
 		D539303D2014B12B00C8D658 /* BitcoinWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D53930232014B12A00C8D658 /* BitcoinWatch.app */; };
+		D53930722014B86E00C8D658 /* CommonLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = D53930702014B86E00C8D658 /* CommonLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D53930882014BAF500C8D658 /* CommonLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = D53930702014B86E00C8D658 /* CommonLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D53930AA2014BBC400C8D658 /* InjectorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539308A2014BBC300C8D658 /* InjectorProtocol.swift */; };
+		D53930AB2014BBC400C8D658 /* InjectorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539308A2014BBC300C8D658 /* InjectorProtocol.swift */; };
+		D53930AC2014BBC400C8D658 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539308B2014BBC300C8D658 /* Injector.swift */; };
+		D53930AD2014BBC400C8D658 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539308B2014BBC300C8D658 /* Injector.swift */; };
+		D53930AE2014BBC400C8D658 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539308C2014BBC300C8D658 /* Mapper.swift */; };
+		D53930AF2014BBC400C8D658 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539308C2014BBC300C8D658 /* Mapper.swift */; };
+		D53930B02014BBC400C8D658 /* ConstructorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539308D2014BBC300C8D658 /* ConstructorType.swift */; };
+		D53930B12014BBC400C8D658 /* ConstructorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539308D2014BBC300C8D658 /* ConstructorType.swift */; };
+		D53930B22014BBC400C8D658 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539308F2014BBC400C8D658 /* Reducer.swift */; };
+		D53930B32014BBC400C8D658 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539308F2014BBC400C8D658 /* Reducer.swift */; };
+		D53930B42014BBC400C8D658 /* ActionAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930902014BBC400C8D658 /* ActionAsync.swift */; };
+		D53930B52014BBC400C8D658 /* ActionAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930902014BBC400C8D658 /* ActionAsync.swift */; };
+		D53930B62014BBC400C8D658 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930912014BBC400C8D658 /* Action.swift */; };
+		D53930B72014BBC400C8D658 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930912014BBC400C8D658 /* Action.swift */; };
+		D53930B82014BBC400C8D658 /* StoreBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930922014BBC400C8D658 /* StoreBase.swift */; };
+		D53930B92014BBC400C8D658 /* StoreBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930922014BBC400C8D658 /* StoreBase.swift */; };
+		D53930BA2014BBC400C8D658 /* UIApplicationEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930942014BBC400C8D658 /* UIApplicationEx.swift */; };
+		D53930BB2014BBC400C8D658 /* UIApplicationEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930942014BBC400C8D658 /* UIApplicationEx.swift */; };
+		D53930BC2014BBC400C8D658 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930952014BBC400C8D658 /* URLRequest.swift */; };
+		D53930BD2014BBC400C8D658 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930952014BBC400C8D658 /* URLRequest.swift */; };
+		D53930BE2014BBC400C8D658 /* ArrayEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930962014BBC400C8D658 /* ArrayEx.swift */; };
+		D53930BF2014BBC400C8D658 /* ArrayEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930962014BBC400C8D658 /* ArrayEx.swift */; };
+		D53930C02014BBC400C8D658 /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930972014BBC400C8D658 /* UIViewEx.swift */; };
+		D53930C12014BBC400C8D658 /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930972014BBC400C8D658 /* UIViewEx.swift */; };
+		D53930C22014BBC400C8D658 /* DateEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930982014BBC400C8D658 /* DateEx.swift */; };
+		D53930C32014BBC400C8D658 /* DateEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930982014BBC400C8D658 /* DateEx.swift */; };
+		D53930C42014BBC400C8D658 /* UIWindowEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930992014BBC400C8D658 /* UIWindowEx.swift */; };
+		D53930C52014BBC400C8D658 /* UIWindowEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930992014BBC400C8D658 /* UIWindowEx.swift */; };
+		D53930C62014BBC400C8D658 /* UIViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309A2014BBC400C8D658 /* UIViewControllerEx.swift */; };
+		D53930C72014BBC400C8D658 /* UIViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309A2014BBC400C8D658 /* UIViewControllerEx.swift */; };
+		D53930C82014BBC400C8D658 /* Startable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309B2014BBC400C8D658 /* Startable.swift */; };
+		D53930C92014BBC400C8D658 /* Startable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309B2014BBC400C8D658 /* Startable.swift */; };
+		D53930CA2014BBC400C8D658 /* UITableViewCellEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309C2014BBC400C8D658 /* UITableViewCellEx.swift */; };
+		D53930CB2014BBC400C8D658 /* UITableViewCellEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309C2014BBC400C8D658 /* UITableViewCellEx.swift */; };
+		D53930CC2014BBC400C8D658 /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309D2014BBC400C8D658 /* StringEx.swift */; };
+		D53930CD2014BBC400C8D658 /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309D2014BBC400C8D658 /* StringEx.swift */; };
+		D53930CE2014BBC400C8D658 /* UICollectionReusableViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309E2014BBC400C8D658 /* UICollectionReusableViewEx.swift */; };
+		D53930CF2014BBC400C8D658 /* UICollectionReusableViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309E2014BBC400C8D658 /* UICollectionReusableViewEx.swift */; };
+		D53930D02014BBC400C8D658 /* URLSessionTask+CancelableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309F2014BBC400C8D658 /* URLSessionTask+CancelableTask.swift */; };
+		D53930D12014BBC400C8D658 /* URLSessionTask+CancelableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309F2014BBC400C8D658 /* URLSessionTask+CancelableTask.swift */; };
+		D53930D22014BBC400C8D658 /* CancelableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A12014BBC400C8D658 /* CancelableTask.swift */; };
+		D53930D32014BBC400C8D658 /* CancelableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A12014BBC400C8D658 /* CancelableTask.swift */; };
+		D53930D42014BBC400C8D658 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A22014BBC400C8D658 /* Result.swift */; };
+		D53930D52014BBC400C8D658 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A22014BBC400C8D658 /* Result.swift */; };
+		D53930D62014BBC400C8D658 /* SignalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A32014BBC400C8D658 /* SignalProtocol.swift */; };
+		D53930D72014BBC400C8D658 /* SignalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A32014BBC400C8D658 /* SignalProtocol.swift */; };
+		D53930D82014BBC400C8D658 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A42014BBC400C8D658 /* Disposable.swift */; };
+		D53930D92014BBC400C8D658 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A42014BBC400C8D658 /* Disposable.swift */; };
+		D53930DA2014BBC400C8D658 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A52014BBC400C8D658 /* Async.swift */; };
+		D53930DB2014BBC400C8D658 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A52014BBC400C8D658 /* Async.swift */; };
+		D53930DC2014BBC400C8D658 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A62014BBC400C8D658 /* Atomic.swift */; };
+		D53930DD2014BBC400C8D658 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A62014BBC400C8D658 /* Atomic.swift */; };
+		D53930DE2014BBC400C8D658 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A72014BBC400C8D658 /* ConfigurableCell.swift */; };
+		D53930DF2014BBC400C8D658 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A72014BBC400C8D658 /* ConfigurableCell.swift */; };
+		D53930E02014BBC400C8D658 /* SyncableResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A82014BBC400C8D658 /* SyncableResult.swift */; };
+		D53930E12014BBC400C8D658 /* SyncableResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A82014BBC400C8D658 /* SyncableResult.swift */; };
+		D53930E22014BBC400C8D658 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A92014BBC400C8D658 /* Signal.swift */; };
+		D53930E32014BBC400C8D658 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A92014BBC400C8D658 /* Signal.swift */; };
 		D5A467A120129459006AAB58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467A020129459006AAB58 /* AppDelegate.swift */; };
 		D5A467A820129459006AAB58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5A467A720129459006AAB58 /* Assets.xcassets */; };
 		D5A467C6201295D2006AAB58 /* ActionAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467C2201295D2006AAB58 /* ActionAsync.swift */; };
@@ -177,6 +237,40 @@
 		D53930362014B12B00C8D658 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		D53930382014B12B00C8D658 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D539303A2014B12B00C8D658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D539306E2014B86E00C8D658 /* CommonLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D53930702014B86E00C8D658 /* CommonLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonLibrary.h; sourceTree = "<group>"; };
+		D539307C2014B87C00C8D658 /* CommonLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D53930862014B95100C8D658 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		D53930872014B95100C8D658 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
+		D539308A2014BBC300C8D658 /* InjectorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectorProtocol.swift; sourceTree = "<group>"; };
+		D539308B2014BBC300C8D658 /* Injector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
+		D539308C2014BBC300C8D658 /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		D539308D2014BBC300C8D658 /* ConstructorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstructorType.swift; sourceTree = "<group>"; };
+		D539308F2014BBC400C8D658 /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		D53930902014BBC400C8D658 /* ActionAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionAsync.swift; sourceTree = "<group>"; };
+		D53930912014BBC400C8D658 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		D53930922014BBC400C8D658 /* StoreBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreBase.swift; sourceTree = "<group>"; };
+		D53930942014BBC400C8D658 /* UIApplicationEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationEx.swift; sourceTree = "<group>"; };
+		D53930952014BBC400C8D658 /* URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
+		D53930962014BBC400C8D658 /* ArrayEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayEx.swift; sourceTree = "<group>"; };
+		D53930972014BBC400C8D658 /* UIViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewEx.swift; sourceTree = "<group>"; };
+		D53930982014BBC400C8D658 /* DateEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateEx.swift; sourceTree = "<group>"; };
+		D53930992014BBC400C8D658 /* UIWindowEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowEx.swift; sourceTree = "<group>"; };
+		D539309A2014BBC400C8D658 /* UIViewControllerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerEx.swift; sourceTree = "<group>"; };
+		D539309B2014BBC400C8D658 /* Startable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Startable.swift; sourceTree = "<group>"; };
+		D539309C2014BBC400C8D658 /* UITableViewCellEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellEx.swift; sourceTree = "<group>"; };
+		D539309D2014BBC400C8D658 /* StringEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
+		D539309E2014BBC400C8D658 /* UICollectionReusableViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionReusableViewEx.swift; sourceTree = "<group>"; };
+		D539309F2014BBC400C8D658 /* URLSessionTask+CancelableTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSessionTask+CancelableTask.swift"; sourceTree = "<group>"; };
+		D53930A12014BBC400C8D658 /* CancelableTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelableTask.swift; sourceTree = "<group>"; };
+		D53930A22014BBC400C8D658 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D53930A32014BBC400C8D658 /* SignalProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalProtocol.swift; sourceTree = "<group>"; };
+		D53930A42014BBC400C8D658 /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
+		D53930A52014BBC400C8D658 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
+		D53930A62014BBC400C8D658 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
+		D53930A72014BBC400C8D658 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		D53930A82014BBC400C8D658 /* SyncableResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncableResult.swift; sourceTree = "<group>"; };
+		D53930A92014BBC400C8D658 /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
 		D5A4679D20129459006AAB58 /* N26.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = N26.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A467A020129459006AAB58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5A467A720129459006AAB58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -271,6 +365,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D539306A2014B86E00C8D658 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D53930782014B87C00C8D658 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5A4679A20129459006AAB58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,6 +438,77 @@
 			path = "BitcoinWatch Extension";
 			sourceTree = "<group>";
 		};
+		D53930852014B95100C8D658 /* CommonLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				D53930932014BBC400C8D658 /* CocoaEx */,
+				D53930A02014BBC400C8D658 /* DataStructures */,
+				D53930892014BBC300C8D658 /* DependencyInjection */,
+				D539308E2014BBC400C8D658 /* Redux */,
+				D53930702014B86E00C8D658 /* CommonLibrary.h */,
+				D53930862014B95100C8D658 /* Info-iOS.plist */,
+				D53930872014B95100C8D658 /* Info-watchOS.plist */,
+			);
+			path = CommonLibrary;
+			sourceTree = "<group>";
+		};
+		D53930892014BBC300C8D658 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				D539308A2014BBC300C8D658 /* InjectorProtocol.swift */,
+				D539308B2014BBC300C8D658 /* Injector.swift */,
+				D539308C2014BBC300C8D658 /* Mapper.swift */,
+				D539308D2014BBC300C8D658 /* ConstructorType.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		D539308E2014BBC400C8D658 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				D539308F2014BBC400C8D658 /* Reducer.swift */,
+				D53930902014BBC400C8D658 /* ActionAsync.swift */,
+				D53930912014BBC400C8D658 /* Action.swift */,
+				D53930922014BBC400C8D658 /* StoreBase.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		D53930932014BBC400C8D658 /* CocoaEx */ = {
+			isa = PBXGroup;
+			children = (
+				D53930942014BBC400C8D658 /* UIApplicationEx.swift */,
+				D53930952014BBC400C8D658 /* URLRequest.swift */,
+				D53930962014BBC400C8D658 /* ArrayEx.swift */,
+				D53930972014BBC400C8D658 /* UIViewEx.swift */,
+				D53930982014BBC400C8D658 /* DateEx.swift */,
+				D53930992014BBC400C8D658 /* UIWindowEx.swift */,
+				D539309A2014BBC400C8D658 /* UIViewControllerEx.swift */,
+				D539309B2014BBC400C8D658 /* Startable.swift */,
+				D539309C2014BBC400C8D658 /* UITableViewCellEx.swift */,
+				D539309D2014BBC400C8D658 /* StringEx.swift */,
+				D539309E2014BBC400C8D658 /* UICollectionReusableViewEx.swift */,
+				D539309F2014BBC400C8D658 /* URLSessionTask+CancelableTask.swift */,
+			);
+			path = CocoaEx;
+			sourceTree = "<group>";
+		};
+		D53930A02014BBC400C8D658 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				D53930A12014BBC400C8D658 /* CancelableTask.swift */,
+				D53930A22014BBC400C8D658 /* Result.swift */,
+				D53930A32014BBC400C8D658 /* SignalProtocol.swift */,
+				D53930A42014BBC400C8D658 /* Disposable.swift */,
+				D53930A52014BBC400C8D658 /* Async.swift */,
+				D53930A62014BBC400C8D658 /* Atomic.swift */,
+				D53930A72014BBC400C8D658 /* ConfigurableCell.swift */,
+				D53930A82014BBC400C8D658 /* SyncableResult.swift */,
+				D53930A92014BBC400C8D658 /* Signal.swift */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
 		D5A4679420129459006AAB58 = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +516,7 @@
 				D5A467B420129459006AAB58 /* N26Tests */,
 				D53930242014B12A00C8D658 /* BitcoinWatch */,
 				D53930332014B12B00C8D658 /* BitcoinWatch Extension */,
+				D53930852014B95100C8D658 /* CommonLibrary */,
 				D5A4679E20129459006AAB58 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -348,6 +528,8 @@
 				D5A467B120129459006AAB58 /* N26Tests.xctest */,
 				D53930232014B12A00C8D658 /* BitcoinWatch.app */,
 				D539302F2014B12A00C8D658 /* BitcoinWatch Extension.appex */,
+				D539306E2014B86E00C8D658 /* CommonLibrary.framework */,
+				D539307C2014B87C00C8D658 /* CommonLibrary.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -656,6 +838,25 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		D539306B2014B86E00C8D658 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D53930722014B86E00C8D658 /* CommonLibrary.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D53930792014B87C00C8D658 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D53930882014BAF500C8D658 /* CommonLibrary.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		D53930222014B12A00C8D658 /* BitcoinWatch */ = {
 			isa = PBXNativeTarget;
@@ -690,6 +891,42 @@
 			productName = "BitcoinWatch Extension";
 			productReference = D539302F2014B12A00C8D658 /* BitcoinWatch Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		D539306D2014B86E00C8D658 /* CommonLibrary iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D53930762014B86E00C8D658 /* Build configuration list for PBXNativeTarget "CommonLibrary iOS" */;
+			buildPhases = (
+				D53930692014B86E00C8D658 /* Sources */,
+				D539306A2014B86E00C8D658 /* Frameworks */,
+				D539306B2014B86E00C8D658 /* Headers */,
+				D539306C2014B86E00C8D658 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CommonLibrary iOS";
+			productName = "CommonLibrary iOS";
+			productReference = D539306E2014B86E00C8D658 /* CommonLibrary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D539307B2014B87C00C8D658 /* CommonLibrary watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D53930812014B87D00C8D658 /* Build configuration list for PBXNativeTarget "CommonLibrary watchOS" */;
+			buildPhases = (
+				D53930772014B87C00C8D658 /* Sources */,
+				D53930782014B87C00C8D658 /* Frameworks */,
+				D53930792014B87C00C8D658 /* Headers */,
+				D539307A2014B87C00C8D658 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CommonLibrary watchOS";
+			productName = "CommonLibrary watchOS";
+			productReference = D539307C2014B87C00C8D658 /* CommonLibrary.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		D5A4679C20129459006AAB58 /* N26 */ = {
 			isa = PBXNativeTarget;
@@ -746,6 +983,14 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					D539306D2014B86E00C8D658 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D539307B2014B87C00C8D658 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					D5A4679C20129459006AAB58 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -774,6 +1019,8 @@
 				D5A467B020129459006AAB58 /* N26Tests */,
 				D53930222014B12A00C8D658 /* BitcoinWatch */,
 				D539302E2014B12A00C8D658 /* BitcoinWatch Extension */,
+				D539306D2014B86E00C8D658 /* CommonLibrary iOS */,
+				D539307B2014B87C00C8D658 /* CommonLibrary watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -793,6 +1040,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				D53930392014B12B00C8D658 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D539306C2014B86E00C8D658 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D539307A2014B87C00C8D658 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,6 +1084,78 @@
 			files = (
 				D53930372014B12B00C8D658 /* ExtensionDelegate.swift in Sources */,
 				D53930352014B12B00C8D658 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D53930692014B86E00C8D658 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D53930C42014BBC400C8D658 /* UIWindowEx.swift in Sources */,
+				D53930D82014BBC400C8D658 /* Disposable.swift in Sources */,
+				D53930B02014BBC400C8D658 /* ConstructorType.swift in Sources */,
+				D53930CE2014BBC400C8D658 /* UICollectionReusableViewEx.swift in Sources */,
+				D53930E22014BBC400C8D658 /* Signal.swift in Sources */,
+				D53930DC2014BBC400C8D658 /* Atomic.swift in Sources */,
+				D53930BA2014BBC400C8D658 /* UIApplicationEx.swift in Sources */,
+				D53930CC2014BBC400C8D658 /* StringEx.swift in Sources */,
+				D53930E02014BBC400C8D658 /* SyncableResult.swift in Sources */,
+				D53930AA2014BBC400C8D658 /* InjectorProtocol.swift in Sources */,
+				D53930B82014BBC400C8D658 /* StoreBase.swift in Sources */,
+				D53930DA2014BBC400C8D658 /* Async.swift in Sources */,
+				D53930B42014BBC400C8D658 /* ActionAsync.swift in Sources */,
+				D53930D62014BBC400C8D658 /* SignalProtocol.swift in Sources */,
+				D53930DE2014BBC400C8D658 /* ConfigurableCell.swift in Sources */,
+				D53930C62014BBC400C8D658 /* UIViewControllerEx.swift in Sources */,
+				D53930BE2014BBC400C8D658 /* ArrayEx.swift in Sources */,
+				D53930D42014BBC400C8D658 /* Result.swift in Sources */,
+				D53930AE2014BBC400C8D658 /* Mapper.swift in Sources */,
+				D53930B62014BBC400C8D658 /* Action.swift in Sources */,
+				D53930D02014BBC400C8D658 /* URLSessionTask+CancelableTask.swift in Sources */,
+				D53930B22014BBC400C8D658 /* Reducer.swift in Sources */,
+				D53930AC2014BBC400C8D658 /* Injector.swift in Sources */,
+				D53930CA2014BBC400C8D658 /* UITableViewCellEx.swift in Sources */,
+				D53930C82014BBC400C8D658 /* Startable.swift in Sources */,
+				D53930BC2014BBC400C8D658 /* URLRequest.swift in Sources */,
+				D53930C22014BBC400C8D658 /* DateEx.swift in Sources */,
+				D53930D22014BBC400C8D658 /* CancelableTask.swift in Sources */,
+				D53930C02014BBC400C8D658 /* UIViewEx.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D53930772014B87C00C8D658 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D53930C52014BBC400C8D658 /* UIWindowEx.swift in Sources */,
+				D53930D92014BBC400C8D658 /* Disposable.swift in Sources */,
+				D53930B12014BBC400C8D658 /* ConstructorType.swift in Sources */,
+				D53930CF2014BBC400C8D658 /* UICollectionReusableViewEx.swift in Sources */,
+				D53930E32014BBC400C8D658 /* Signal.swift in Sources */,
+				D53930DD2014BBC400C8D658 /* Atomic.swift in Sources */,
+				D53930BB2014BBC400C8D658 /* UIApplicationEx.swift in Sources */,
+				D53930CD2014BBC400C8D658 /* StringEx.swift in Sources */,
+				D53930E12014BBC400C8D658 /* SyncableResult.swift in Sources */,
+				D53930AB2014BBC400C8D658 /* InjectorProtocol.swift in Sources */,
+				D53930B92014BBC400C8D658 /* StoreBase.swift in Sources */,
+				D53930DB2014BBC400C8D658 /* Async.swift in Sources */,
+				D53930B52014BBC400C8D658 /* ActionAsync.swift in Sources */,
+				D53930D72014BBC400C8D658 /* SignalProtocol.swift in Sources */,
+				D53930DF2014BBC400C8D658 /* ConfigurableCell.swift in Sources */,
+				D53930C72014BBC400C8D658 /* UIViewControllerEx.swift in Sources */,
+				D53930BF2014BBC400C8D658 /* ArrayEx.swift in Sources */,
+				D53930D52014BBC400C8D658 /* Result.swift in Sources */,
+				D53930AF2014BBC400C8D658 /* Mapper.swift in Sources */,
+				D53930B72014BBC400C8D658 /* Action.swift in Sources */,
+				D53930D12014BBC400C8D658 /* URLSessionTask+CancelableTask.swift in Sources */,
+				D53930B32014BBC400C8D658 /* Reducer.swift in Sources */,
+				D53930AD2014BBC400C8D658 /* Injector.swift in Sources */,
+				D53930CB2014BBC400C8D658 /* UITableViewCellEx.swift in Sources */,
+				D53930C92014BBC400C8D658 /* Startable.swift in Sources */,
+				D53930BD2014BBC400C8D658 /* URLRequest.swift in Sources */,
+				D53930C32014BBC400C8D658 /* DateEx.swift in Sources */,
+				D53930D32014BBC400C8D658 /* CancelableTask.swift in Sources */,
+				D53930C12014BBC400C8D658 /* UIViewEx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1074,6 +1407,170 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		D53930732014B86E00C8D658 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CommonLibrary/Info-iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.CommonLibrary-iOS";
+				PRODUCT_NAME = CommonLibrary;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D53930742014B86E00C8D658 /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "CommonLibrary/Info-iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.CommonLibrary-iOS";
+				PRODUCT_NAME = CommonLibrary;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Testing;
+		};
+		D53930752014B86E00C8D658 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "CommonLibrary/Info-iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.CommonLibrary-iOS";
+				PRODUCT_NAME = CommonLibrary;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D53930822014B87D00C8D658 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CommonLibrary/Info-watchOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.CommonLibrary-watchOS";
+				PRODUCT_NAME = CommonLibrary;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		D53930832014B87D00C8D658 /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "CommonLibrary/Info-watchOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.CommonLibrary-watchOS";
+				PRODUCT_NAME = CommonLibrary;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Testing;
+		};
+		D53930842014B87D00C8D658 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "CommonLibrary/Info-watchOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.CommonLibrary-watchOS";
+				PRODUCT_NAME = CommonLibrary;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};
 			name = Release;
@@ -1366,6 +1863,26 @@
 				D53930442014B12B00C8D658 /* Debug */,
 				D53930452014B12B00C8D658 /* Testing */,
 				D53930462014B12B00C8D658 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D53930762014B86E00C8D658 /* Build configuration list for PBXNativeTarget "CommonLibrary iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D53930732014B86E00C8D658 /* Debug */,
+				D53930742014B86E00C8D658 /* Testing */,
+				D53930752014B86E00C8D658 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D53930812014B87D00C8D658 /* Build configuration list for PBXNativeTarget "CommonLibrary watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D53930822014B87D00C8D658 /* Debug */,
+				D53930832014B87D00C8D658 /* Testing */,
+				D53930842014B87D00C8D658 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
