@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CommonLibrary
 
 public class BitcoinAPIClient: BitcoinRateAPI {
     static let shared: BitcoinRateAPI = {

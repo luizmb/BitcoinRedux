@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import CommonLibrary
 
 final class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: Window?
+    var window: UIWindow?
 
     override init() {
         super.init()
@@ -18,7 +19,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow.create()
+        window = UIWindow.create() as? UIWindow
         actionDispatcher.async(BootstrapRequest.boot(application: application,
                                                      window: window!,
                                                      launchOptions: launchOptions))

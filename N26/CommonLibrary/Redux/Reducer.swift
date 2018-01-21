@@ -18,7 +18,7 @@ public struct AnyReducer<S>: Reducer {
     public typealias StateType = S
     let reducerFunction: (S, Action) -> S
 
-    init<R: Reducer>(_ reducer: R) where R.StateType == S {
+    public init<R: Reducer>(_ reducer: R) where R.StateType == S {
         self.reducerFunction = reducer.reduce
     }
 

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CommonLibrary
 
 public enum NavigationActionRequest: AppActionAsync {
     public typealias StateType = AppState

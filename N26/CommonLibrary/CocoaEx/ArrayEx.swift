@@ -9,7 +9,7 @@
 import UIKit
 
 extension Array {
-    subscript (safe index: Int) -> Element? {
+    public subscript (safe index: Int) -> Element? {
         return index < count && index >= 0 ? self[index] : nil
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CommonLibrary
 
 enum BitcoinRateRequest: AppActionAsync {
     case realtimeCache

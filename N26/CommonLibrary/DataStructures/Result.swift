@@ -7,14 +7,14 @@ public enum Result<T: Equatable> {
 
 // MARK: - Functor, Monad
 extension Result {
-    func map<B>(_ transform: (T) -> (B)) -> Result<B> {
+    public func map<B>(_ transform: (T) -> (B)) -> Result<B> {
         switch self {
         case .error(let error): return .error(error)
         case .success(let valueT): return .success(transform(valueT))
         }
     }
 
-    func flatMap<B>(_ transform: (T) -> (Result<B>)) -> Result<B> {
+    public func flatMap<B>(_ transform: (T) -> (Result<B>)) -> Result<B> {
         switch self {
         case .error(let error): return .error(error)
         case .success(let valueT): return transform(valueT)

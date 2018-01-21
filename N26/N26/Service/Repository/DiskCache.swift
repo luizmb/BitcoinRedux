@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CommonLibrary
 
 public enum FileError: Error {
     case notFound

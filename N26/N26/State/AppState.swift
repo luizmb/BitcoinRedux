@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CommonLibrary
 
 public struct AppState: Equatable {
     var bitcoinState = BitcoinState()

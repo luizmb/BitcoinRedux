@@ -17,6 +17,7 @@ public func ==(lhs: Application, rhs: Application) -> Bool {
     return lhs.hashValue == rhs.hashValue
 }
 
+#if os(iOS)
 extension UIApplication: Application {
     public var keepScreenOn: Bool {
         get {
@@ -27,3 +28,4 @@ extension UIApplication: Application {
         }
     }
 }
+#endif

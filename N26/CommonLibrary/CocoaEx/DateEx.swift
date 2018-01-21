@@ -9,12 +9,12 @@
 import Foundation
 
 extension Date {
-    var backToMidnight: Date {
+    public var backToMidnight: Date {
         let calendar = Calendar.current
         return calendar.startOfDay(for: self)
     }
 
-    func addingDays(_ days: Int) -> Date {
+    public func addingDays(_ days: Int) -> Date {
         let calendar = Calendar.current
         var daysOffset = DateComponents()
         daysOffset.day = days

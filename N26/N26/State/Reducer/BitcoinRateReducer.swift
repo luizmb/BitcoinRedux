@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CommonLibrary
 
 public struct BitcoinRateReducer: Reducer {
     public func reduce(_ currentState: AppState, action: Action) -> AppState {

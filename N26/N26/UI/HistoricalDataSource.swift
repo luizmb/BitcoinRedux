@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CommonLibrary
 
 final class HistoricalDataSource: NSObject, UITableViewDataSource {
     private weak var tableView: UITableView?

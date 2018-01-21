@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CommonLibrary
 
 public protocol RepositoryProtocol {
     func save(data: Data, name: String)

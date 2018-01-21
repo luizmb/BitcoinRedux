@@ -1,7 +1,7 @@
 import UIKit
 
 extension UITableViewCell {
-    static func reuseIdentifier() -> String {
+    public static func reuseIdentifier() -> String {
         return nibName
     }
 }

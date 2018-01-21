@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CommonLibrary
 
 extension InjectorProtocol {
     public var actionDispatcher: ActionDispatcher { return self.mapper.getSingleton()! }

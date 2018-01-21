@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CommonLibrary
 
 enum BootstrapRequest: AppActionAsync {
     typealias StateType = AppState

@@ -11,16 +11,16 @@ public final class Disposable {
     }
 }
 
-protocol HasDisposableBag: class {
+public protocol HasDisposableBag: class {
     var disposables: [Any] { get set }
 }
 
 extension Disposable {
-    func addDisposableTo(_ disposableBag: inout [Any]) {
+    public func addDisposableTo(_ disposableBag: inout [Any]) {
         disposableBag.append(self)
     }
 
-    func bind(to parent: HasDisposableBag) {
+    public func bind(to parent: HasDisposableBag) {
         parent.disposables.append(self)
     }
 }

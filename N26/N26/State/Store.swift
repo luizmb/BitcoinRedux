@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CommonLibrary
 
 public protocol AppActionAsync: ActionAsync where StateType == AppState {
 }
@@ -16,7 +17,7 @@ public protocol ActionDispatcher {
     func async<AppActionAsyncType: AppActionAsync>(_ action: AppActionAsyncType)
 }
 
-public final class Store: StoreBase<AppState, EntryPointReducer> {
+final public class Store: StoreBase<AppState, EntryPointReducer> {
     static let shared: Store = {
         let global = Store()
         return global

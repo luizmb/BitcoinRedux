@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CommonLibrary
 
 public struct BitcoinState {
     public var realtimeRate: SyncableResult<BitcoinRealTimeRate> = .neverLoaded

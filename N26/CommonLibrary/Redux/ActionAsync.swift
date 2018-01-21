@@ -15,7 +15,7 @@ public struct AnyActionAsync<S>: ActionAsync {
         @escaping (AnyActionAsync<StateType>) -> ())
         -> Void
 
-    init<A: ActionAsync>(_ actionAsync: A) where A.StateType == S {
+    public init<A: ActionAsync>(_ actionAsync: A) where A.StateType == S {
         self.executeFunction = actionAsync.execute
     }
 

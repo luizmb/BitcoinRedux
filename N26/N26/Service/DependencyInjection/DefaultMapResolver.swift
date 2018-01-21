@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CommonLibrary
 
 public class DefaultMapResolver {
     public static func mapServices() {

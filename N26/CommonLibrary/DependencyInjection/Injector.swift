@@ -29,11 +29,11 @@ public class Injector: InjectorProtocol {
 #endif
 
 #if TESTING
-    func injector() -> InjectorProtocol {
+    public func injector() -> InjectorProtocol {
         return MockInjector.getInjector()!
     }
 #else
-    func injector() -> InjectorProtocol {
+    public func injector() -> InjectorProtocol {
         return Injector.shared
     }
 #endif

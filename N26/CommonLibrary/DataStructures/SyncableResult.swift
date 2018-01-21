@@ -20,7 +20,7 @@ public func ==<T>(lhs: SyncableResult<T>, rhs: SyncableResult<T>) -> Bool {
 }
 
 extension SyncableResult {
-    func possibleResult() -> Result<T>? {
+    public func possibleResult() -> Result<T>? {
         switch self {
         case .neverLoaded: return nil
         case .syncing(_, let oldValue): return oldValue
@@ -28,7 +28,7 @@ extension SyncableResult {
         }
     }
 
-    func possibleValue() -> T? {
+    public func possibleValue() -> T? {
         return self.possibleResult().flatMap {
             switch $0 {
             case .success(let value): return value
@@ -51,7 +51,7 @@ public enum SyncableArrayResult<T: Equatable> {
 }
 
 extension SyncableArrayResult {
-    func possibleResult() -> ResultArray<T>? {
+    public func possibleResult() -> ResultArray<T>? {
         switch self {
         case .neverLoaded: return nil
         case .syncing(_, let oldValue): return oldValue
@@ -59,7 +59,7 @@ extension SyncableArrayResult {
         }
     }
 
-    func possibleValue() -> [T]? {
+    public func possibleValue() -> [T]? {
         return self.possibleResult().flatMap {
             switch $0 {
             case .success(let value): return value
@@ -70,7 +70,7 @@ extension SyncableArrayResult {
 }
 
 extension SyncableArrayResult {
-    func map<B: Equatable>(_ transform: (T) -> B) -> SyncableArrayResult<B> {
+    public func map<B: Equatable>(_ transform: (T) -> B) -> SyncableArrayResult<B> {
         switch self {
         case .neverLoaded: return .neverLoaded
         case .syncing(let task, let oldValue):

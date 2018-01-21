@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CommonLibrary
 
 final class HistoricalViewController: UIViewController {
     var disposables: [Any] = []

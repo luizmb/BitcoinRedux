@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CommonLibrary
 
 public protocol StateProvider {
     func map<B>(_ transform: @escaping (AppState) -> B) -> Signal<B>

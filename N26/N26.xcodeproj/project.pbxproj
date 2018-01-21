@@ -13,11 +13,9 @@
 		D5393011201405CB00C8D658 /* RouterReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5393010201405CB00C8D658 /* RouterReducerTests.swift */; };
 		D5393013201407D500C8D658 /* NavigationActionRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5393012201407D500C8D658 /* NavigationActionRequestTests.swift */; };
 		D53930152014120D00C8D658 /* BootstrapRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930142014120D00C8D658 /* BootstrapRequestTests.swift */; };
-		D5393017201424E100C8D658 /* UIApplicationEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5393016201424E100C8D658 /* UIApplicationEx.swift */; };
 		D53930192014349A00C8D658 /* BitcoinRateRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930182014349A00C8D658 /* BitcoinRateRequestTests.swift */; };
 		D539301C201441BF00C8D658 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539301B201441BF00C8D658 /* RepositoryProtocol.swift */; };
 		D539301E2014421800C8D658 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539301D2014421800C8D658 /* DiskCache.swift */; };
-		D53930202014452700C8D658 /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539301F2014452700C8D658 /* StringEx.swift */; };
 		D53930272014B12A00C8D658 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53930252014B12A00C8D658 /* Interface.storyboard */; };
 		D53930292014B12A00C8D658 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53930282014B12A00C8D658 /* Assets.xcassets */; };
 		D53930302014B12B00C8D658 /* BitcoinWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D539302F2014B12A00C8D658 /* BitcoinWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -50,21 +48,16 @@
 		D53930BE2014BBC400C8D658 /* ArrayEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930962014BBC400C8D658 /* ArrayEx.swift */; };
 		D53930BF2014BBC400C8D658 /* ArrayEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930962014BBC400C8D658 /* ArrayEx.swift */; };
 		D53930C02014BBC400C8D658 /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930972014BBC400C8D658 /* UIViewEx.swift */; };
-		D53930C12014BBC400C8D658 /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930972014BBC400C8D658 /* UIViewEx.swift */; };
 		D53930C22014BBC400C8D658 /* DateEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930982014BBC400C8D658 /* DateEx.swift */; };
 		D53930C32014BBC400C8D658 /* DateEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930982014BBC400C8D658 /* DateEx.swift */; };
 		D53930C42014BBC400C8D658 /* UIWindowEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930992014BBC400C8D658 /* UIWindowEx.swift */; };
-		D53930C52014BBC400C8D658 /* UIWindowEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930992014BBC400C8D658 /* UIWindowEx.swift */; };
 		D53930C62014BBC400C8D658 /* UIViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309A2014BBC400C8D658 /* UIViewControllerEx.swift */; };
-		D53930C72014BBC400C8D658 /* UIViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309A2014BBC400C8D658 /* UIViewControllerEx.swift */; };
 		D53930C82014BBC400C8D658 /* Startable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309B2014BBC400C8D658 /* Startable.swift */; };
 		D53930C92014BBC400C8D658 /* Startable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309B2014BBC400C8D658 /* Startable.swift */; };
 		D53930CA2014BBC400C8D658 /* UITableViewCellEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309C2014BBC400C8D658 /* UITableViewCellEx.swift */; };
-		D53930CB2014BBC400C8D658 /* UITableViewCellEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309C2014BBC400C8D658 /* UITableViewCellEx.swift */; };
 		D53930CC2014BBC400C8D658 /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309D2014BBC400C8D658 /* StringEx.swift */; };
 		D53930CD2014BBC400C8D658 /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309D2014BBC400C8D658 /* StringEx.swift */; };
 		D53930CE2014BBC400C8D658 /* UICollectionReusableViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309E2014BBC400C8D658 /* UICollectionReusableViewEx.swift */; };
-		D53930CF2014BBC400C8D658 /* UICollectionReusableViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309E2014BBC400C8D658 /* UICollectionReusableViewEx.swift */; };
 		D53930D02014BBC400C8D658 /* URLSessionTask+CancelableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309F2014BBC400C8D658 /* URLSessionTask+CancelableTask.swift */; };
 		D53930D12014BBC400C8D658 /* URLSessionTask+CancelableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539309F2014BBC400C8D658 /* URLSessionTask+CancelableTask.swift */; };
 		D53930D22014BBC400C8D658 /* CancelableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A12014BBC400C8D658 /* CancelableTask.swift */; };
@@ -85,30 +78,12 @@
 		D53930E12014BBC400C8D658 /* SyncableResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A82014BBC400C8D658 /* SyncableResult.swift */; };
 		D53930E22014BBC400C8D658 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A92014BBC400C8D658 /* Signal.swift */; };
 		D53930E32014BBC400C8D658 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A92014BBC400C8D658 /* Signal.swift */; };
+		D53930E52014BDC300C8D658 /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539306E2014B86E00C8D658 /* CommonLibrary.framework */; };
+		D53930E62014BDD000C8D658 /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539307C2014B87C00C8D658 /* CommonLibrary.framework */; };
 		D5A467A120129459006AAB58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467A020129459006AAB58 /* AppDelegate.swift */; };
 		D5A467A820129459006AAB58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5A467A720129459006AAB58 /* Assets.xcassets */; };
-		D5A467C6201295D2006AAB58 /* ActionAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467C2201295D2006AAB58 /* ActionAsync.swift */; };
-		D5A467C7201295D2006AAB58 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467C3201295D2006AAB58 /* Reducer.swift */; };
-		D5A467C8201295D2006AAB58 /* StoreBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467C4201295D2006AAB58 /* StoreBase.swift */; };
-		D5A467C9201295D2006AAB58 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467C5201295D2006AAB58 /* Action.swift */; };
-		D5A467D220129711006AAB58 /* UICollectionReusableViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467CC20129711006AAB58 /* UICollectionReusableViewEx.swift */; };
-		D5A467D320129711006AAB58 /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467CD20129711006AAB58 /* UIViewEx.swift */; };
-		D5A467D420129711006AAB58 /* URLSessionTask+CancelableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467CE20129711006AAB58 /* URLSessionTask+CancelableTask.swift */; };
-		D5A467D520129711006AAB58 /* UIWindowEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467CF20129711006AAB58 /* UIWindowEx.swift */; };
-		D5A467D620129711006AAB58 /* UIViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467D020129711006AAB58 /* UIViewControllerEx.swift */; };
-		D5A467D720129711006AAB58 /* UITableViewCellEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467D120129711006AAB58 /* UITableViewCellEx.swift */; };
-		D5A467E520129737006AAB58 /* CancelableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467DA20129737006AAB58 /* CancelableTask.swift */; };
-		D5A467E720129737006AAB58 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467DC20129737006AAB58 /* Result.swift */; };
-		D5A467E820129737006AAB58 /* SignalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467DD20129737006AAB58 /* SignalProtocol.swift */; };
-		D5A467E920129737006AAB58 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467DE20129737006AAB58 /* Disposable.swift */; };
-		D5A467EA20129737006AAB58 /* SyncableResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467DF20129737006AAB58 /* SyncableResult.swift */; };
-		D5A467EB20129737006AAB58 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467E020129737006AAB58 /* Async.swift */; };
-		D5A467EC20129737006AAB58 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467E120129737006AAB58 /* Atomic.swift */; };
-		D5A467ED20129737006AAB58 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467E220129737006AAB58 /* ConfigurableCell.swift */; };
-		D5A467EE20129737006AAB58 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467E320129737006AAB58 /* Signal.swift */; };
 		D5A467F12012A079006AAB58 /* CocoaExTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467F02012A079006AAB58 /* CocoaExTests.swift */; };
 		D5A467F32012A673006AAB58 /* DataStructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467F22012A673006AAB58 /* DataStructureTests.swift */; };
-		D5A467FF2012B495006AAB58 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467FE2012B495006AAB58 /* URLRequest.swift */; };
 		D5A468022012B4CE006AAB58 /* BitcoinEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468012012B4CE006AAB58 /* BitcoinEndpoint.swift */; };
 		D5A468042012B4E8006AAB58 /* BitcoinRateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468032012B4E7006AAB58 /* BitcoinRateAPI.swift */; };
 		D5A468072012B521006AAB58 /* URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468062012B521006AAB58 /* URLEndpoint.swift */; };
@@ -122,7 +97,6 @@
 		D5A4681A2012C92B006AAB58 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468192012C92B006AAB58 /* Currency.swift */; };
 		D5A4681C2012C947006AAB58 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4681B2012C947006AAB58 /* Rate.swift */; };
 		D5A4681E2012C955006AAB58 /* HistoricalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4681D2012C955006AAB58 /* HistoricalResponse.swift */; };
-		D5A468202012C97E006AAB58 /* DateEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4681F2012C97E006AAB58 /* DateEx.swift */; };
 		D5A468232012C9CB006AAB58 /* RealTimeResponse.Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468222012C9CB006AAB58 /* RealTimeResponse.Codable.swift */; };
 		D5A468252012CA08006AAB58 /* HistoricalResponse.Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468242012CA08006AAB58 /* HistoricalResponse.Codable.swift */; };
 		D5A468282012CB68006AAB58 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468272012CB68006AAB58 /* ModelTests.swift */; };
@@ -136,10 +110,6 @@
 		D5A4683F20135DED006AAB58 /* NavigationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683E20135DED006AAB58 /* NavigationRoute.swift */; };
 		D5A4684120135E14006AAB58 /* NavigationTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4684020135E14006AAB58 /* NavigationTree.swift */; };
 		D5A4684320135F96006AAB58 /* RouterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4684220135F96006AAB58 /* RouterAction.swift */; };
-		D5A4684620136664006AAB58 /* InjectorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4684520136664006AAB58 /* InjectorProtocol.swift */; };
-		D5A46848201366A3006AAB58 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A46847201366A3006AAB58 /* Injector.swift */; };
-		D5A4684A201366D3006AAB58 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A46849201366D3006AAB58 /* Mapper.swift */; };
-		D5A4684C201366EE006AAB58 /* ConstructorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4684B201366EE006AAB58 /* ConstructorType.swift */; };
 		D5A4684E2013675F006AAB58 /* DefaultMapResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4684D2013675F006AAB58 /* DefaultMapResolver.swift */; };
 		D5A468512013684E006AAB58 /* InjectorServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468502013684E006AAB58 /* InjectorServices.swift */; };
 		D5A4685320136ABF006AAB58 /* NavigationActionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4685220136ABF006AAB58 /* NavigationActionRequest.swift */; };
@@ -149,10 +119,8 @@
 		D5A4685D20136F25006AAB58 /* HistoricalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A4685C20136F25006AAB58 /* HistoricalView.xib */; };
 		D5A4685F20136F35006AAB58 /* HistoricalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4685E20136F35006AAB58 /* HistoricalView.swift */; };
 		D5A4686120136F5F006AAB58 /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4686020136F5F006AAB58 /* HistoricalViewController.swift */; };
-		D5A4686320137055006AAB58 /* Startable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4686220137055006AAB58 /* Startable.swift */; };
 		D5A46865201370B6006AAB58 /* HistoricalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A46864201370B6006AAB58 /* HistoricalDataSource.swift */; };
 		D5A4686720137201006AAB58 /* HistoricalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4686620137201006AAB58 /* HistoricalViewModel.swift */; };
-		D5A46869201374FB006AAB58 /* ArrayEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A46868201374FB006AAB58 /* ArrayEx.swift */; };
 		D5A4686B201377D1006AAB58 /* HistoricalRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4686A201377D1006AAB58 /* HistoricalRecordTableViewCell.swift */; };
 		D5A4686D201377F7006AAB58 /* HistoricalRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A4686C201377F7006AAB58 /* HistoricalRecordTableViewCell.xib */; };
 		D5A4686F20137D23006AAB58 /* BitcoinState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4686E20137D23006AAB58 /* BitcoinState.swift */; };
@@ -223,11 +191,9 @@
 		D5393010201405CB00C8D658 /* RouterReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterReducerTests.swift; sourceTree = "<group>"; };
 		D5393012201407D500C8D658 /* NavigationActionRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationActionRequestTests.swift; sourceTree = "<group>"; };
 		D53930142014120D00C8D658 /* BootstrapRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapRequestTests.swift; sourceTree = "<group>"; };
-		D5393016201424E100C8D658 /* UIApplicationEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationEx.swift; sourceTree = "<group>"; };
 		D53930182014349A00C8D658 /* BitcoinRateRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateRequestTests.swift; sourceTree = "<group>"; };
 		D539301B201441BF00C8D658 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		D539301D2014421800C8D658 /* DiskCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
-		D539301F2014452700C8D658 /* StringEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
 		D53930232014B12A00C8D658 /* BitcoinWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcoinWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53930262014B12A00C8D658 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		D53930282014B12A00C8D658 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -277,28 +243,8 @@
 		D5A467AC20129459006AAB58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5A467B120129459006AAB58 /* N26Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N26Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A467B720129459006AAB58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5A467C2201295D2006AAB58 /* ActionAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionAsync.swift; sourceTree = "<group>"; };
-		D5A467C3201295D2006AAB58 /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
-		D5A467C4201295D2006AAB58 /* StoreBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreBase.swift; sourceTree = "<group>"; };
-		D5A467C5201295D2006AAB58 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
-		D5A467CC20129711006AAB58 /* UICollectionReusableViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionReusableViewEx.swift; sourceTree = "<group>"; };
-		D5A467CD20129711006AAB58 /* UIViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewEx.swift; sourceTree = "<group>"; };
-		D5A467CE20129711006AAB58 /* URLSessionTask+CancelableTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSessionTask+CancelableTask.swift"; sourceTree = "<group>"; };
-		D5A467CF20129711006AAB58 /* UIWindowEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowEx.swift; sourceTree = "<group>"; };
-		D5A467D020129711006AAB58 /* UIViewControllerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerEx.swift; sourceTree = "<group>"; };
-		D5A467D120129711006AAB58 /* UITableViewCellEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellEx.swift; sourceTree = "<group>"; };
-		D5A467DA20129737006AAB58 /* CancelableTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelableTask.swift; sourceTree = "<group>"; };
-		D5A467DC20129737006AAB58 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		D5A467DD20129737006AAB58 /* SignalProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalProtocol.swift; sourceTree = "<group>"; };
-		D5A467DE20129737006AAB58 /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
-		D5A467DF20129737006AAB58 /* SyncableResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncableResult.swift; sourceTree = "<group>"; };
-		D5A467E020129737006AAB58 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
-		D5A467E120129737006AAB58 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
-		D5A467E220129737006AAB58 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
-		D5A467E320129737006AAB58 /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
 		D5A467F02012A079006AAB58 /* CocoaExTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaExTests.swift; sourceTree = "<group>"; };
 		D5A467F22012A673006AAB58 /* DataStructureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTests.swift; sourceTree = "<group>"; };
-		D5A467FE2012B495006AAB58 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 		D5A468012012B4CE006AAB58 /* BitcoinEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinEndpoint.swift; sourceTree = "<group>"; };
 		D5A468032012B4E7006AAB58 /* BitcoinRateAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateAPI.swift; sourceTree = "<group>"; };
 		D5A468062012B521006AAB58 /* URLEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEndpoint.swift; sourceTree = "<group>"; };
@@ -312,7 +258,6 @@
 		D5A468192012C92B006AAB58 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		D5A4681B2012C947006AAB58 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		D5A4681D2012C955006AAB58 /* HistoricalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalResponse.swift; sourceTree = "<group>"; };
-		D5A4681F2012C97E006AAB58 /* DateEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEx.swift; sourceTree = "<group>"; };
 		D5A468222012C9CB006AAB58 /* RealTimeResponse.Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeResponse.Codable.swift; sourceTree = "<group>"; };
 		D5A468242012CA08006AAB58 /* HistoricalResponse.Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalResponse.Codable.swift; sourceTree = "<group>"; };
 		D5A468272012CB68006AAB58 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
@@ -326,10 +271,6 @@
 		D5A4683E20135DED006AAB58 /* NavigationRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRoute.swift; sourceTree = "<group>"; };
 		D5A4684020135E14006AAB58 /* NavigationTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTree.swift; sourceTree = "<group>"; };
 		D5A4684220135F96006AAB58 /* RouterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterAction.swift; sourceTree = "<group>"; };
-		D5A4684520136664006AAB58 /* InjectorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorProtocol.swift; sourceTree = "<group>"; };
-		D5A46847201366A3006AAB58 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
-		D5A46849201366D3006AAB58 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
-		D5A4684B201366EE006AAB58 /* ConstructorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorType.swift; sourceTree = "<group>"; };
 		D5A4684D2013675F006AAB58 /* DefaultMapResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMapResolver.swift; sourceTree = "<group>"; };
 		D5A468502013684E006AAB58 /* InjectorServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorServices.swift; sourceTree = "<group>"; };
 		D5A4685220136ABF006AAB58 /* NavigationActionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationActionRequest.swift; sourceTree = "<group>"; };
@@ -339,10 +280,8 @@
 		D5A4685C20136F25006AAB58 /* HistoricalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricalView.xib; sourceTree = "<group>"; };
 		D5A4685E20136F35006AAB58 /* HistoricalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalView.swift; sourceTree = "<group>"; };
 		D5A4686020136F5F006AAB58 /* HistoricalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewController.swift; sourceTree = "<group>"; };
-		D5A4686220137055006AAB58 /* Startable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Startable.swift; sourceTree = "<group>"; };
 		D5A46864201370B6006AAB58 /* HistoricalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalDataSource.swift; sourceTree = "<group>"; };
 		D5A4686620137201006AAB58 /* HistoricalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewModel.swift; sourceTree = "<group>"; };
-		D5A46868201374FB006AAB58 /* ArrayEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayEx.swift; sourceTree = "<group>"; };
 		D5A4686A201377D1006AAB58 /* HistoricalRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalRecordTableViewCell.swift; sourceTree = "<group>"; };
 		D5A4686C201377F7006AAB58 /* HistoricalRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricalRecordTableViewCell.xib; sourceTree = "<group>"; };
 		D5A4686E20137D23006AAB58 /* BitcoinState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinState.swift; sourceTree = "<group>"; };
@@ -362,6 +301,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53930E62014BDD000C8D658 /* CommonLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +323,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53930E52014BDC300C8D658 /* CommonLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,17 +418,17 @@
 		D53930932014BBC400C8D658 /* CocoaEx */ = {
 			isa = PBXGroup;
 			children = (
-				D53930942014BBC400C8D658 /* UIApplicationEx.swift */,
-				D53930952014BBC400C8D658 /* URLRequest.swift */,
 				D53930962014BBC400C8D658 /* ArrayEx.swift */,
-				D53930972014BBC400C8D658 /* UIViewEx.swift */,
 				D53930982014BBC400C8D658 /* DateEx.swift */,
-				D53930992014BBC400C8D658 /* UIWindowEx.swift */,
-				D539309A2014BBC400C8D658 /* UIViewControllerEx.swift */,
 				D539309B2014BBC400C8D658 /* Startable.swift */,
-				D539309C2014BBC400C8D658 /* UITableViewCellEx.swift */,
 				D539309D2014BBC400C8D658 /* StringEx.swift */,
+				D53930942014BBC400C8D658 /* UIApplicationEx.swift */,
 				D539309E2014BBC400C8D658 /* UICollectionReusableViewEx.swift */,
+				D539309C2014BBC400C8D658 /* UITableViewCellEx.swift */,
+				D539309A2014BBC400C8D658 /* UIViewControllerEx.swift */,
+				D53930972014BBC400C8D658 /* UIViewEx.swift */,
+				D53930992014BBC400C8D658 /* UIWindowEx.swift */,
+				D53930952014BBC400C8D658 /* URLRequest.swift */,
 				D539309F2014BBC400C8D658 /* URLSessionTask+CancelableTask.swift */,
 			);
 			path = CocoaEx;
@@ -509,6 +450,13 @@
 			path = DataStructures;
 			sourceTree = "<group>";
 		};
+		D53930E42014BDC300C8D658 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D5A4679420129459006AAB58 = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +466,7 @@
 				D53930332014B12B00C8D658 /* BitcoinWatch Extension */,
 				D53930852014B95100C8D658 /* CommonLibrary */,
 				D5A4679E20129459006AAB58 /* Products */,
+				D53930E42014BDC300C8D658 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -538,7 +487,6 @@
 			isa = PBXGroup;
 			children = (
 				D5A467C0201294E4006AAB58 /* Bootstrap */,
-				D5A467C120129593006AAB58 /* Common */,
 				D5A468162012C8CB006AAB58 /* Model */,
 				D5A468002012B4B5006AAB58 /* Service */,
 				D5A4682C20135AFC006AAB58 /* State */,
@@ -572,63 +520,6 @@
 				D5F6CD872013CF2C0005E972 /* main.swift */,
 			);
 			path = Bootstrap;
-			sourceTree = "<group>";
-		};
-		D5A467C120129593006AAB58 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				D5A467CB20129697006AAB58 /* CocoaEx */,
-				D5A467D820129737006AAB58 /* DataStructures */,
-				D5A4684F201367C0006AAB58 /* DependencyInjection */,
-				D5A467CA201295F8006AAB58 /* Redux */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		D5A467CA201295F8006AAB58 /* Redux */ = {
-			isa = PBXGroup;
-			children = (
-				D5A467C5201295D2006AAB58 /* Action.swift */,
-				D5A467C2201295D2006AAB58 /* ActionAsync.swift */,
-				D5A467C3201295D2006AAB58 /* Reducer.swift */,
-				D5A467C4201295D2006AAB58 /* StoreBase.swift */,
-			);
-			path = Redux;
-			sourceTree = "<group>";
-		};
-		D5A467CB20129697006AAB58 /* CocoaEx */ = {
-			isa = PBXGroup;
-			children = (
-				D5A46868201374FB006AAB58 /* ArrayEx.swift */,
-				D5A4681F2012C97E006AAB58 /* DateEx.swift */,
-				D5A4686220137055006AAB58 /* Startable.swift */,
-				D539301F2014452700C8D658 /* StringEx.swift */,
-				D5393016201424E100C8D658 /* UIApplicationEx.swift */,
-				D5A467CC20129711006AAB58 /* UICollectionReusableViewEx.swift */,
-				D5A467D120129711006AAB58 /* UITableViewCellEx.swift */,
-				D5A467D020129711006AAB58 /* UIViewControllerEx.swift */,
-				D5A467CD20129711006AAB58 /* UIViewEx.swift */,
-				D5A467CF20129711006AAB58 /* UIWindowEx.swift */,
-				D5A467FE2012B495006AAB58 /* URLRequest.swift */,
-				D5A467CE20129711006AAB58 /* URLSessionTask+CancelableTask.swift */,
-			);
-			path = CocoaEx;
-			sourceTree = "<group>";
-		};
-		D5A467D820129737006AAB58 /* DataStructures */ = {
-			isa = PBXGroup;
-			children = (
-				D5A467E020129737006AAB58 /* Async.swift */,
-				D5A467E120129737006AAB58 /* Atomic.swift */,
-				D5A467DA20129737006AAB58 /* CancelableTask.swift */,
-				D5A467E220129737006AAB58 /* ConfigurableCell.swift */,
-				D5A467DE20129737006AAB58 /* Disposable.swift */,
-				D5A467DC20129737006AAB58 /* Result.swift */,
-				D5A467E320129737006AAB58 /* Signal.swift */,
-				D5A467DD20129737006AAB58 /* SignalProtocol.swift */,
-				D5A467DF20129737006AAB58 /* SyncableResult.swift */,
-			);
-			path = DataStructures;
 			sourceTree = "<group>";
 		};
 		D5A467EF2012A06A006AAB58 /* Common */ = {
@@ -779,17 +670,6 @@
 			children = (
 				D5A4684D2013675F006AAB58 /* DefaultMapResolver.swift */,
 				D5A468502013684E006AAB58 /* InjectorServices.swift */,
-			);
-			path = DependencyInjection;
-			sourceTree = "<group>";
-		};
-		D5A4684F201367C0006AAB58 /* DependencyInjection */ = {
-			isa = PBXGroup;
-			children = (
-				D5A4684B201366EE006AAB58 /* ConstructorType.swift */,
-				D5A46847201366A3006AAB58 /* Injector.swift */,
-				D5A4684520136664006AAB58 /* InjectorProtocol.swift */,
-				D5A46849201366D3006AAB58 /* Mapper.swift */,
 			);
 			path = DependencyInjection;
 			sourceTree = "<group>";
@@ -1127,10 +1007,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D53930C52014BBC400C8D658 /* UIWindowEx.swift in Sources */,
 				D53930D92014BBC400C8D658 /* Disposable.swift in Sources */,
 				D53930B12014BBC400C8D658 /* ConstructorType.swift in Sources */,
-				D53930CF2014BBC400C8D658 /* UICollectionReusableViewEx.swift in Sources */,
 				D53930E32014BBC400C8D658 /* Signal.swift in Sources */,
 				D53930DD2014BBC400C8D658 /* Atomic.swift in Sources */,
 				D53930BB2014BBC400C8D658 /* UIApplicationEx.swift in Sources */,
@@ -1142,7 +1020,6 @@
 				D53930B52014BBC400C8D658 /* ActionAsync.swift in Sources */,
 				D53930D72014BBC400C8D658 /* SignalProtocol.swift in Sources */,
 				D53930DF2014BBC400C8D658 /* ConfigurableCell.swift in Sources */,
-				D53930C72014BBC400C8D658 /* UIViewControllerEx.swift in Sources */,
 				D53930BF2014BBC400C8D658 /* ArrayEx.swift in Sources */,
 				D53930D52014BBC400C8D658 /* Result.swift in Sources */,
 				D53930AF2014BBC400C8D658 /* Mapper.swift in Sources */,
@@ -1150,12 +1027,10 @@
 				D53930D12014BBC400C8D658 /* URLSessionTask+CancelableTask.swift in Sources */,
 				D53930B32014BBC400C8D658 /* Reducer.swift in Sources */,
 				D53930AD2014BBC400C8D658 /* Injector.swift in Sources */,
-				D53930CB2014BBC400C8D658 /* UITableViewCellEx.swift in Sources */,
 				D53930C92014BBC400C8D658 /* Startable.swift in Sources */,
 				D53930BD2014BBC400C8D658 /* URLRequest.swift in Sources */,
 				D53930C32014BBC400C8D658 /* DateEx.swift in Sources */,
 				D53930D32014BBC400C8D658 /* CancelableTask.swift in Sources */,
-				D53930C12014BBC400C8D658 /* UIViewEx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1165,75 +1040,46 @@
 			files = (
 				D5A4683120135BC8006AAB58 /* Store.swift in Sources */,
 				D5A4680D2012BCC3006AAB58 /* BitcoinAPIClient.swift in Sources */,
-				D5A467D520129711006AAB58 /* UIWindowEx.swift in Sources */,
 				D5A4687320138777006AAB58 /* BitcoinRateRequest.swift in Sources */,
-				D53930202014452700C8D658 /* StringEx.swift in Sources */,
 				D5A468512013684E006AAB58 /* InjectorServices.swift in Sources */,
 				D5A468232012C9CB006AAB58 /* RealTimeResponse.Codable.swift in Sources */,
-				D5A468202012C97E006AAB58 /* DateEx.swift in Sources */,
-				D5A467D620129711006AAB58 /* UIViewControllerEx.swift in Sources */,
 				D5A46865201370B6006AAB58 /* HistoricalDataSource.swift in Sources */,
 				D5A4681C2012C947006AAB58 /* Rate.swift in Sources */,
-				D5A467EA20129737006AAB58 /* SyncableResult.swift in Sources */,
 				D5A4684E2013675F006AAB58 /* DefaultMapResolver.swift in Sources */,
-				D5A467ED20129737006AAB58 /* ConfigurableCell.swift in Sources */,
 				D5A4687120137DD0006AAB58 /* BitcoinHistoricalRate.swift in Sources */,
 				D5A4683D20135DD4006AAB58 /* NavigationState.swift in Sources */,
-				D5A4686320137055006AAB58 /* Startable.swift in Sources */,
 				D5A4681E2012C955006AAB58 /* HistoricalResponse.swift in Sources */,
 				D5A4681A2012C92B006AAB58 /* Currency.swift in Sources */,
 				D5A4683B20135D6F006AAB58 /* RouterReducer.swift in Sources */,
 				D539301E2014421800C8D658 /* DiskCache.swift in Sources */,
-				D5A467D420129711006AAB58 /* URLSessionTask+CancelableTask.swift in Sources */,
 				D539301C201441BF00C8D658 /* RepositoryProtocol.swift in Sources */,
 				D5A4685F20136F35006AAB58 /* HistoricalView.swift in Sources */,
 				D5A468022012B4CE006AAB58 /* BitcoinEndpoint.swift in Sources */,
-				D5A467EC20129737006AAB58 /* Atomic.swift in Sources */,
 				D5A4685520136AFE006AAB58 /* KnownRoute.swift in Sources */,
 				D5A4683320135BFB006AAB58 /* StateProvider.swift in Sources */,
-				D5A4684C201366EE006AAB58 /* ConstructorType.swift in Sources */,
 				D5A468122012C2A3006AAB58 /* JsonParser.swift in Sources */,
 				D5A4687920139E2C006AAB58 /* BitcoinRateReducer.swift in Sources */,
-				D5A467C6201295D2006AAB58 /* ActionAsync.swift in Sources */,
 				D5A4686720137201006AAB58 /* HistoricalViewModel.swift in Sources */,
-				D5A467E920129737006AAB58 /* Disposable.swift in Sources */,
-				D5A46869201374FB006AAB58 /* ArrayEx.swift in Sources */,
 				D5A467A120129459006AAB58 /* AppDelegate.swift in Sources */,
-				D5A467E720129737006AAB58 /* Result.swift in Sources */,
-				D5A467D220129711006AAB58 /* UICollectionReusableViewEx.swift in Sources */,
-				D5A467D320129711006AAB58 /* UIViewEx.swift in Sources */,
 				D5A4685820136D68006AAB58 /* BootstrapRequest.swift in Sources */,
 				D5A4687520138B02006AAB58 /* BitcoinRateAction.swift in Sources */,
 				D5A4684320135F96006AAB58 /* RouterAction.swift in Sources */,
 				D5A468182012C8F7006AAB58 /* RealTimeResponse.swift in Sources */,
-				D5A467C8201295D2006AAB58 /* StoreBase.swift in Sources */,
-				D5A467C9201295D2006AAB58 /* Action.swift in Sources */,
 				D5A468092012B535006AAB58 /* BitcoinEndpoint.URLEndpoint.swift in Sources */,
-				D5393017201424E100C8D658 /* UIApplicationEx.swift in Sources */,
-				D5A4684620136664006AAB58 /* InjectorProtocol.swift in Sources */,
-				D5A467EB20129737006AAB58 /* Async.swift in Sources */,
 				D5A468072012B521006AAB58 /* URLEndpoint.swift in Sources */,
 				D5A4683720135C79006AAB58 /* EntryPointReducer.swift in Sources */,
-				D5A467FF2012B495006AAB58 /* URLRequest.swift in Sources */,
 				D5A468042012B4E8006AAB58 /* BitcoinRateAPI.swift in Sources */,
 				D5A4684120135E14006AAB58 /* NavigationTree.swift in Sources */,
 				D5A4686B201377D1006AAB58 /* HistoricalRecordTableViewCell.swift in Sources */,
 				D5A4683520135C49006AAB58 /* AppState.swift in Sources */,
-				D5A467C7201295D2006AAB58 /* Reducer.swift in Sources */,
-				D5A467D720129711006AAB58 /* UITableViewCellEx.swift in Sources */,
 				D5A4685A20136DE7006AAB58 /* Theme.swift in Sources */,
-				D5A467E520129737006AAB58 /* CancelableTask.swift in Sources */,
-				D5A4684A201366D3006AAB58 /* Mapper.swift in Sources */,
-				D5A46848201366A3006AAB58 /* Injector.swift in Sources */,
 				D53930082013E3B200C8D658 /* BitcoinRealTimeRate.swift in Sources */,
 				D5A4683F20135DED006AAB58 /* NavigationRoute.swift in Sources */,
 				D5A4686120136F5F006AAB58 /* HistoricalViewController.swift in Sources */,
-				D5A467E820129737006AAB58 /* SignalProtocol.swift in Sources */,
 				D5A4685320136ABF006AAB58 /* NavigationActionRequest.swift in Sources */,
 				D5F6CD882013CF2C0005E972 /* main.swift in Sources */,
 				D5A468252012CA08006AAB58 /* HistoricalResponse.Codable.swift in Sources */,
 				D5A4686F20137D23006AAB58 /* BitcoinState.swift in Sources */,
-				D5A467EE20129737006AAB58 /* Signal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
