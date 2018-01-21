@@ -13,6 +13,7 @@ import CommonLibrary
 final class HistoricalViewController: UIViewController {
     var disposables: [Any] = []
     @IBOutlet weak var tableView: UITableView!
+    private let refreshControl = UIRefreshControl()
     private var dataSource: HistoricalDataSource!
 
     override func viewDidLoad() {
@@ -21,23 +22,37 @@ final class HistoricalViewController: UIViewController {
         stateProvider[\.bitcoinState].subscribe { [weak self] state in
             self?.update(state: state)
         }.bind(to: self)
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
     }
 
     private func update(state: BitcoinState) {
-        var sections: [HistoricalTableViewSection] = []
+        DispatchQueue.main.async {
+            var sections: [HistoricalTableViewSection] = []
 
-        if let realtimeSection = state.realtimeRate.possibleValue().flatMap(HistoricalTableViewSection.init) {
-            sections.append(realtimeSection)
-        }
+            if let realtimeSection = state.realtimeRate.possibleValue().flatMap(HistoricalTableViewSection.init) {
+                sections.append(realtimeSection)
+            }
 
-        if let historicalSection = state.historicalRates.possibleValue().flatMap(HistoricalTableViewSection.init) {
-            sections.append(historicalSection)
-        }
+            if let historicalSection = state.historicalRates.possibleValue().flatMap(HistoricalTableViewSection.init) {
+                sections.append(historicalSection)
+            }
 
-        dataSource.viewModel = sections
-        if sections.count < 0 {
-            // TODO: Fallback for no results
+            self.dataSource.viewModel = sections
+            if sections.count < 0 {
+                // TODO: Fallback for no results
+            }
+
+            switch (state.realtimeRate, state.historicalRates) {
+            case (.syncing, _), (_, .syncing): return
+            default: self.refreshControl.endRefreshing()
+            }
         }
+    }
+
+    @objc private func pullToRefresh() {
+        actionDispatcher.async(BitcoinRateRequest.realtimeRefresh(isManual: true))
+        actionDispatcher.async(BitcoinRateRequest.historicalDataRefresh(isManual: true))
     }
 }
 
