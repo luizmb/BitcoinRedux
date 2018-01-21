@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D527DC4D2014D81B00D4F2FB /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539307C2014B87C00C8D658 /* CommonLibrary.framework */; };
+		D527DC4E2014D81B00D4F2FB /* CommonLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D539307C2014B87C00C8D658 /* CommonLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D53930082013E3B200C8D658 /* BitcoinRealTimeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930072013E3B200C8D658 /* BitcoinRealTimeRate.swift */; };
 		D539300D2013EAB300C8D658 /* BitcoinRateReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539300C2013EAB300C8D658 /* BitcoinRateReducerTests.swift */; };
 		D539300F2013F04B00C8D658 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539300E2013F04B00C8D658 /* Mocks.swift */; };
@@ -79,7 +81,6 @@
 		D53930E22014BBC400C8D658 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A92014BBC400C8D658 /* Signal.swift */; };
 		D53930E32014BBC400C8D658 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A92014BBC400C8D658 /* Signal.swift */; };
 		D53930E52014BDC300C8D658 /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539306E2014B86E00C8D658 /* CommonLibrary.framework */; };
-		D53930E62014BDD000C8D658 /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539307C2014B87C00C8D658 /* CommonLibrary.framework */; };
 		D5A467A120129459006AAB58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467A020129459006AAB58 /* AppDelegate.swift */; };
 		D5A467A820129459006AAB58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5A467A720129459006AAB58 /* Assets.xcassets */; };
 		D5A467F12012A079006AAB58 /* CocoaExTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467F02012A079006AAB58 /* CocoaExTests.swift */; };
@@ -136,6 +137,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D527DC4F2014D81B00D4F2FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5A4679520129459006AAB58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D539307B2014B87C00C8D658;
+			remoteInfo = "CommonLibrary watchOS";
+		};
 		D53930312014B12B00C8D658 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5A4679520129459006AAB58 /* Project object */;
@@ -160,6 +168,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D527DC512014D81B00D4F2FB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D527DC4E2014D81B00D4F2FB /* CommonLibrary.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D53930422014B12B00C8D658 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,7 +320,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D53930E62014BDD000C8D658 /* CommonLibrary.framework in Frameworks */,
+				D527DC4D2014D81B00D4F2FB /* CommonLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,10 +781,12 @@
 				D539302B2014B12A00C8D658 /* Sources */,
 				D539302C2014B12A00C8D658 /* Frameworks */,
 				D539302D2014B12A00C8D658 /* Resources */,
+				D527DC512014D81B00D4F2FB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D527DC502014D81B00D4F2FB /* PBXTargetDependency */,
 			);
 			name = "BitcoinWatch Extension";
 			productName = "BitcoinWatch Extension";
@@ -1109,6 +1130,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D527DC502014D81B00D4F2FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D539307B2014B87C00C8D658 /* CommonLibrary watchOS */;
+			targetProxy = D527DC4F2014D81B00D4F2FB /* PBXContainerItemProxy */;
+		};
 		D53930322014B12B00C8D658 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D539302E2014B12A00C8D658 /* BitcoinWatch Extension */;
@@ -1141,6 +1167,7 @@
 		D539303F2014B12B00C8D658 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
@@ -1163,6 +1190,7 @@
 		D53930402014B12B00C8D658 /* Testing */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
@@ -1181,6 +1209,7 @@
 		D53930412014B12B00C8D658 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
@@ -1339,6 +1368,7 @@
 		D53930822014B87D00C8D658 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1370,6 +1400,7 @@
 		D53930832014B87D00C8D658 /* Testing */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1397,6 +1428,7 @@
 		D53930842014B87D00C8D658 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
