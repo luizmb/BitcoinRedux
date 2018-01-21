@@ -14,6 +14,8 @@ import CommonLibrary
 public enum RouterAction: Action {
     #if os(iOS)
     case didStart(Application, UINavigationController)
+    #else
+    case didStart(Application)
     #endif
     case willNavigate(NavigationRoute)
     case didNavigate(NavigationTree)

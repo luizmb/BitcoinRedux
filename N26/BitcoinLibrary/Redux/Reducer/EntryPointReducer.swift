@@ -7,10 +7,11 @@
 //
 
 import Foundation
-import BitcoinLibrary
 import CommonLibrary
 
 public struct EntryPointReducer: Reducer {
+
+    public init() { }
 
     public typealias StateType = AppState
     private let reducers = [
