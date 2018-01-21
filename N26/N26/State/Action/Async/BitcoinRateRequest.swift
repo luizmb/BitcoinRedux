@@ -23,6 +23,7 @@ enum BitcoinRateRequest: AppActionAsync {
             }
 
             let task = bitcoinRateAPI.request(.realtime(currency: state.currency.code)) { result in
+                // TODO: Save to file-system
                 let realtime: Result<RealTimeResponse> = result.flatMap(JsonParser.decode)
                 dispatch(BitcoinRateAction.didRefreshRealTime(realtime))
             }
@@ -35,6 +36,7 @@ enum BitcoinRateRequest: AppActionAsync {
 
             let startDate = Date().backToMidnight.addingDays(-state.historicalDays)
             let task = bitcoinRateAPI.request(.historical(currency: state.currency.code, startDate: startDate, endDate: Date() )) { result in
+                // TODO: Save to file-system
                 let historical: Result<HistoricalResponse> = result.flatMap(JsonParser.decode)
                 dispatch(BitcoinRateAction.didRefreshHistoricalData(historical))
             }

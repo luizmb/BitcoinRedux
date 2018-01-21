@@ -26,6 +26,8 @@ enum BootstrapRequest: AppActionAsync {
 
             dispatch(RouterAction.didStart(application, navigationController))
 
+            // TODO: Read from file-system in meantime
+            // TODO: Trigger auto-refresh
             dispatchAsync(AnyActionAsync(BitcoinRateRequest.realtimeRefresh))
             dispatchAsync(AnyActionAsync(BitcoinRateRequest.historicalDataRefresh))
         }

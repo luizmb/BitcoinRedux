@@ -15,7 +15,11 @@ private func defaultCurrency() -> Currency { return Currency(code: "EUR", name: 
 // Empty protocols
 enum FooAction: Action { case foo }
 struct AnyError: Error { }
-class Cancelable: CancelableTask { func cancel() { } }
+class Cancelable: CancelableTask {
+    let id = UUID()
+    var cancelCount = 0
+    func cancel() { cancelCount += 1 }
+}
 
 // Default values
 extension NavigationRoute {
@@ -104,6 +108,16 @@ class MockApplication: NSObject, Application {
         didSet {
             keepScreenOnChanged?(keepScreenOn)
         }
+    }
+}
+
+class MockAPI: BitcoinRateAPI {
+    var calledRequest: (BitcoinEndpoint, (Result<Data>) -> ())?
+    var onCallRequest: ((BitcoinEndpoint, (Result<Data>) -> ()) -> CancelableTask)?
+    func request(_ endpoint: BitcoinEndpoint, completion: @escaping (Result<Data>) -> ()) -> CancelableTask {
+        let result = onCallRequest?(endpoint, completion) ?? Cancelable()
+        calledRequest = (endpoint, completion)
+        return result
     }
 }
 
