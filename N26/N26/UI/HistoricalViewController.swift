@@ -15,7 +15,10 @@ final class HistoricalViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private let refreshControl = UIRefreshControl()
     private var dataSource: HistoricalDataSource!
-
+    @IBOutlet weak var noDataLine1Label: UILabel!
+    @IBOutlet weak var noDataLine2Label: UILabel!
+    @IBOutlet weak var noDataRefreshButton: UIButton!
+    
     override func viewDidLoad() {
         self.title = "Bitcoin Rates"
         dataSource = HistoricalDataSource(tableView: tableView)
@@ -39,8 +42,16 @@ final class HistoricalViewController: UIViewController {
             }
 
             self.dataSource.viewModel = sections
-            if sections.count < 0 {
-                // TODO: Fallback for no results
+            if sections.count == 0 {
+                self.tableView.isHidden = true
+                self.noDataLine1Label.isHidden = false
+                self.noDataLine2Label.isHidden = false
+                self.noDataRefreshButton.isHidden = false
+            } else {
+                self.tableView.isHidden = false
+                self.noDataLine1Label.isHidden = true
+                self.noDataLine2Label.isHidden = true
+                self.noDataRefreshButton.isHidden = true
             }
 
             switch (state.realtimeRate, state.historicalRates) {
@@ -48,6 +59,11 @@ final class HistoricalViewController: UIViewController {
             default: self.refreshControl.endRefreshing()
             }
         }
+    }
+
+    @IBAction func refreshButtonTap(_ sender: Any) {
+        actionDispatcher.async(BitcoinRateRequest.realtimeRefresh(isManual: true))
+        actionDispatcher.async(BitcoinRateRequest.historicalDataRefresh(isManual: true))
     }
 
     @objc private func pullToRefresh() {

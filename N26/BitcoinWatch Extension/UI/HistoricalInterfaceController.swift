@@ -76,6 +76,11 @@ final class HistoricalInterfaceController: WKInterfaceController {
             }
         }
     }
+
+    @IBAction func refreshMenuItemTap() {
+        actionDispatcher.async(BitcoinRateRequest.realtimeRefresh(isManual: true))
+        actionDispatcher.async(BitcoinRateRequest.historicalDataRefresh(isManual: true))
+    }
 }
 
 extension HistoricalInterfaceController: HasActionDispatcher { }

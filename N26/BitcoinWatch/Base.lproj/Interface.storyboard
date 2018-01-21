@@ -52,6 +52,15 @@
                             </items>
                         </table>
                     </items>
+                    <menu key="menu" id="AAE-HE-hBe">
+                        <items>
+                            <menuItem title="Refresh" icon="resume" id="jrN-nb-w2X">
+                                <connections>
+                                    <action selector="refreshMenuItemTap" destination="AgC-eL-Hgc" id="hIc-oB-Myo"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="historicalTable" destination="UTJ-G6-ZdM" id="bOe-FK-WIk"/>
                         <outlet property="realtimeDateLabel" destination="0oE-86-tyM" id="llA-Yt-gpq"/>
