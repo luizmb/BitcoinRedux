@@ -43,7 +43,7 @@ class BitcoinRateRequestTests: UnitTest {
         injector.mapper.mapSingleton(RepositoryProtocol.self) { mockRepository }
 
         BitcoinRateRequest
-            .realtimeRefresh
+            .realtimeRefresh(isManual: false)
             .execute(getState: { state },
                      dispatch: { actions.append($0) },
                      dispatchAsync: { asyncActions.append($0) })
@@ -88,7 +88,7 @@ class BitcoinRateRequestTests: UnitTest {
         injector.mapper.mapSingleton(RepositoryProtocol.self) { mockRepository }
 
         BitcoinRateRequest
-            .historicalDataRefresh
+            .historicalDataRefresh(isManual: false)
             .execute(getState: { state },
                      dispatch: { actions.append($0) },
                      dispatchAsync: { asyncActions.append($0) })

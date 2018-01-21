@@ -28,15 +28,30 @@ class AppDelegateTests: UnitTest {
         let expectedWindow: Window = UIApplication.shared.windows.first!
 
         XCTAssertEqual(actionDispatcher.actions.count, 0)
-        XCTAssertEqual(actionDispatcher.asyncActions.count, 1)
-        let actionTriggered = actionDispatcher.asyncActions.first as? BootstrapRequest
-        XCTAssertNotNil(actionTriggered)
-        guard case let .boot(app, window, options) = actionTriggered! else {
+        XCTAssertEqual(actionDispatcher.asyncActions.count, 3)
+        let bootstrapRequest = actionDispatcher.asyncActions.first as? BootstrapRequest
+        XCTAssertNotNil(bootstrapRequest)
+        guard case let .boot(app, window, options) = bootstrapRequest! else {
             XCTFail("Invalid action request")
             return
         }
         XCTAssertTrue(app == expectedApplication)
         XCTAssertTrue(window == expectedWindow)
+
+        let realtimeCacheRequest = actionDispatcher.asyncActions[1] as? BitcoinRateRequest
+        XCTAssertNotNil(realtimeCacheRequest)
+        guard case .realtimeCache = realtimeCacheRequest! else {
+            XCTFail("Invalid action request")
+            return
+        }
+        
+        let historicalCacheRequest = actionDispatcher.asyncActions[2] as? BitcoinRateRequest
+        XCTAssertNotNil(historicalCacheRequest)
+        guard case .historicalCache = historicalCacheRequest! else {
+            XCTFail("Invalid action request")
+            return
+        }
+
         let expectedOptions = [UIApplicationLaunchOptionsKey.bluetoothPeripherals: "Bluetooth1" as Any,
                                UIApplicationLaunchOptionsKey.cloudKitShareMetadata: "CloudKit1" as Any] as [UIApplicationLaunchOptionsKey: Any]?
         XCTAssertTrue(options?.keys == expectedOptions?.keys)

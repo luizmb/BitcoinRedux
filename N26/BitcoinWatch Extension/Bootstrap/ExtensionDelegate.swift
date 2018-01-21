@@ -11,22 +11,37 @@ import BitcoinLibrary
 import CommonLibrary
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
+    var refreshTimer: Timer?
+
     override init() {
         super.init()
         DefaultMapResolver.map()
     }
 
+    @objc func refresh() {
+        actionDispatcher.async(BitcoinRateRequest.realtimeRefresh(isManual: false))
+        actionDispatcher.async(BitcoinRateRequest.historicalDataRefresh(isManual: false))
+    }
+
     func applicationDidFinishLaunching() {
         actionDispatcher.async(BootstrapRequest.boot)
+        actionDispatcher.async(BitcoinRateRequest.realtimeCache)
+        actionDispatcher.async(BitcoinRateRequest.historicalCache)
     }
 
     func applicationDidBecomeActive() {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        refreshTimer = Timer.scheduledTimer(timeInterval: 6,
+                                            target: self,
+                                            selector: #selector(refresh),
+                                            userInfo: nil,
+                                            repeats: true)
+        refreshTimer?.fire()
     }
 
     func applicationWillResignActive() {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, etc.
+        refreshTimer?.invalidate()
     }
 
     func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {
@@ -52,7 +67,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
             }
         }
     }
-
 }
 
 extension ExtensionDelegate: HasActionDispatcher { }

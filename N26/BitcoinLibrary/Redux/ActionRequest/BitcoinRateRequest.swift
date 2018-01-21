@@ -12,8 +12,8 @@ import CommonLibrary
 public enum BitcoinRateRequest: AppActionAsync {
     case realtimeCache
     case historicalCache
-    case realtimeRefresh
-    case historicalDataRefresh
+    case realtimeRefresh(isManual: Bool)
+    case historicalDataRefresh(isManual: Bool)
 
     public func execute(getState: @escaping () -> AppState,
                  dispatch: @escaping DispatchFunction,
@@ -25,8 +25,13 @@ public enum BitcoinRateRequest: AppActionAsync {
         case .historicalCache:
             let historical: Result<HistoricalResponse> = self.repository.load(filename: HistoricalResponse.cacheFile).flatMap(JsonParser.decode)
             dispatch(BitcoinRateAction.didRefreshHistoricalData(historical))
-        case .realtimeRefresh:
+        case .realtimeRefresh(let isManual):
             let state = getState()
+            let lastUpdate = state.bitcoinState.localTimeLastUpdateRealTime
+            let refreshTime = state.bitcoinState.realtimeRateRefreshTime
+            let nextUpdate = lastUpdate.addingTimeInterval(refreshTime)
+            guard isManual || Date() > nextUpdate else { return }
+
             if case let .syncing(oldTask, _) = state.bitcoinState.realtimeRate {
                 oldTask.cancel()
             }
@@ -38,9 +43,15 @@ public enum BitcoinRateRequest: AppActionAsync {
                 }
                 dispatch(BitcoinRateAction.didRefreshRealTime(realtime))
             }
+            debugPrint("Refresh RealTime rates")
             dispatch(BitcoinRateAction.willRefreshRealTime(task))
-        case .historicalDataRefresh:
+        case .historicalDataRefresh(let isManual):
             let state = getState()
+            let lastUpdate = state.bitcoinState.localTimeLastUpdateHistorical
+            let refreshTime = state.bitcoinState.historicalRatesRefreshTime
+            let nextUpdate = lastUpdate.addingTimeInterval(refreshTime)
+            guard isManual || Date() > nextUpdate else { return }
+
             if case let .syncing(oldTask, _) = state.bitcoinState.historicalRates {
                 oldTask.cancel()
             }
@@ -53,6 +64,7 @@ public enum BitcoinRateRequest: AppActionAsync {
                 }
                 dispatch(BitcoinRateAction.didRefreshHistoricalData(historical))
             }
+            debugPrint("Refresh Historical rates")
             dispatch(BitcoinRateAction.willRefreshHistoricalData(task))
         }
     }

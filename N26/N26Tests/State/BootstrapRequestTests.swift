@@ -39,7 +39,7 @@ class BootstrapRequestTests: UnitTest {
 
         XCTAssertEqual(actions.count, 1)
         self.assertAction(actions.first, shouldBeDidStart: mockApplication, navigationController: navigationController)
-        XCTAssertEqual(asyncActions.count, 4)
+        XCTAssertEqual(asyncActions.count, 0)
     }
 
     private func assertAction(_ action: Action?, shouldBeDidStart application: Application, navigationController: UINavigationController) {

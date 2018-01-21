@@ -25,12 +25,6 @@ enum BootstrapRequest: AppActionAsync {
             window.setup(with: navigationController)
 
             dispatch(RouterAction.didStart(application, navigationController))
-
-            // TODO: Trigger auto-refresh
-            dispatchAsync(AnyActionAsync(BitcoinRateRequest.realtimeCache))
-            dispatchAsync(AnyActionAsync(BitcoinRateRequest.historicalCache))
-            dispatchAsync(AnyActionAsync(BitcoinRateRequest.realtimeRefresh))
-            dispatchAsync(AnyActionAsync(BitcoinRateRequest.historicalDataRefresh))
         }
     }
 }

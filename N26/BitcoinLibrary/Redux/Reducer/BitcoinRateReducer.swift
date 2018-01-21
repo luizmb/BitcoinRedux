@@ -19,9 +19,11 @@ public struct BitcoinRateReducer: Reducer {
         case .willRefreshRealTime(let task):
             let oldResult = stateCopy.bitcoinState.realtimeRate.possibleResult()
             stateCopy.bitcoinState.realtimeRate = .syncing(task: task, oldValue: oldResult)
+            stateCopy.bitcoinState.localTimeLastUpdateRealTime = Date()
         case .willRefreshHistoricalData(let task):
             let oldResult = stateCopy.bitcoinState.historicalRates.possibleResult()
             stateCopy.bitcoinState.historicalRates = .syncing(task: task, oldValue: oldResult)
+            stateCopy.bitcoinState.localTimeLastUpdateHistorical = Date()
         case .didRefreshRealTime(let result):
             switch result {
             case .success(let response):
@@ -37,6 +39,7 @@ public struct BitcoinRateReducer: Reducer {
                 let oldResult = stateCopy.bitcoinState.realtimeRate.possibleResult()
                 // TODO: Proper error handling (e.g: put error message into the state)
                 stateCopy.bitcoinState.realtimeRate = oldResult.map { .loaded($0) } ?? .loaded(.error(error))
+                stateCopy.bitcoinState.localTimeLastUpdateRealTime = Date.distantPast
             }
         case .didRefreshHistoricalData(let result):
             switch result {
@@ -51,6 +54,7 @@ public struct BitcoinRateReducer: Reducer {
                 let oldResult = stateCopy.bitcoinState.historicalRates.possibleResult()
                 // TODO: Proper error handling (e.g: put error message into the state)
                 stateCopy.bitcoinState.historicalRates = oldResult.map { .loaded($0) } ?? .loaded(.error(error))
+                stateCopy.bitcoinState.localTimeLastUpdateHistorical = Date.distantPast
             }
         }
 
