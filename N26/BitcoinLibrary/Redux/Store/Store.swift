@@ -12,11 +12,6 @@ import CommonLibrary
 public protocol AppActionAsync: ActionAsync where StateType == AppState {
 }
 
-public protocol ActionDispatcher {
-    func dispatch(_ action: Action)
-    func async<AppActionAsyncType: AppActionAsync>(_ action: AppActionAsyncType)
-}
-
 final public class Store: StoreBase<AppState, EntryPointReducer> {
     public static let shared: Store = {
         let global = Store()

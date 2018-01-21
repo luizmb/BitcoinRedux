@@ -49,7 +49,6 @@
 		D527DCA52014E33900D4F2FB /* BitcoinEndpoint.URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468082012B535006AAB58 /* BitcoinEndpoint.URLEndpoint.swift */; };
 		D527DCA62014E33A00D4F2FB /* BitcoinEndpoint.URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468082012B535006AAB58 /* BitcoinEndpoint.URLEndpoint.swift */; };
 		D527DCA72014E39300D4F2FB /* DefaultMapResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4684D2013675F006AAB58 /* DefaultMapResolver.swift */; };
-		D527DCA82014E39700D4F2FB /* InjectorServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A468502013684E006AAB58 /* InjectorServices.swift */; };
 		D527DCAE2014EAC700D4F2FB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683420135C49006AAB58 /* AppState.swift */; };
 		D527DCAF2014EAC700D4F2FB /* BitcoinState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4686E20137D23006AAB58 /* BitcoinState.swift */; };
 		D527DCB02014EAC700D4F2FB /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683C20135DD4006AAB58 /* NavigationState.swift */; };
@@ -131,6 +130,14 @@
 		D53930E22014BBC400C8D658 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A92014BBC400C8D658 /* Signal.swift */; };
 		D53930E32014BBC400C8D658 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A92014BBC400C8D658 /* Signal.swift */; };
 		D53930E52014BDC300C8D658 /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539306E2014B86E00C8D658 /* CommonLibrary.framework */; };
+		D575ADBB2015093A0038C331 /* ActionDispatcher.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADB9201509230038C331 /* ActionDispatcher.DI.swift */; };
+		D575ADBC2015093B0038C331 /* ActionDispatcher.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADB9201509230038C331 /* ActionDispatcher.DI.swift */; };
+		D575ADBF2015098C0038C331 /* BitcoinRateAPI.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADBD2015096B0038C331 /* BitcoinRateAPI.DI.swift */; };
+		D575ADC02015098D0038C331 /* BitcoinRateAPI.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADBD2015096B0038C331 /* BitcoinRateAPI.DI.swift */; };
+		D575ADC520150C260038C331 /* StateProvider.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADC320150B3C0038C331 /* StateProvider.DI.swift */; };
+		D575ADC620150C270038C331 /* StateProvider.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADC320150B3C0038C331 /* StateProvider.DI.swift */; };
+		D575ADC720150C360038C331 /* RepositoryProtocol.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADC120150AC80038C331 /* RepositoryProtocol.DI.swift */; };
+		D575ADC820150C370038C331 /* RepositoryProtocol.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADC120150AC80038C331 /* RepositoryProtocol.DI.swift */; };
 		D5934CAC2014FCA300F48C73 /* BitcoinRateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687820139E2C006AAB58 /* BitcoinRateReducer.swift */; };
 		D5934CAD2014FCA300F48C73 /* EntryPointReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683620135C79006AAB58 /* EntryPointReducer.swift */; };
 		D5934CAE2014FCA300F48C73 /* RouterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683A20135D6F006AAB58 /* RouterReducer.swift */; };
@@ -166,6 +173,8 @@
 		D5A4686D201377F7006AAB58 /* HistoricalRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A4686C201377F7006AAB58 /* HistoricalRecordTableViewCell.xib */; };
 		D5A4687320138777006AAB58 /* BitcoinRateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687220138777006AAB58 /* BitcoinRateRequest.swift */; };
 		D5A4687720139CCA006AAB58 /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A4687620139CCA006AAB58 /* SplashView.xib */; };
+		D5D93DF820150796000AF767 /* ActionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D93DF620150756000AF767 /* ActionDispatcher.swift */; };
+		D5D93DF920150797000AF767 /* ActionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D93DF620150756000AF767 /* ActionDispatcher.swift */; };
 		D5F6CD7B2013B7450005E972 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6CD7A2013B7450005E972 /* AppDelegateTests.swift */; };
 		D5F6CD842013CC9A0005E972 /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6CD832013CC9A0005E972 /* UnitTest.swift */; };
 		D5F6CD882013CF2C0005E972 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6CD872013CF2C0005E972 /* main.swift */; };
@@ -312,6 +321,10 @@
 		D53930A72014BBC400C8D658 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		D53930A82014BBC400C8D658 /* SyncableResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncableResult.swift; sourceTree = "<group>"; };
 		D53930A92014BBC400C8D658 /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
+		D575ADB9201509230038C331 /* ActionDispatcher.DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDispatcher.DI.swift; sourceTree = "<group>"; };
+		D575ADBD2015096B0038C331 /* BitcoinRateAPI.DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateAPI.DI.swift; sourceTree = "<group>"; };
+		D575ADC120150AC80038C331 /* RepositoryProtocol.DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.DI.swift; sourceTree = "<group>"; };
+		D575ADC320150B3C0038C331 /* StateProvider.DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateProvider.DI.swift; sourceTree = "<group>"; };
 		D5934CB6201502FF00F48C73 /* RouterAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterAction.swift; sourceTree = "<group>"; };
 		D5934CB7201502FF00F48C73 /* BitcoinRateAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinRateAction.swift; sourceTree = "<group>"; };
 		D5934CBF2015043700F48C73 /* StateProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateProvider.swift; sourceTree = "<group>"; };
@@ -342,7 +355,6 @@
 		D5A4683E20135DED006AAB58 /* NavigationRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRoute.swift; sourceTree = "<group>"; };
 		D5A4684020135E14006AAB58 /* NavigationTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTree.swift; sourceTree = "<group>"; };
 		D5A4684D2013675F006AAB58 /* DefaultMapResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMapResolver.swift; sourceTree = "<group>"; };
-		D5A468502013684E006AAB58 /* InjectorServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorServices.swift; sourceTree = "<group>"; };
 		D5A4685220136ABF006AAB58 /* NavigationActionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationActionRequest.swift; sourceTree = "<group>"; };
 		D5A4685420136AFE006AAB58 /* KnownRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnownRoute.swift; sourceTree = "<group>"; };
 		D5A4685720136D68006AAB58 /* BootstrapRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapRequest.swift; sourceTree = "<group>"; };
@@ -358,6 +370,7 @@
 		D5A4687220138777006AAB58 /* BitcoinRateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateRequest.swift; sourceTree = "<group>"; };
 		D5A4687620139CCA006AAB58 /* SplashView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
 		D5A4687820139E2C006AAB58 /* BitcoinRateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateReducer.swift; sourceTree = "<group>"; };
+		D5D93DF620150756000AF767 /* ActionDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDispatcher.swift; sourceTree = "<group>"; };
 		D5F6CD7A2013B7450005E972 /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		D5F6CD832013CC9A0005E972 /* UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTest.swift; sourceTree = "<group>"; };
 		D5F6CD872013CF2C0005E972 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -465,6 +478,7 @@
 				D539301D2014421800C8D658 /* DiskCache.swift */,
 				D5A468112012C2A3006AAB58 /* JsonParser.swift */,
 				D539301B201441BF00C8D658 /* RepositoryProtocol.swift */,
+				D575ADC120150AC80038C331 /* RepositoryProtocol.DI.swift */,
 			);
 			path = Serialization;
 			sourceTree = "<group>";
@@ -495,7 +509,6 @@
 			isa = PBXGroup;
 			children = (
 				D5934CB5201502FF00F48C73 /* Action */,
-				D5934CC52015044700F48C73 /* ActionRequest */,
 				D5A4682E20135B17006AAB58 /* Reducer */,
 				D5934CBE2015043700F48C73 /* Store */,
 			);
@@ -627,17 +640,13 @@
 		D5934CBE2015043700F48C73 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				D5D93DF620150756000AF767 /* ActionDispatcher.swift */,
+				D575ADB9201509230038C331 /* ActionDispatcher.DI.swift */,
 				D5934CBF2015043700F48C73 /* StateProvider.swift */,
+				D575ADC320150B3C0038C331 /* StateProvider.DI.swift */,
 				D5934CC02015043700F48C73 /* Store.swift */,
 			);
 			path = Store;
-			sourceTree = "<group>";
-		};
-		D5934CC52015044700F48C73 /* ActionRequest */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ActionRequest;
 			sourceTree = "<group>";
 		};
 		D5A4679420129459006AAB58 = {
@@ -739,6 +748,7 @@
 			children = (
 				D5A468012012B4CE006AAB58 /* BitcoinEndpoint.swift */,
 				D5A468032012B4E7006AAB58 /* BitcoinRateAPI.swift */,
+				D575ADBD2015096B0038C331 /* BitcoinRateAPI.DI.swift */,
 				D5A468052012B501006AAB58 /* WebClient */,
 			);
 			path = Service;
@@ -808,7 +818,6 @@
 			isa = PBXGroup;
 			children = (
 				D5A4684D2013675F006AAB58 /* DefaultMapResolver.swift */,
-				D5A468502013684E006AAB58 /* InjectorServices.swift */,
 			);
 			path = DependencyInjection;
 			sourceTree = "<group>";
@@ -1184,6 +1193,7 @@
 				D527DCA32014E33200D4F2FB /* BitcoinAPIClient.swift in Sources */,
 				D5934CC12015043700F48C73 /* StateProvider.swift in Sources */,
 				D527DCB12014EAC700D4F2FB /* NavigationRoute.swift in Sources */,
+				D5D93DF820150796000AF767 /* ActionDispatcher.swift in Sources */,
 				D527DC882014DBB700D4F2FB /* HistoricalResponse.Codable.swift in Sources */,
 				D5934CC32015043700F48C73 /* Store.swift in Sources */,
 				D527DCB32014EAC700D4F2FB /* KnownRoute.swift in Sources */,
@@ -1192,15 +1202,18 @@
 				D527DC862014DBB700D4F2FB /* Currency.swift in Sources */,
 				D527DC8E2014DBB700D4F2FB /* Rate.swift in Sources */,
 				D5934CAD2014FCA300F48C73 /* EntryPointReducer.swift in Sources */,
+				D575ADC620150C270038C331 /* StateProvider.DI.swift in Sources */,
 				D527DC902014DBB700D4F2FB /* BitcoinHistoricalRate.swift in Sources */,
 				D5934CBA201502FF00F48C73 /* BitcoinRateAction.swift in Sources */,
 				D5934CAC2014FCA300F48C73 /* BitcoinRateReducer.swift in Sources */,
+				D575ADBB2015093A0038C331 /* ActionDispatcher.DI.swift in Sources */,
 				D527DCAF2014EAC700D4F2FB /* BitcoinState.swift in Sources */,
 				D527DCAE2014EAC700D4F2FB /* AppState.swift in Sources */,
 				D527DCB02014EAC700D4F2FB /* NavigationState.swift in Sources */,
 				D527DC842014DBB700D4F2FB /* HistoricalResponse.swift in Sources */,
 				D527DCA52014E33900D4F2FB /* BitcoinEndpoint.URLEndpoint.swift in Sources */,
 				D527DCB22014EAC700D4F2FB /* NavigationTree.swift in Sources */,
+				D575ADBF2015098C0038C331 /* BitcoinRateAPI.DI.swift in Sources */,
 				D527DC822014DBB700D4F2FB /* RealTimeResponse.swift in Sources */,
 				D527DC9D2014E31E00D4F2FB /* BitcoinRateAPI.swift in Sources */,
 				D527DC9B2014E31800D4F2FB /* BitcoinEndpoint.swift in Sources */,
@@ -1216,6 +1229,7 @@
 				D527DCA42014E33300D4F2FB /* BitcoinAPIClient.swift in Sources */,
 				D5934CC22015043700F48C73 /* StateProvider.swift in Sources */,
 				D527DCB92014EAC800D4F2FB /* NavigationRoute.swift in Sources */,
+				D5D93DF920150797000AF767 /* ActionDispatcher.swift in Sources */,
 				D527DC892014DBB700D4F2FB /* HistoricalResponse.Codable.swift in Sources */,
 				D5934CC42015043700F48C73 /* Store.swift in Sources */,
 				D527DCBB2014EAC800D4F2FB /* KnownRoute.swift in Sources */,
@@ -1224,15 +1238,18 @@
 				D527DC872014DBB700D4F2FB /* Currency.swift in Sources */,
 				D527DC8F2014DBB700D4F2FB /* Rate.swift in Sources */,
 				D5934CB02014FCA500F48C73 /* EntryPointReducer.swift in Sources */,
+				D575ADC520150C260038C331 /* StateProvider.DI.swift in Sources */,
 				D527DC912014DBB700D4F2FB /* BitcoinHistoricalRate.swift in Sources */,
 				D5934CBB201502FF00F48C73 /* BitcoinRateAction.swift in Sources */,
 				D5934CAF2014FCA500F48C73 /* BitcoinRateReducer.swift in Sources */,
+				D575ADBC2015093B0038C331 /* ActionDispatcher.DI.swift in Sources */,
 				D527DCB72014EAC800D4F2FB /* BitcoinState.swift in Sources */,
 				D527DCB62014EAC800D4F2FB /* AppState.swift in Sources */,
 				D527DCB82014EAC800D4F2FB /* NavigationState.swift in Sources */,
 				D527DC852014DBB700D4F2FB /* HistoricalResponse.swift in Sources */,
 				D527DCA62014E33A00D4F2FB /* BitcoinEndpoint.URLEndpoint.swift in Sources */,
 				D527DCBA2014EAC800D4F2FB /* NavigationTree.swift in Sources */,
+				D575ADC02015098D0038C331 /* BitcoinRateAPI.DI.swift in Sources */,
 				D527DC832014DBB700D4F2FB /* RealTimeResponse.swift in Sources */,
 				D527DC9E2014E31F00D4F2FB /* BitcoinRateAPI.swift in Sources */,
 				D527DC9C2014E31900D4F2FB /* BitcoinEndpoint.swift in Sources */,
@@ -1264,6 +1281,7 @@
 				D53930E02014BBC400C8D658 /* SyncableResult.swift in Sources */,
 				D527DC972014E08100D4F2FB /* DiskCache.swift in Sources */,
 				D53930AA2014BBC400C8D658 /* InjectorProtocol.swift in Sources */,
+				D575ADC820150C370038C331 /* RepositoryProtocol.DI.swift in Sources */,
 				D53930B82014BBC400C8D658 /* StoreBase.swift in Sources */,
 				D53930DA2014BBC400C8D658 /* Async.swift in Sources */,
 				D53930B42014BBC400C8D658 /* ActionAsync.swift in Sources */,
@@ -1294,6 +1312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D53930D92014BBC400C8D658 /* Disposable.swift in Sources */,
+				D575ADC720150C360038C331 /* RepositoryProtocol.DI.swift in Sources */,
 				D53930B12014BBC400C8D658 /* ConstructorType.swift in Sources */,
 				D53930E32014BBC400C8D658 /* Signal.swift in Sources */,
 				D53930DD2014BBC400C8D658 /* Atomic.swift in Sources */,
@@ -1335,7 +1354,6 @@
 				D5A4686720137201006AAB58 /* HistoricalViewModel.swift in Sources */,
 				D5A467A120129459006AAB58 /* AppDelegate.swift in Sources */,
 				D5A4685820136D68006AAB58 /* BootstrapRequest.swift in Sources */,
-				D527DCA82014E39700D4F2FB /* InjectorServices.swift in Sources */,
 				D5A4686B201377D1006AAB58 /* HistoricalRecordTableViewCell.swift in Sources */,
 				D5A4685A20136DE7006AAB58 /* Theme.swift in Sources */,
 				D5A4686120136F5F006AAB58 /* HistoricalViewController.swift in Sources */,
