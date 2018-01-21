@@ -9,7 +9,7 @@
 import Foundation
 
 public struct HistoricalResponse {
-    public static let cacheFile = "historical_cache"
+    public static let cacheFile = "historical_cache.bin"
     public let updatedTime: Date
     public let disclaimer: String?
     public let bpi: [Rate]

@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol URLEndpoint {
+public protocol URLEndpoint {
     var urlRequest: URLRequest { get }
 }

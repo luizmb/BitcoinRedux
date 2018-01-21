@@ -9,7 +9,7 @@
 import Foundation
 
 public struct RealTimeResponse {
-    public static let cacheFile = "realtime_cache"
+    public static let cacheFile = "realtime_cache.bin"
     public let updatedTime: Date
     public let disclaimer: String?
     public let bpi: [Currency: Float]

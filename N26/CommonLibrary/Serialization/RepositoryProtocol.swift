@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import CommonLibrary
 
 public protocol RepositoryProtocol {
-    func save(data: Data, name: String)
-    func load(name: String) -> Result<Data>
+    func save(data: Data, filename: String)
+    func load(filename: String) -> Result<Data>
 }

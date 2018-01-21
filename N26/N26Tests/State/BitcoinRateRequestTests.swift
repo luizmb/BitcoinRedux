@@ -30,7 +30,7 @@ class BitcoinRateRequestTests: UnitTest {
 
         let mockRepository = MockRepository()
         mockRepository.onCallSave = { [weak self] data, name in
-            XCTAssertEqual(name, "realtime_cache")
+            XCTAssertEqual(name, "realtime_cache.bin")
             XCTAssertEqual(data, Data())
             XCTAssertEqual(actions.count, 1)
             self?.assertAction(actions.first, shouldBeWillRefreshRealTime: newTask)
@@ -75,7 +75,7 @@ class BitcoinRateRequestTests: UnitTest {
 
         let mockRepository = MockRepository()
         mockRepository.onCallSave = { [weak self] data, name in
-            XCTAssertEqual(name, "historical_cache")
+            XCTAssertEqual(name, "historical_cache.bin")
             XCTAssertEqual(data, Data())
             XCTAssertEqual(actions.count, 1)
             self?.assertAction(actions.first, shouldBeWillRefreshHistoricalData: newTask)
@@ -113,7 +113,7 @@ class BitcoinRateRequestTests: UnitTest {
             return
         }
         mockRepository.onCallLoad = { name in
-            XCTAssertEqual(name, "realtime_cache")
+            XCTAssertEqual(name, "realtime_cache.bin")
             XCTAssertEqual(actions.count, 0)
             XCTAssertEqual(asyncActions.count, 0)
             return .error(AnyError())
@@ -141,7 +141,7 @@ class BitcoinRateRequestTests: UnitTest {
             return
         }
         mockRepository.onCallLoad = { name in
-            XCTAssertEqual(name, "historical_cache")
+            XCTAssertEqual(name, "historical_cache.bin")
             XCTAssertEqual(actions.count, 0)
             XCTAssertEqual(asyncActions.count, 0)
             return .error(AnyError())

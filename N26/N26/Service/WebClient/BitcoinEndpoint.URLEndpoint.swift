@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CommonLibrary
 
 extension BitcoinEndpoint {
     private var httpMethod: String {
@@ -18,7 +19,7 @@ extension BitcoinEndpoint {
 }
 
 extension BitcoinEndpoint: URLEndpoint {
-    var urlRequest: URLRequest {
+    public var urlRequest: URLRequest {
         switch self {
         case let .realtime(currency):
             return URLRequest.createRequest(url: "https://api.coindesk.com/v1/bpi/currentprice/\(currency).json",

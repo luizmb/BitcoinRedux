@@ -116,16 +116,16 @@ class MockApplication: NSObject, Application {
 class MockRepository: RepositoryProtocol {
     var calledSave: (Data, String)?
     var onCallSave: ((Data, String) -> ())?
-    func save(data: Data, name: String) {
-        onCallSave?(data, name)
-        calledSave = (data, name)
+    func save(data: Data, filename: String) {
+        onCallSave?(data, filename)
+        calledSave = (data, filename)
     }
 
     var calledLoad: String?
     var onCallLoad: ((String) -> (Result<Data>))?
-    func load(name: String) -> Result<Data> {
-        let result = onCallLoad?(name) ?? .error(AnyError())
-        calledLoad = name
+    func load(filename: String) -> Result<Data> {
+        let result = onCallLoad?(filename) ?? .error(AnyError())
+        calledLoad = filename
         return result
     }
 }
