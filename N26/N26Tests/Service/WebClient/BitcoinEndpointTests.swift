@@ -9,6 +9,7 @@
 import XCTest
 import Foundation
 @testable import N26
+@testable import CommonLibrary
 
 class BitcoinEndpointTests: UnitTest {
     func testURLEndpoint_URLRequestFactory() {

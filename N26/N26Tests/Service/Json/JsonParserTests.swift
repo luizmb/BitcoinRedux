@@ -9,6 +9,7 @@
 import XCTest
 import Foundation
 @testable import N26
+@testable import CommonLibrary
 
 struct Sample: Codable {
     let string: String

@@ -8,7 +8,7 @@
 
 import XCTest
 import Foundation
-@testable import N26
+@testable import CommonLibrary
 
 class DataStructureTests: UnitTest {
     func testAtomic() {

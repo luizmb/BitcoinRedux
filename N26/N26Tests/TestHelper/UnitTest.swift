@@ -9,6 +9,7 @@
 import Foundation
 import XCTest
 @testable import N26
+@testable import CommonLibrary
 
 class UnitTest: XCTestCase {
     var injector: MockInjector!

@@ -9,6 +9,7 @@
 import XCTest
 import Foundation
 @testable import N26
+@testable import CommonLibrary
 
 class AnotherCollectionReusableView: UICollectionReusableView { }
 class AnotherTableViewCell: UITableViewCell { }

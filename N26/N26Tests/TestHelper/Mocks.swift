@@ -8,6 +8,7 @@
 
 import UIKit
 @testable import N26
+@testable import CommonLibrary
 
 private func defaultDate() -> Date { return Date(timeIntervalSinceReferenceDate: 0) }
 private func defaultCurrency() -> Currency { return Currency(code: "EUR", name: "Euro", symbol: "€") }
