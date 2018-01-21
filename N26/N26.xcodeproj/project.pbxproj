@@ -62,8 +62,6 @@
 		D527DCB92014EAC800D4F2FB /* NavigationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683E20135DED006AAB58 /* NavigationRoute.swift */; };
 		D527DCBA2014EAC800D4F2FB /* NavigationTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4684020135E14006AAB58 /* NavigationTree.swift */; };
 		D527DCBB2014EAC800D4F2FB /* KnownRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4685420136AFE006AAB58 /* KnownRoute.swift */; };
-		D527DCBC2014EBD200D4F2FB /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683020135BC8006AAB58 /* Store.swift */; };
-		D527DCBD2014EC0400D4F2FB /* StateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683220135BFB006AAB58 /* StateProvider.swift */; };
 		D539300D2013EAB300C8D658 /* BitcoinRateReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539300C2013EAB300C8D658 /* BitcoinRateReducerTests.swift */; };
 		D539300F2013F04B00C8D658 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539300E2013F04B00C8D658 /* Mocks.swift */; };
 		D5393011201405CB00C8D658 /* RouterReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5393010201405CB00C8D658 /* RouterReducerTests.swift */; };
@@ -133,16 +131,20 @@
 		D53930E22014BBC400C8D658 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A92014BBC400C8D658 /* Signal.swift */; };
 		D53930E32014BBC400C8D658 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A92014BBC400C8D658 /* Signal.swift */; };
 		D53930E52014BDC300C8D658 /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539306E2014B86E00C8D658 /* CommonLibrary.framework */; };
-		D5934CA82014FBF900F48C73 /* BitcoinRateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687420138B02006AAB58 /* BitcoinRateAction.swift */; };
-		D5934CA92014FBFA00F48C73 /* BitcoinRateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687420138B02006AAB58 /* BitcoinRateAction.swift */; };
-		D5934CAA2014FBFF00F48C73 /* RouterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4684220135F96006AAB58 /* RouterAction.swift */; };
-		D5934CAB2014FC0000F48C73 /* RouterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4684220135F96006AAB58 /* RouterAction.swift */; };
 		D5934CAC2014FCA300F48C73 /* BitcoinRateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687820139E2C006AAB58 /* BitcoinRateReducer.swift */; };
 		D5934CAD2014FCA300F48C73 /* EntryPointReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683620135C79006AAB58 /* EntryPointReducer.swift */; };
 		D5934CAE2014FCA300F48C73 /* RouterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683A20135D6F006AAB58 /* RouterReducer.swift */; };
 		D5934CAF2014FCA500F48C73 /* BitcoinRateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687820139E2C006AAB58 /* BitcoinRateReducer.swift */; };
 		D5934CB02014FCA500F48C73 /* EntryPointReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683620135C79006AAB58 /* EntryPointReducer.swift */; };
 		D5934CB12014FCA500F48C73 /* RouterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683A20135D6F006AAB58 /* RouterReducer.swift */; };
+		D5934CB8201502FF00F48C73 /* RouterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5934CB6201502FF00F48C73 /* RouterAction.swift */; };
+		D5934CB9201502FF00F48C73 /* RouterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5934CB6201502FF00F48C73 /* RouterAction.swift */; };
+		D5934CBA201502FF00F48C73 /* BitcoinRateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5934CB7201502FF00F48C73 /* BitcoinRateAction.swift */; };
+		D5934CBB201502FF00F48C73 /* BitcoinRateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5934CB7201502FF00F48C73 /* BitcoinRateAction.swift */; };
+		D5934CC12015043700F48C73 /* StateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5934CBF2015043700F48C73 /* StateProvider.swift */; };
+		D5934CC22015043700F48C73 /* StateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5934CBF2015043700F48C73 /* StateProvider.swift */; };
+		D5934CC32015043700F48C73 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5934CC02015043700F48C73 /* Store.swift */; };
+		D5934CC42015043700F48C73 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5934CC02015043700F48C73 /* Store.swift */; };
 		D5A467A120129459006AAB58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467A020129459006AAB58 /* AppDelegate.swift */; };
 		D5A467A820129459006AAB58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5A467A720129459006AAB58 /* Assets.xcassets */; };
 		D5A467F12012A079006AAB58 /* CocoaExTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A467F02012A079006AAB58 /* CocoaExTests.swift */; };
@@ -310,6 +312,10 @@
 		D53930A72014BBC400C8D658 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		D53930A82014BBC400C8D658 /* SyncableResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncableResult.swift; sourceTree = "<group>"; };
 		D53930A92014BBC400C8D658 /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
+		D5934CB6201502FF00F48C73 /* RouterAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterAction.swift; sourceTree = "<group>"; };
+		D5934CB7201502FF00F48C73 /* BitcoinRateAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinRateAction.swift; sourceTree = "<group>"; };
+		D5934CBF2015043700F48C73 /* StateProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateProvider.swift; sourceTree = "<group>"; };
+		D5934CC02015043700F48C73 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		D5A4679D20129459006AAB58 /* N26.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = N26.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A467A020129459006AAB58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5A467A720129459006AAB58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -329,15 +335,12 @@
 		D5A468142012C2CE006AAB58 /* JsonParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParserTests.swift; sourceTree = "<group>"; };
 		D5A468272012CB68006AAB58 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		D5A4682A2012D0B8006AAB58 /* ModelSerializationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSerializationTests.swift; sourceTree = "<group>"; };
-		D5A4683020135BC8006AAB58 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		D5A4683220135BFB006AAB58 /* StateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateProvider.swift; sourceTree = "<group>"; };
 		D5A4683420135C49006AAB58 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D5A4683620135C79006AAB58 /* EntryPointReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPointReducer.swift; sourceTree = "<group>"; };
 		D5A4683A20135D6F006AAB58 /* RouterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterReducer.swift; sourceTree = "<group>"; };
 		D5A4683C20135DD4006AAB58 /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
 		D5A4683E20135DED006AAB58 /* NavigationRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRoute.swift; sourceTree = "<group>"; };
 		D5A4684020135E14006AAB58 /* NavigationTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTree.swift; sourceTree = "<group>"; };
-		D5A4684220135F96006AAB58 /* RouterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterAction.swift; sourceTree = "<group>"; };
 		D5A4684D2013675F006AAB58 /* DefaultMapResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMapResolver.swift; sourceTree = "<group>"; };
 		D5A468502013684E006AAB58 /* InjectorServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorServices.swift; sourceTree = "<group>"; };
 		D5A4685220136ABF006AAB58 /* NavigationActionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationActionRequest.swift; sourceTree = "<group>"; };
@@ -353,7 +356,6 @@
 		D5A4686C201377F7006AAB58 /* HistoricalRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricalRecordTableViewCell.xib; sourceTree = "<group>"; };
 		D5A4686E20137D23006AAB58 /* BitcoinState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinState.swift; sourceTree = "<group>"; };
 		D5A4687220138777006AAB58 /* BitcoinRateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateRequest.swift; sourceTree = "<group>"; };
-		D5A4687420138B02006AAB58 /* BitcoinRateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateAction.swift; sourceTree = "<group>"; };
 		D5A4687620139CCA006AAB58 /* SplashView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
 		D5A4687820139E2C006AAB58 /* BitcoinRateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateReducer.swift; sourceTree = "<group>"; };
 		D5F6CD7A2013B7450005E972 /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
@@ -492,8 +494,10 @@
 		D527DCAB2014EA9200D4F2FB /* Redux */ = {
 			isa = PBXGroup;
 			children = (
-				D5934CA72014FB7800F48C73 /* Action */,
+				D5934CB5201502FF00F48C73 /* Action */,
+				D5934CC52015044700F48C73 /* ActionRequest */,
 				D5A4682E20135B17006AAB58 /* Reducer */,
+				D5934CBE2015043700F48C73 /* Store */,
 			);
 			path = Redux;
 			sourceTree = "<group>";
@@ -611,14 +615,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D5934CA72014FB7800F48C73 /* Action */ = {
+		D5934CB5201502FF00F48C73 /* Action */ = {
 			isa = PBXGroup;
 			children = (
-				D5A4687420138B02006AAB58 /* BitcoinRateAction.swift */,
-				D5A4684220135F96006AAB58 /* RouterAction.swift */,
+				D5934CB6201502FF00F48C73 /* RouterAction.swift */,
+				D5934CB7201502FF00F48C73 /* BitcoinRateAction.swift */,
 			);
-			name = Action;
-			path = "New Group";
+			path = Action;
+			sourceTree = "<group>";
+		};
+		D5934CBE2015043700F48C73 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				D5934CBF2015043700F48C73 /* StateProvider.swift */,
+				D5934CC02015043700F48C73 /* Store.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		D5934CC52015044700F48C73 /* ActionRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ActionRequest;
 			sourceTree = "<group>";
 		};
 		D5A4679420129459006AAB58 = {
@@ -762,8 +781,6 @@
 		D5A4682C20135AFC006AAB58 /* State */ = {
 			isa = PBXGroup;
 			children = (
-				D5A4683020135BC8006AAB58 /* Store.swift */,
-				D5A4683220135BFB006AAB58 /* StateProvider.swift */,
 				D5A4682D20135B0D006AAB58 /* Action */,
 			);
 			path = State;
@@ -1163,20 +1180,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5934CB8201502FF00F48C73 /* RouterAction.swift in Sources */,
 				D527DCA32014E33200D4F2FB /* BitcoinAPIClient.swift in Sources */,
+				D5934CC12015043700F48C73 /* StateProvider.swift in Sources */,
 				D527DCB12014EAC700D4F2FB /* NavigationRoute.swift in Sources */,
 				D527DC882014DBB700D4F2FB /* HistoricalResponse.Codable.swift in Sources */,
+				D5934CC32015043700F48C73 /* Store.swift in Sources */,
 				D527DCB32014EAC700D4F2FB /* KnownRoute.swift in Sources */,
-				D5934CAA2014FBFF00F48C73 /* RouterAction.swift in Sources */,
 				D5934CAE2014FCA300F48C73 /* RouterReducer.swift in Sources */,
 				D527DC8A2014DBB700D4F2FB /* RealTimeResponse.Codable.swift in Sources */,
 				D527DC862014DBB700D4F2FB /* Currency.swift in Sources */,
 				D527DC8E2014DBB700D4F2FB /* Rate.swift in Sources */,
 				D5934CAD2014FCA300F48C73 /* EntryPointReducer.swift in Sources */,
 				D527DC902014DBB700D4F2FB /* BitcoinHistoricalRate.swift in Sources */,
+				D5934CBA201502FF00F48C73 /* BitcoinRateAction.swift in Sources */,
 				D5934CAC2014FCA300F48C73 /* BitcoinRateReducer.swift in Sources */,
 				D527DCAF2014EAC700D4F2FB /* BitcoinState.swift in Sources */,
-				D5934CA82014FBF900F48C73 /* BitcoinRateAction.swift in Sources */,
 				D527DCAE2014EAC700D4F2FB /* AppState.swift in Sources */,
 				D527DCB02014EAC700D4F2FB /* NavigationState.swift in Sources */,
 				D527DC842014DBB700D4F2FB /* HistoricalResponse.swift in Sources */,
@@ -1193,20 +1212,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5934CB9201502FF00F48C73 /* RouterAction.swift in Sources */,
 				D527DCA42014E33300D4F2FB /* BitcoinAPIClient.swift in Sources */,
+				D5934CC22015043700F48C73 /* StateProvider.swift in Sources */,
 				D527DCB92014EAC800D4F2FB /* NavigationRoute.swift in Sources */,
 				D527DC892014DBB700D4F2FB /* HistoricalResponse.Codable.swift in Sources */,
+				D5934CC42015043700F48C73 /* Store.swift in Sources */,
 				D527DCBB2014EAC800D4F2FB /* KnownRoute.swift in Sources */,
-				D5934CAB2014FC0000F48C73 /* RouterAction.swift in Sources */,
 				D5934CB12014FCA500F48C73 /* RouterReducer.swift in Sources */,
 				D527DC8B2014DBB700D4F2FB /* RealTimeResponse.Codable.swift in Sources */,
 				D527DC872014DBB700D4F2FB /* Currency.swift in Sources */,
 				D527DC8F2014DBB700D4F2FB /* Rate.swift in Sources */,
 				D5934CB02014FCA500F48C73 /* EntryPointReducer.swift in Sources */,
 				D527DC912014DBB700D4F2FB /* BitcoinHistoricalRate.swift in Sources */,
+				D5934CBB201502FF00F48C73 /* BitcoinRateAction.swift in Sources */,
 				D5934CAF2014FCA500F48C73 /* BitcoinRateReducer.swift in Sources */,
 				D527DCB72014EAC800D4F2FB /* BitcoinState.swift in Sources */,
-				D5934CA92014FBFA00F48C73 /* BitcoinRateAction.swift in Sources */,
 				D527DCB62014EAC800D4F2FB /* AppState.swift in Sources */,
 				D527DCB82014EAC800D4F2FB /* NavigationState.swift in Sources */,
 				D527DC852014DBB700D4F2FB /* HistoricalResponse.swift in Sources */,
@@ -1314,10 +1335,8 @@
 				D5A4686720137201006AAB58 /* HistoricalViewModel.swift in Sources */,
 				D5A467A120129459006AAB58 /* AppDelegate.swift in Sources */,
 				D5A4685820136D68006AAB58 /* BootstrapRequest.swift in Sources */,
-				D527DCBD2014EC0400D4F2FB /* StateProvider.swift in Sources */,
 				D527DCA82014E39700D4F2FB /* InjectorServices.swift in Sources */,
 				D5A4686B201377D1006AAB58 /* HistoricalRecordTableViewCell.swift in Sources */,
-				D527DCBC2014EBD200D4F2FB /* Store.swift in Sources */,
 				D5A4685A20136DE7006AAB58 /* Theme.swift in Sources */,
 				D5A4686120136F5F006AAB58 /* HistoricalViewController.swift in Sources */,
 				D5A4685320136ABF006AAB58 /* NavigationActionRequest.swift in Sources */,

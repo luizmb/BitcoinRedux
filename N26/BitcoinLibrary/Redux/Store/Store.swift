@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import BitcoinLibrary
 import CommonLibrary
 
 public protocol AppActionAsync: ActionAsync where StateType == AppState {
@@ -19,7 +18,7 @@ public protocol ActionDispatcher {
 }
 
 final public class Store: StoreBase<AppState, EntryPointReducer> {
-    static let shared: Store = {
+    public static let shared: Store = {
         let global = Store()
         return global
     }()
