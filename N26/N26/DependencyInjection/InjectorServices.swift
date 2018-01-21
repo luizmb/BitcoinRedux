@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import BitcoinLibrary
 import CommonLibrary
 
 extension InjectorProtocol {

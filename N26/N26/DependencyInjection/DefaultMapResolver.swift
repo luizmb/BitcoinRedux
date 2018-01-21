@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import BitcoinLibrary
 import CommonLibrary
 
 public class DefaultMapResolver {
@@ -23,7 +24,7 @@ public class DefaultMapResolver {
 }
 
 extension DefaultMapResolver {
-    static func map() {
+    public static func map() {
         mapServices()
     }
 }

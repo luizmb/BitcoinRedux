@@ -10,7 +10,7 @@ import Foundation
 import CommonLibrary
 
 public class BitcoinAPIClient: BitcoinRateAPI {
-    static let shared: BitcoinRateAPI = {
+    public static let shared: BitcoinRateAPI = {
         let global = BitcoinAPIClient(session: URLSession.shared)
         return global
     }()
