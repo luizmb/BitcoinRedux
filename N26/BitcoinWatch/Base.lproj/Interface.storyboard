@@ -7,6 +7,7 @@
         <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -16,20 +17,16 @@
                     <items>
                         <group width="1" alignment="center" layout="vertical" id="BR6-xs-4QQ">
                             <items>
-                                <group width="1" alignment="left" radius="0.0" spacing="9" id="Guo-4U-Doy">
-                                    <items>
-                                        <label alignment="left" text="Live" textAlignment="left" baselineAdjustment="alignCenters" id="PIl-js-Gxp">
-                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                        </label>
-                                        <label alignment="left" text="09/09 09:09:09" textAlignment="right" baselineAdjustment="alignCenters" id="0oE-86-tyM">
-                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                        </label>
-                                    </items>
-                                </group>
-                                <label alignment="center" text="10,000,000.00" textAlignment="center" baselineAdjustment="alignCenters" id="4x6-Hd-zTA">
+                                <label alignment="center" textAlignment="center" baselineAdjustment="alignCenters" id="4x6-Hd-zTA">
+                                    <color key="textColor" name="ChromeText"/>
                                     <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                 </label>
+                                <label alignment="center" textAlignment="center" baselineAdjustment="alignCenters" id="0oE-86-tyM">
+                                    <color key="textColor" name="ChromeText"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
                             </items>
+                            <color key="backgroundColor" name="ChromeBackground"/>
                         </group>
                         <table alignment="left" id="UTJ-G6-ZdM">
                             <items>
@@ -48,4 +45,12 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="ChromeBackground">
+            <color red="0.39100000262260437" green="0.19900000095367432" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ChromeText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

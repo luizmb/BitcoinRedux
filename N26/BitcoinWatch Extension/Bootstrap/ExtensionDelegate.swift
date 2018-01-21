@@ -7,11 +7,17 @@
 //
 
 import WatchKit
+import BitcoinLibrary
+import CommonLibrary
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
+    override init() {
+        super.init()
+        DefaultMapResolver.map()
+    }
 
     func applicationDidFinishLaunching() {
-        // Perform any final initialization of your application.
+        actionDispatcher.async(BootstrapRequest.boot)
     }
 
     func applicationDidBecomeActive() {
@@ -48,3 +54,5 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
     }
 
 }
+
+extension ExtensionDelegate: HasActionDispatcher { }

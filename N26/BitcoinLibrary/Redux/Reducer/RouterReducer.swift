@@ -28,8 +28,7 @@ public struct RouterReducer: Reducer {
             }
         #else
             switch routerAction {
-            case .didStart(let application):
-                stateCopy.application = application
+            case .didStart:
                 stateCopy.navigation = .still(at: .root())
             case .willNavigate(let route):
                 stateCopy.navigation = .navigating(route)

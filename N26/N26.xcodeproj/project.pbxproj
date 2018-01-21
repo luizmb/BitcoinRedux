@@ -143,6 +143,8 @@
 		D575ADCE201510820038C331 /* BootstrapRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4685720136D68006AAB58 /* BootstrapRequest.swift */; };
 		D575ADCF201510E60038C331 /* BitcoinRateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687220138777006AAB58 /* BitcoinRateRequest.swift */; };
 		D575ADD0201510E60038C331 /* BitcoinRateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687220138777006AAB58 /* BitcoinRateRequest.swift */; };
+		D575ADD4201514C10038C331 /* DefaultMapResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADD3201514C10038C331 /* DefaultMapResolver.swift */; };
+		D575ADD6201514F10038C331 /* BootstrapRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADD5201514F10038C331 /* BootstrapRequest.swift */; };
 		D5934CAC2014FCA300F48C73 /* BitcoinRateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687820139E2C006AAB58 /* BitcoinRateReducer.swift */; };
 		D5934CAD2014FCA300F48C73 /* EntryPointReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683620135C79006AAB58 /* EntryPointReducer.swift */; };
 		D5934CAE2014FCA300F48C73 /* RouterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683A20135D6F006AAB58 /* RouterReducer.swift */; };
@@ -327,6 +329,8 @@
 		D575ADBD2015096B0038C331 /* BitcoinRateAPI.DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateAPI.DI.swift; sourceTree = "<group>"; };
 		D575ADC120150AC80038C331 /* RepositoryProtocol.DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.DI.swift; sourceTree = "<group>"; };
 		D575ADC320150B3C0038C331 /* StateProvider.DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateProvider.DI.swift; sourceTree = "<group>"; };
+		D575ADD3201514C10038C331 /* DefaultMapResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMapResolver.swift; sourceTree = "<group>"; };
+		D575ADD5201514F10038C331 /* BootstrapRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapRequest.swift; sourceTree = "<group>"; };
 		D5934CB6201502FF00F48C73 /* RouterAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterAction.swift; sourceTree = "<group>"; };
 		D5934CB7201502FF00F48C73 /* BitcoinRateAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinRateAction.swift; sourceTree = "<group>"; };
 		D5934CBF2015043700F48C73 /* StateProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateProvider.swift; sourceTree = "<group>"; };
@@ -543,10 +547,8 @@
 		D53930332014B12B00C8D658 /* BitcoinWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D53930342014B12B00C8D658 /* InterfaceController.swift */,
-				D53930362014B12B00C8D658 /* ExtensionDelegate.swift */,
-				D53930382014B12B00C8D658 /* Assets.xcassets */,
-				D539303A2014B12B00C8D658 /* Info.plist */,
+				D575ADD1201512740038C331 /* Bootstrap */,
+				D575ADD22015127D0038C331 /* UI */,
 			);
 			path = "BitcoinWatch Extension";
 			sourceTree = "<group>";
@@ -640,6 +642,26 @@
 			path = ActionRequest;
 			sourceTree = "<group>";
 		};
+		D575ADD1201512740038C331 /* Bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				D539303A2014B12B00C8D658 /* Info.plist */,
+				D575ADD5201514F10038C331 /* BootstrapRequest.swift */,
+				D575ADD3201514C10038C331 /* DefaultMapResolver.swift */,
+				D53930362014B12B00C8D658 /* ExtensionDelegate.swift */,
+				D53930382014B12B00C8D658 /* Assets.xcassets */,
+			);
+			path = Bootstrap;
+			sourceTree = "<group>";
+		};
+		D575ADD22015127D0038C331 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D53930342014B12B00C8D658 /* InterfaceController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		D5934CB5201502FF00F48C73 /* Action */ = {
 			isa = PBXGroup;
 			children = (
@@ -716,14 +738,14 @@
 		D5A467C0201294E4006AAB58 /* Bootstrap */ = {
 			isa = PBXGroup;
 			children = (
-				D5A467A720129459006AAB58 /* Assets.xcassets */,
 				D5A467AC20129459006AAB58 /* Info.plist */,
 				D5A467A020129459006AAB58 /* AppDelegate.swift */,
 				D5A4685720136D68006AAB58 /* BootstrapRequest.swift */,
 				D5A4684D2013675F006AAB58 /* DefaultMapResolver.swift */,
-				D5A4685920136DE7006AAB58 /* Theme.swift */,
-				D5A4687620139CCA006AAB58 /* SplashView.xib */,
 				D5F6CD872013CF2C0005E972 /* main.swift */,
+				D5A4685920136DE7006AAB58 /* Theme.swift */,
+				D5A467A720129459006AAB58 /* Assets.xcassets */,
+				D5A4687620139CCA006AAB58 /* SplashView.xib */,
 			);
 			path = Bootstrap;
 			sourceTree = "<group>";
@@ -1243,8 +1265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D575ADD6201514F10038C331 /* BootstrapRequest.swift in Sources */,
 				D53930372014B12B00C8D658 /* ExtensionDelegate.swift in Sources */,
 				D53930352014B12B00C8D658 /* InterfaceController.swift in Sources */,
+				D575ADD4201514C10038C331 /* DefaultMapResolver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1585,7 +1609,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "BitcoinWatch Extension/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BitcoinWatch Extension/Bootstrap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.N26.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
@@ -1604,7 +1628,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
-				INFOPLIST_FILE = "BitcoinWatch Extension/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BitcoinWatch Extension/Bootstrap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.N26.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
@@ -1623,7 +1647,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
-				INFOPLIST_FILE = "BitcoinWatch Extension/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BitcoinWatch Extension/Bootstrap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.N26.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";

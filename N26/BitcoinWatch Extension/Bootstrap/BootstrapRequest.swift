@@ -1,30 +1,26 @@
 //
 //  BootstrapRequest.swift
-//  N26
+//  BitcoinWatch Extension
 //
-//  Created by Luiz Rodrigo Martins Barbosa on 20.01.18.
+//  Created by Luiz Rodrigo Martins Barbosa on 21.01.18.
 //  Copyright © 2018 Luiz Rodrigo Martins Barbosa. All rights reserved.
 //
 
-import UIKit
+import WatchKit
 import BitcoinLibrary
 import CommonLibrary
 
 enum BootstrapRequest: AppActionAsync {
-    case boot(application: Application, window: Window, launchOptions: [UIApplicationLaunchOptionsKey: Any]?)
+    case boot
 
     func execute(getState: @escaping () -> AppState,
                  dispatch: @escaping DispatchFunction,
                  dispatchAsync: @escaping (AnyActionAsync<AppState>) -> ()) {
         switch self {
-        case .boot(let application, let window, _):
-            Theme.apply()
-            application.keepScreenOn = true
+        case .boot:
+            // Theme.apply()
 
-            let navigationController = UINavigationController(rootViewController: HistoricalViewController.start()!)
-            window.setup(with: navigationController)
-
-            dispatch(RouterAction.didStart(application, navigationController))
+            dispatch(RouterAction.didStart)
 
             // TODO: Trigger auto-refresh
             dispatchAsync(AnyActionAsync(BitcoinRateRequest.realtimeCache))
@@ -34,3 +30,4 @@ enum BootstrapRequest: AppActionAsync {
         }
     }
 }
+
