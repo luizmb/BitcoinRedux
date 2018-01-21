@@ -9,9 +9,15 @@
 import Foundation
 
 public struct BitcoinHistoricalRate {
-    var currency: Currency
-    var closedDate: Date
-    var rate: Float
+    public var currency: Currency
+    public var closedDate: Date
+    public var rate: Float
+
+    public init(currency: Currency, closedDate: Date, rate: Float) {
+        self.currency = currency
+        self.closedDate = closedDate
+        self.rate = rate
+    }
 }
 
 extension BitcoinHistoricalRate: Equatable {

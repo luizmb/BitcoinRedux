@@ -9,21 +9,20 @@
 import Foundation
 
 public struct Currency: Codable {
-    let code: String
-    let name: String
-    var symbol: String? = nil
+    public let code: String
+    public let name: String
+    public var symbol: String? = nil
 
     enum CodingKeys: String, CodingKey {
         case code
         case name = "description"
         case symbol
     }
-}
 
-extension Currency {
-    init(code: String, name: String) {
+    public init(code: String, name: String, symbol: String? = nil) {
         self.code = code
         self.name = name
+        self.symbol = symbol
     }
 }
 

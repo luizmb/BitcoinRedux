@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BitcoinLibrary
 import CommonLibrary
 
 public struct AppState: Equatable {

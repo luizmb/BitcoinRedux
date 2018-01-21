@@ -9,10 +9,16 @@
 import Foundation
 
 public struct HistoricalResponse {
-    static let cacheFile = "historical_cache"
-    let updatedTime: Date
-    let disclaimer: String?
-    let bpi: [Rate]
+    public static let cacheFile = "historical_cache"
+    public let updatedTime: Date
+    public let disclaimer: String?
+    public let bpi: [Rate]
+
+    public init(updatedTime: Date, disclaimer: String?, bpi: [Rate]) {
+        self.updatedTime = updatedTime
+        self.disclaimer = disclaimer
+        self.bpi = bpi
+    }
 }
 
 extension HistoricalResponse: Equatable {

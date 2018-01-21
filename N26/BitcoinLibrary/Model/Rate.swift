@@ -9,8 +9,13 @@
 import Foundation
 
 public struct Rate: Codable {
-    let date: Date
-    let rate: Float
+    public let date: Date
+    public let rate: Float
+
+    public init(date: Date, rate: Float) {
+        self.date = date
+        self.rate = rate
+    }
 }
 
 extension Rate: Equatable {

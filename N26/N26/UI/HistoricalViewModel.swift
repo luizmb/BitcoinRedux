@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import BitcoinLibrary
 
 struct HistoricalViewModel {
     let sections: [HistoricalTableViewSection]?

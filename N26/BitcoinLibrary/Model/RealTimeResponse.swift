@@ -9,10 +9,16 @@
 import Foundation
 
 public struct RealTimeResponse {
-    static let cacheFile = "realtime_cache"
-    let updatedTime: Date
-    let disclaimer: String?
-    let bpi: [Currency: Float]
+    public static let cacheFile = "realtime_cache"
+    public let updatedTime: Date
+    public let disclaimer: String?
+    public let bpi: [Currency: Float]
+
+    public init(updatedTime: Date, disclaimer: String?, bpi: [Currency: Float]) {
+        self.updatedTime = updatedTime
+        self.disclaimer = disclaimer
+        self.bpi = bpi
+    }
 }
 
 extension RealTimeResponse: Equatable {
