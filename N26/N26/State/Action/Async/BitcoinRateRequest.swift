@@ -12,7 +12,9 @@ enum BitcoinRateRequest: AppActionAsync {
     case realtimeRefresh
     case historicalDataRefresh
 
-    func execute(getState: @escaping () -> AppState, dispatch: @escaping DispatchFunction) {
+    func execute(getState: @escaping () -> AppState,
+                 dispatch: @escaping DispatchFunction,
+                 dispatchAsync: @escaping (AnyActionAsync<AppState>) -> ()) {
         switch self {
         case .realtimeRefresh:
             let state = getState()

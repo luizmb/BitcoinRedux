@@ -9,7 +9,7 @@
 import UIKit
 
 final class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
+    var window: Window?
 
     override init() {
         super.init()

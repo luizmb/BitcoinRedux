@@ -11,21 +11,23 @@ import UIKit
 enum BootstrapRequest: AppActionAsync {
     typealias StateType = AppState
 
-    case boot(application: UIApplication, window: UIWindow, launchOptions: [UIApplicationLaunchOptionsKey: Any]?)
+    case boot(application: Application, window: Window, launchOptions: [UIApplicationLaunchOptionsKey: Any]?)
 
-    func execute(getState: @escaping () -> AppState, dispatch: @escaping DispatchFunction) {
+    func execute(getState: @escaping () -> AppState,
+                 dispatch: @escaping DispatchFunction,
+                 dispatchAsync: @escaping (AnyActionAsync<AppState>) -> ()) {
         switch self {
         case .boot(let application, let window, _):
             Theme.apply()
-            UIApplication.shared.isIdleTimerDisabled = true
+            application.keepScreenOn = true
 
             let navigationController = UINavigationController(rootViewController: HistoricalViewController.start()!)
             window.setup(with: navigationController)
 
             dispatch(RouterAction.didStart(application, navigationController))
 
-            BitcoinRateRequest.realtimeRefresh.execute(getState: getState, dispatch: dispatch)
-            BitcoinRateRequest.historicalDataRefresh.execute(getState: getState, dispatch: dispatch)
+            dispatchAsync(AnyActionAsync(BitcoinRateRequest.realtimeRefresh))
+            dispatchAsync(AnyActionAsync(BitcoinRateRequest.historicalDataRefresh))
         }
     }
 }

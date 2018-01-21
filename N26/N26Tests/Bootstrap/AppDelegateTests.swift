@@ -22,6 +22,9 @@ class AppDelegateTests: UnitTest {
                                      didFinishLaunchingWithOptions: [.bluetoothPeripherals: "Bluetooth1",
                                                                      .cloudKitShareMetadata: "CloudKit1"])
 
+        let expectedApplication: Application = UIApplication.shared
+        let expectedWindow: Window = UIApplication.shared.windows.first!
+
         XCTAssertEqual(actionDispatcher.actions.count, 0)
         XCTAssertEqual(actionDispatcher.asyncActions.count, 1)
         let actionTriggered = actionDispatcher.asyncActions.first as? BootstrapRequest
@@ -30,8 +33,8 @@ class AppDelegateTests: UnitTest {
             XCTFail("Invalid action request")
             return
         }
-        XCTAssertEqual(app, UIApplication.shared)
-        XCTAssertEqual(window, UIApplication.shared.windows.first)
+        XCTAssertTrue(app == expectedApplication)
+        XCTAssertTrue(window == expectedWindow)
         let expectedOptions = [UIApplicationLaunchOptionsKey.bluetoothPeripherals: "Bluetooth1" as Any,
                                UIApplicationLaunchOptionsKey.cloudKitShareMetadata: "CloudKit1" as Any] as [UIApplicationLaunchOptionsKey: Any]?
         XCTAssertTrue(options?.keys == expectedOptions?.keys)

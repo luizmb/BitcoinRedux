@@ -9,7 +9,7 @@
 import UIKit
 
 public enum RouterAction: Action {
-    case didStart(UIApplication, UINavigationController)
+    case didStart(Application, UINavigationController)
     case willNavigate(NavigationRoute)
     case didNavigate(NavigationTree)
 }

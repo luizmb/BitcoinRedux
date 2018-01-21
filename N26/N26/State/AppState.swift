@@ -14,7 +14,7 @@ public struct AppState: Equatable {
     var historicalDays = 14
 
     var navigation = NavigationState.still(at: .root())
-    weak var application: UIApplication?
+    weak var application: Application?
     weak var navigationController: UINavigationController?
 }
 

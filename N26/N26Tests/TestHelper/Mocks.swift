@@ -73,8 +73,37 @@ class MockRoute: KnownRoute {
     }
 
     var calledNavigate: (UINavigationController, () -> ())?
+    var onCallNavigate: ((UINavigationController, () -> ()) -> ())?
     func navigate(_ navigationController: UINavigationController, completion: @escaping () -> ()) {
+        onCallNavigate?(navigationController, completion)
         calledNavigate = (navigationController, completion)
+    }
+}
+
+class MockWindow: NSObject, Window {
+    static func create() -> Window {
+        let w = MockWindow()
+        w.frame = UIScreen.main.bounds
+        return w
+    }
+
+    @discardableResult func setup(with viewController: UIViewController?) -> Window {
+        self.rootViewController = viewController
+        self.isKeyWindow = true
+        return self
+    }
+
+    var frame: CGRect = .zero
+    var isKeyWindow: Bool = false
+    var rootViewController: UIViewController? = nil
+}
+
+class MockApplication: NSObject, Application {
+    var keepScreenOnChanged: ((Bool) -> ())?
+    var keepScreenOn: Bool = false {
+        didSet {
+            keepScreenOnChanged?(keepScreenOn)
+        }
     }
 }
 

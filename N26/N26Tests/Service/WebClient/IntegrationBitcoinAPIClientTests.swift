@@ -11,6 +11,7 @@ import Foundation
 @testable import N26
 
 class IntegrationBitcoinAPIClientTests: UnitTest {
+
     func testRealTimeAPIValidResponse() {
         let shouldGetValidResponse: XCTestExpectation = expectation(description: "Valid response")
         let client = BitcoinAPIClient(session: URLSession.shared)

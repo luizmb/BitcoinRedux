@@ -42,13 +42,16 @@ public class StoreBase<StateType: Equatable, ReducerType> where ReducerType: Red
         reduce(action)
     }
 
-    public func async<ActionAsyncType>(_ action: ActionAsyncType) where ActionAsyncType: ActionAsync, ActionAsyncType.StateType == StateType {
+    public func async(_ action: AnyActionAsync<StateType>) {
+        let getState: () -> StateType = { [unowned self] in self.currentState }
+
         action.execute(
-            getState: { [unowned self] in
-                self.currentState
-            },
-            dispatch: { [unowned self] derivedAction in
-                self.dispatch(derivedAction)
-            })
+            getState: getState,
+            dispatch: { [unowned self] derivedAction in self.dispatch(derivedAction) },
+            dispatchAsync: { [unowned self] derivedAsyncAction in self.async(derivedAsyncAction) })
+    }
+
+    public func async<ActionAsyncType>(_ action: ActionAsyncType) where ActionAsyncType: ActionAsync, ActionAsyncType.StateType == StateType {
+        async(AnyActionAsync(action))
     }
 }

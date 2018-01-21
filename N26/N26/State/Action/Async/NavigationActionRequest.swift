@@ -13,7 +13,9 @@ public enum NavigationActionRequest: AppActionAsync {
 
     case navigate(route: KnownRoute)
 
-    public func execute(getState: @escaping () -> AppState, dispatch: @escaping DispatchFunction) {
+    public func execute(getState: @escaping () -> AppState,
+                        dispatch: @escaping DispatchFunction,
+                        dispatchAsync: @escaping (AnyActionAsync<StateType>) -> ()) {
         let currentState = getState()
         guard let navigationController = currentState.navigationController else { return }
 

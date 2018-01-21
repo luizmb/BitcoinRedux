@@ -21,13 +21,14 @@ class RouterReducerTests: UnitTest {
 
     func tesRouterReducerDidStart() {
         let nc = UINavigationController()
-        let newState = reducer.reduce(appState, action: RouterAction.didStart(UIApplication.shared, nc))
+        let mockApplication = MockApplication()
+        let newState = reducer.reduce(appState, action: RouterAction.didStart(mockApplication, nc))
         XCTAssertNotEqual(appState, newState)
-        XCTAssertNotEqual(appState.application, newState.application)
+        XCTAssertFalse(appState.application! == newState.application!)
         XCTAssertEqual(appState.bitcoinState, newState.bitcoinState)
         XCTAssertEqual(appState.navigation, newState.navigation)
         XCTAssertNotEqual(appState.navigationController, newState.navigationController)
-        XCTAssertEqual(newState.application, UIApplication.shared)
+        XCTAssertTrue(newState.application! == mockApplication)
         XCTAssertEqual(newState.navigationController, nc)
         XCTAssertEqual(newState.navigation, .still(at: .listHistoricalAndRealtime))
     }
@@ -36,7 +37,8 @@ class RouterReducerTests: UnitTest {
         let newState = reducer.reduce(appState, action: RouterAction.willNavigate(.mock))
         XCTAssertNotEqual(appState, newState)
         XCTAssertNotEqual(appState.navigation, newState.navigation)
-        XCTAssertEqual(appState.application, newState.application)
+        XCTAssertNil(appState.application)
+        XCTAssertNil(newState.application)
         XCTAssertEqual(appState.bitcoinState, newState.bitcoinState)
         XCTAssertEqual(appState.navigationController, newState.navigationController)
         XCTAssertEqual(newState.navigation, .navigating(.mock))
