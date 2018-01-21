@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		D527DC4D2014D81B00D4F2FB /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539307C2014B87C00C8D658 /* CommonLibrary.framework */; };
 		D527DC4E2014D81B00D4F2FB /* CommonLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D539307C2014B87C00C8D658 /* CommonLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D527DC5B2014D99800D4F2FB /* BitcoinLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = D527DC592014D99800D4F2FB /* BitcoinLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D527DC6F2014DA4800D4F2FB /* BitcoinLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = D527DC592014D99800D4F2FB /* BitcoinLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D527DC702014DAE200D4F2FB /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539306E2014B86E00C8D658 /* CommonLibrary.framework */; };
+		D527DC712014DAE800D4F2FB /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539307C2014B87C00C8D658 /* CommonLibrary.framework */; };
+		D527DC722014DAF600D4F2FB /* BitcoinLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D527DC572014D99800D4F2FB /* BitcoinLibrary.framework */; };
+		D527DC742014DB1400D4F2FB /* BitcoinLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D527DC652014D9AC00D4F2FB /* BitcoinLibrary.framework */; };
+		D527DC752014DB1400D4F2FB /* BitcoinLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D527DC652014D9AC00D4F2FB /* BitcoinLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D53930082013E3B200C8D658 /* BitcoinRealTimeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930072013E3B200C8D658 /* BitcoinRealTimeRate.swift */; };
 		D539300D2013EAB300C8D658 /* BitcoinRateReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539300C2013EAB300C8D658 /* BitcoinRateReducerTests.swift */; };
 		D539300F2013F04B00C8D658 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539300E2013F04B00C8D658 /* Mocks.swift */; };
@@ -144,6 +151,13 @@
 			remoteGlobalIDString = D539307B2014B87C00C8D658;
 			remoteInfo = "CommonLibrary watchOS";
 		};
+		D527DC762014DB1400D4F2FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5A4679520129459006AAB58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D527DC642014D9AC00D4F2FB;
+			remoteInfo = "BitcoinLibrary watchOS";
+		};
 		D53930312014B12B00C8D658 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5A4679520129459006AAB58 /* Project object */;
@@ -175,6 +189,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D527DC4E2014D81B00D4F2FB /* CommonLibrary.framework in Embed Frameworks */,
+				D527DC752014DB1400D4F2FB /* BitcoinLibrary.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +219,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D527DC572014D99800D4F2FB /* BitcoinLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitcoinLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D527DC592014D99800D4F2FB /* BitcoinLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitcoinLibrary.h; sourceTree = "<group>"; };
+		D527DC5A2014D99800D4F2FB /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		D527DC652014D9AC00D4F2FB /* BitcoinLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitcoinLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D527DC682014D9AC00D4F2FB /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
 		D53930072013E3B200C8D658 /* BitcoinRealTimeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRealTimeRate.swift; sourceTree = "<group>"; };
 		D539300C2013EAB300C8D658 /* BitcoinRateReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateReducerTests.swift; sourceTree = "<group>"; };
 		D539300E2013F04B00C8D658 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
@@ -316,11 +336,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D527DC532014D99800D4F2FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D527DC702014DAE200D4F2FB /* CommonLibrary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D527DC612014D9AC00D4F2FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D527DC712014DAE800D4F2FB /* CommonLibrary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D539302C2014B12A00C8D658 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D527DC4D2014D81B00D4F2FB /* CommonLibrary.framework in Frameworks */,
+				D527DC742014DB1400D4F2FB /* BitcoinLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +379,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D527DC722014DAF600D4F2FB /* BitcoinLibrary.framework in Frameworks */,
 				D53930E52014BDC300C8D658 /* CommonLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +394,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D527DC6E2014D9BD00D4F2FB /* BitcoinLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				D527DC592014D99800D4F2FB /* BitcoinLibrary.h */,
+				D527DC682014D9AC00D4F2FB /* Info-watchOS.plist */,
+				D527DC5A2014D99800D4F2FB /* Info-iOS.plist */,
+			);
+			path = BitcoinLibrary;
+			sourceTree = "<group>";
+		};
 		D53930092013EA4900C8D658 /* State */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +531,7 @@
 				D5A467B420129459006AAB58 /* N26Tests */,
 				D53930242014B12A00C8D658 /* BitcoinWatch */,
 				D53930332014B12B00C8D658 /* BitcoinWatch Extension */,
+				D527DC6E2014D9BD00D4F2FB /* BitcoinLibrary */,
 				D53930852014B95100C8D658 /* CommonLibrary */,
 				D5A4679E20129459006AAB58 /* Products */,
 				D53930E42014BDC300C8D658 /* Frameworks */,
@@ -498,6 +547,8 @@
 				D539302F2014B12A00C8D658 /* BitcoinWatch Extension.appex */,
 				D539306E2014B86E00C8D658 /* CommonLibrary.framework */,
 				D539307C2014B87C00C8D658 /* CommonLibrary.framework */,
+				D527DC572014D99800D4F2FB /* BitcoinLibrary.framework */,
+				D527DC652014D9AC00D4F2FB /* BitcoinLibrary.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -738,6 +789,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		D527DC542014D99800D4F2FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D527DC5B2014D99800D4F2FB /* BitcoinLibrary.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D527DC622014D9AC00D4F2FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D527DC6F2014DA4800D4F2FB /* BitcoinLibrary.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D539306B2014B86E00C8D658 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -757,6 +824,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D527DC562014D99800D4F2FB /* BitcoinLibrary iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D527DC5C2014D99800D4F2FB /* Build configuration list for PBXNativeTarget "BitcoinLibrary iOS" */;
+			buildPhases = (
+				D527DC522014D99800D4F2FB /* Sources */,
+				D527DC532014D99800D4F2FB /* Frameworks */,
+				D527DC542014D99800D4F2FB /* Headers */,
+				D527DC552014D99800D4F2FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BitcoinLibrary iOS";
+			productName = "BitcoinLibrary iOS";
+			productReference = D527DC572014D99800D4F2FB /* BitcoinLibrary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D527DC642014D9AC00D4F2FB /* BitcoinLibrary watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D527DC6A2014D9AC00D4F2FB /* Build configuration list for PBXNativeTarget "BitcoinLibrary watchOS" */;
+			buildPhases = (
+				D527DC602014D9AC00D4F2FB /* Sources */,
+				D527DC612014D9AC00D4F2FB /* Frameworks */,
+				D527DC622014D9AC00D4F2FB /* Headers */,
+				D527DC632014D9AC00D4F2FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BitcoinLibrary watchOS";
+			productName = "BitcoinLibrary watchOS";
+			productReference = D527DC652014D9AC00D4F2FB /* BitcoinLibrary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		D53930222014B12A00C8D658 /* BitcoinWatch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D53930432014B12B00C8D658 /* Build configuration list for PBXNativeTarget "BitcoinWatch" */;
@@ -787,6 +890,7 @@
 			);
 			dependencies = (
 				D527DC502014D81B00D4F2FB /* PBXTargetDependency */,
+				D527DC772014DB1400D4F2FB /* PBXTargetDependency */,
 			);
 			name = "BitcoinWatch Extension";
 			productName = "BitcoinWatch Extension";
@@ -876,6 +980,14 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Luiz Rodrigo Martins Barbosa";
 				TargetAttributes = {
+					D527DC562014D99800D4F2FB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D527DC642014D9AC00D4F2FB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					D53930222014B12A00C8D658 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -922,11 +1034,27 @@
 				D539302E2014B12A00C8D658 /* BitcoinWatch Extension */,
 				D539306D2014B86E00C8D658 /* CommonLibrary iOS */,
 				D539307B2014B87C00C8D658 /* CommonLibrary watchOS */,
+				D527DC562014D99800D4F2FB /* BitcoinLibrary iOS */,
+				D527DC642014D9AC00D4F2FB /* BitcoinLibrary watchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D527DC552014D99800D4F2FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D527DC632014D9AC00D4F2FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D53930212014B12A00C8D658 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -979,6 +1107,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D527DC522014D99800D4F2FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D527DC602014D9AC00D4F2FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D539302B2014B12A00C8D658 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1135,6 +1277,11 @@
 			target = D539307B2014B87C00C8D658 /* CommonLibrary watchOS */;
 			targetProxy = D527DC4F2014D81B00D4F2FB /* PBXContainerItemProxy */;
 		};
+		D527DC772014DB1400D4F2FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D527DC642014D9AC00D4F2FB /* BitcoinLibrary watchOS */;
+			targetProxy = D527DC762014DB1400D4F2FB /* PBXContainerItemProxy */;
+		};
 		D53930322014B12B00C8D658 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D539302E2014B12A00C8D658 /* BitcoinWatch Extension */;
@@ -1164,6 +1311,173 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D527DC5D2014D99800D4F2FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BitcoinLibrary/Info-iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.BitcoinLibrary-iOS";
+				PRODUCT_NAME = BitcoinLibrary;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D527DC5E2014D99800D4F2FB /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "BitcoinLibrary/Info-iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.BitcoinLibrary-iOS";
+				PRODUCT_NAME = BitcoinLibrary;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Testing;
+		};
+		D527DC5F2014D99800D4F2FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "BitcoinLibrary/Info-iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.BitcoinLibrary-iOS";
+				PRODUCT_NAME = BitcoinLibrary;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D527DC6B2014D9AC00D4F2FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BitcoinLibrary/Info-watchOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.BitcoinLibrary-watchOS";
+				PRODUCT_NAME = BitcoinLibrary;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		D527DC6C2014D9AC00D4F2FB /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "BitcoinLibrary/Info-watchOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.BitcoinLibrary-watchOS";
+				PRODUCT_NAME = BitcoinLibrary;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Testing;
+		};
+		D527DC6D2014D9AC00D4F2FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "BitcoinLibrary/Info-watchOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.developercity.BitcoinLibrary-watchOS";
+				PRODUCT_NAME = BitcoinLibrary;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
 		D539303F2014B12B00C8D658 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1725,6 +2039,26 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D527DC5C2014D99800D4F2FB /* Build configuration list for PBXNativeTarget "BitcoinLibrary iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D527DC5D2014D99800D4F2FB /* Debug */,
+				D527DC5E2014D99800D4F2FB /* Testing */,
+				D527DC5F2014D99800D4F2FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D527DC6A2014D9AC00D4F2FB /* Build configuration list for PBXNativeTarget "BitcoinLibrary watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D527DC6B2014D9AC00D4F2FB /* Debug */,
+				D527DC6C2014D9AC00D4F2FB /* Testing */,
+				D527DC6D2014D9AC00D4F2FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D539303E2014B12B00C8D658 /* Build configuration list for PBXNativeTarget "BitcoinWatch Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
