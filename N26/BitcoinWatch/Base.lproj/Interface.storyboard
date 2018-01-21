@@ -10,34 +10,50 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Historical Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BitcoinWatch" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="HistoricalInterfaceController" customModule="BitcoinWatch" customModuleProvider="target">
                     <items>
                         <group width="1" alignment="center" layout="vertical" id="BR6-xs-4QQ">
                             <items>
-                                <label alignment="center" textAlignment="center" baselineAdjustment="alignCenters" id="4x6-Hd-zTA">
-                                    <color key="textColor" name="ChromeText"/>
-                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                                </label>
-                                <label alignment="center" textAlignment="center" baselineAdjustment="alignCenters" id="0oE-86-tyM">
+                                <label alignment="left" textAlignment="left" baselineAdjustment="alignCenters" id="0oE-86-tyM">
                                     <color key="textColor" name="ChromeText"/>
                                     <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                                <label alignment="right" textAlignment="right" baselineAdjustment="alignCenters" id="4x6-Hd-zTA">
+                                    <color key="textColor" name="ChromeText"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                 </label>
                             </items>
                             <color key="backgroundColor" name="ChromeBackground"/>
                         </group>
                         <table alignment="left" id="UTJ-G6-ZdM">
                             <items>
-                                <tableRow id="xUB-Fi-nhK">
-                                    <group key="rootItem" width="1" alignment="left" id="Pbf-ng-gWn"/>
+                                <tableRow identifier="HistoricalRow" id="xUB-Fi-nhK" customClass="HistoricalRowController" customModule="BitcoinWatch" customModuleProvider="target">
+                                    <group key="rootItem" width="1" height="25" alignment="left" spacing="0.0" id="Pbf-ng-gWn">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="09/09" textAlignment="left" minimumScaleFactor="0.5" id="iVO-La-QTy">
+                                                <color key="textColor" name="CellText"/>
+                                                <fontDescription key="font" type="italicSystem" pointSize="11"/>
+                                            </label>
+                                            <label alignment="right" verticalAlignment="center" text="$9,999.99" textAlignment="right" minimumScaleFactor="0.69999999999999996" id="orj-Hd-iRK">
+                                                <color key="textColor" name="CellHighlightText"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" name="ListBackground"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="dateLabel" destination="iVO-La-QTy" id="945-Bo-3wd"/>
+                                        <outlet property="rateLabel" destination="orj-Hd-iRK" id="bXt-eF-c5v"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
                     <connections>
-                        <outlet property="historicalTable" destination="UTJ-G6-ZdM" id="oEf-W7-FZh"/>
+                        <outlet property="historicalTable" destination="UTJ-G6-ZdM" id="bOe-FK-WIk"/>
                         <outlet property="realtimeDateLabel" destination="0oE-86-tyM" id="llA-Yt-gpq"/>
                         <outlet property="realtimeRateLabel" destination="4x6-Hd-zTA" id="M5w-mT-IPO"/>
                     </connections>
@@ -46,11 +62,20 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="CellHighlightText">
+            <color red="0.96899998188018799" green="1" blue="0.98299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CellText">
+            <color red="0.74099999666213989" green="0.88899999856948853" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="ChromeBackground">
             <color red="0.39100000262260437" green="0.19900000095367432" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ChromeText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ListBackground">
+            <color red="0.22300000488758087" green="0.11100000143051147" blue="0.58499997854232788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

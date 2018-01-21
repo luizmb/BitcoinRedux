@@ -70,7 +70,7 @@
 		D53930272014B12A00C8D658 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53930252014B12A00C8D658 /* Interface.storyboard */; };
 		D53930292014B12A00C8D658 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53930282014B12A00C8D658 /* Assets.xcassets */; };
 		D53930302014B12B00C8D658 /* BitcoinWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D539302F2014B12A00C8D658 /* BitcoinWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D53930352014B12B00C8D658 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930342014B12B00C8D658 /* InterfaceController.swift */; };
+		D53930352014B12B00C8D658 /* HistoricalInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930342014B12B00C8D658 /* HistoricalInterfaceController.swift */; };
 		D53930372014B12B00C8D658 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930362014B12B00C8D658 /* ExtensionDelegate.swift */; };
 		D53930392014B12B00C8D658 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53930382014B12B00C8D658 /* Assets.xcassets */; };
 		D539303D2014B12B00C8D658 /* BitcoinWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D53930232014B12A00C8D658 /* BitcoinWatch.app */; };
@@ -145,6 +145,7 @@
 		D575ADD0201510E60038C331 /* BitcoinRateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687220138777006AAB58 /* BitcoinRateRequest.swift */; };
 		D575ADD4201514C10038C331 /* DefaultMapResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADD3201514C10038C331 /* DefaultMapResolver.swift */; };
 		D575ADD6201514F10038C331 /* BootstrapRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADD5201514F10038C331 /* BootstrapRequest.swift */; };
+		D575ADDA201521F30038C331 /* HistoricalRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADD9201521F30038C331 /* HistoricalRowController.swift */; };
 		D5934CAC2014FCA300F48C73 /* BitcoinRateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4687820139E2C006AAB58 /* BitcoinRateReducer.swift */; };
 		D5934CAD2014FCA300F48C73 /* EntryPointReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683620135C79006AAB58 /* EntryPointReducer.swift */; };
 		D5934CAE2014FCA300F48C73 /* RouterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4683A20135D6F006AAB58 /* RouterReducer.swift */; };
@@ -287,7 +288,7 @@
 		D53930282014B12A00C8D658 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D539302A2014B12A00C8D658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D539302F2014B12A00C8D658 /* BitcoinWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BitcoinWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D53930342014B12B00C8D658 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		D53930342014B12B00C8D658 /* HistoricalInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalInterfaceController.swift; sourceTree = "<group>"; };
 		D53930362014B12B00C8D658 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		D53930382014B12B00C8D658 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D539303A2014B12B00C8D658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -331,6 +332,7 @@
 		D575ADC320150B3C0038C331 /* StateProvider.DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateProvider.DI.swift; sourceTree = "<group>"; };
 		D575ADD3201514C10038C331 /* DefaultMapResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMapResolver.swift; sourceTree = "<group>"; };
 		D575ADD5201514F10038C331 /* BootstrapRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapRequest.swift; sourceTree = "<group>"; };
+		D575ADD9201521F30038C331 /* HistoricalRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalRowController.swift; sourceTree = "<group>"; };
 		D5934CB6201502FF00F48C73 /* RouterAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterAction.swift; sourceTree = "<group>"; };
 		D5934CB7201502FF00F48C73 /* BitcoinRateAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinRateAction.swift; sourceTree = "<group>"; };
 		D5934CBF2015043700F48C73 /* StateProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateProvider.swift; sourceTree = "<group>"; };
@@ -657,7 +659,8 @@
 		D575ADD22015127D0038C331 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				D53930342014B12B00C8D658 /* InterfaceController.swift */,
+				D53930342014B12B00C8D658 /* HistoricalInterfaceController.swift */,
+				D575ADD9201521F30038C331 /* HistoricalRowController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1267,7 +1270,8 @@
 			files = (
 				D575ADD6201514F10038C331 /* BootstrapRequest.swift in Sources */,
 				D53930372014B12B00C8D658 /* ExtensionDelegate.swift in Sources */,
-				D53930352014B12B00C8D658 /* InterfaceController.swift in Sources */,
+				D53930352014B12B00C8D658 /* HistoricalInterfaceController.swift in Sources */,
+				D575ADDA201521F30038C331 /* HistoricalRowController.swift in Sources */,
 				D575ADD4201514C10038C331 /* DefaultMapResolver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

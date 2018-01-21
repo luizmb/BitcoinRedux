@@ -10,17 +10,17 @@ import WatchKit
 import BitcoinLibrary
 import CommonLibrary
 
-final class InterfaceController: WKInterfaceController {
+final class HistoricalInterfaceController: WKInterfaceController {
     var disposables: [Any] = []
 
     @IBOutlet var realtimeDateLabel: WKInterfaceLabel!
     @IBOutlet var realtimeRateLabel: WKInterfaceLabel!
-
     @IBOutlet var historicalTable: WKInterfaceTable!
-    
+
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         self.setTitle("Bitcoin Rates")
+
         stateProvider[\.bitcoinState].subscribe { [weak self] state in
             self?.update(state: state)
         }.bind(to: self)
@@ -36,6 +36,7 @@ final class InterfaceController: WKInterfaceController {
     }
 
     private func update(state: BitcoinState) {
+
         if case let .loaded(result) = state.realtimeRate,
             case let .success(realtimeRate) = result {
 
@@ -51,9 +52,32 @@ final class InterfaceController: WKInterfaceController {
             realtimeDateLabel.setText(dateFormatter.string(from: realtimeRate.lastUpdate))
             realtimeRateLabel.setText(numberFormatter.string(from: NSDecimalNumber(value: realtimeRate.rate)) ?? "")
         }
+
+        if case let .loaded(result) = state.historicalRates,
+            case let .success(historicalRate) = result {
+            historicalTable.setNumberOfRows(historicalRate.count,
+                                            withRowType: HistoricalRowController.reuseIdentifier)
+
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .short
+            dateFormatter.timeStyle = .none
+
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .currency
+
+            for index in 0..<historicalTable.numberOfRows {
+                guard let controller = historicalTable.rowController(at: index) as? HistoricalRowController else { continue }
+                numberFormatter.currencyCode = historicalRate[index].currency.code
+                numberFormatter.currencySymbol = historicalRate[index].currency.symbol
+                let dateText = dateFormatter.string(from: historicalRate[index].closedDate)
+                let rateText = numberFormatter.string(from: NSDecimalNumber(value: historicalRate[index].rate))
+                controller.dateLabel.setText(dateText)
+                controller.rateLabel.setText(rateText)
+            }
+        }
     }
 }
 
-extension InterfaceController: HasActionDispatcher { }
-extension InterfaceController: HasStateProvider { }
-extension InterfaceController: HasDisposableBag { }
+extension HistoricalInterfaceController: HasActionDispatcher { }
+extension HistoricalInterfaceController: HasStateProvider { }
+extension HistoricalInterfaceController: HasDisposableBag { }
