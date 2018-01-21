@@ -14,6 +14,8 @@ public protocol KnownRoute {
     var route: NavigationRoute { get }
     #if os(iOS)
     func navigate(_ navigationController: UINavigationController, completion: @escaping () -> ())
+    #else
+    func navigate(completion: @escaping () -> ())
     #endif
 }
 

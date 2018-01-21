@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import BitcoinLibrary
 import CommonLibrary
 
 public enum NavigationActionRequest: AppActionAsync {
@@ -19,14 +18,22 @@ public enum NavigationActionRequest: AppActionAsync {
                         dispatch: @escaping DispatchFunction,
                         dispatchAsync: @escaping (AnyActionAsync<StateType>) -> ()) {
         let currentState = getState()
+        #if os(iOS)
         guard let navigationController = currentState.navigationController else { return }
+        #endif
 
         switch self {
         case .navigate(let journey):
             dispatch(RouterAction.willNavigate(journey.route))
+            #if os(iOS)
             journey.navigate(navigationController) {
                 dispatch(RouterAction.didNavigate(journey.route.destination))
             }
+            #else
+            journey.navigate {
+                dispatch(RouterAction.didNavigate(journey.route.destination))
+            }
+            #endif
         }
     }
 }

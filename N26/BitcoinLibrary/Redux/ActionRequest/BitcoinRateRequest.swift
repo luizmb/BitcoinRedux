@@ -7,16 +7,15 @@
 //
 
 import Foundation
-import BitcoinLibrary
 import CommonLibrary
 
-enum BitcoinRateRequest: AppActionAsync {
+public enum BitcoinRateRequest: AppActionAsync {
     case realtimeCache
     case historicalCache
     case realtimeRefresh
     case historicalDataRefresh
 
-    func execute(getState: @escaping () -> AppState,
+    public func execute(getState: @escaping () -> AppState,
                  dispatch: @escaping DispatchFunction,
                  dispatchAsync: @escaping (AnyActionAsync<AppState>) -> ()) {
         switch self {
