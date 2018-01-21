@@ -6,7 +6,9 @@
 //  Copyright © 2018 Luiz Rodrigo Martins Barbosa. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
+#endif
 
 @objc public protocol Application: class, NSObjectProtocol {
     var keepScreenOn: Bool { get set }

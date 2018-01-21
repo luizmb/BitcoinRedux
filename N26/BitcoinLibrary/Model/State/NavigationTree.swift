@@ -11,7 +11,7 @@ import Foundation
 public enum NavigationTree {
     case listHistoricalAndRealtime
 
-    static func root() -> NavigationTree {
+    public static func root() -> NavigationTree {
         return .listHistoricalAndRealtime
     }
 }

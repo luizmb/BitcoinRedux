@@ -6,18 +6,23 @@
 //  Copyright © 2018 Luiz Rodrigo Martins Barbosa. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
-import BitcoinLibrary
+#endif
 import CommonLibrary
 
 public struct AppState: Equatable {
-    var bitcoinState = BitcoinState()
-    var currency = Currency(code: "EUR", name: "Euro", symbol: "€")
-    var historicalDays = 14
+    public var bitcoinState = BitcoinState()
+    public var currency = Currency(code: "EUR", name: "Euro", symbol: "€")
+    public var historicalDays = 14
 
-    var navigation = NavigationState.still(at: .root())
-    weak var application: Application?
-    weak var navigationController: UINavigationController?
+    public var navigation = NavigationState.still(at: .root())
+    public weak var application: Application?
+    #if os(iOS)
+    public weak var navigationController: UINavigationController?
+    #endif
+
+    public init() { }
 }
 
 extension AppState {

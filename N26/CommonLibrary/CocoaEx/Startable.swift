@@ -6,7 +6,9 @@
 //  Copyright © 2018 Luiz Rodrigo Martins Barbosa. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
+#endif
 
 public protocol Startable {
     static func start() -> Self?

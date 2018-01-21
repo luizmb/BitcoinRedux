@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BitcoinLibrary
 import CommonLibrary
 
 final class HistoricalViewController: UIViewController {

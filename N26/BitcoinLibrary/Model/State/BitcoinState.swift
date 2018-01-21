@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import BitcoinLibrary
 import CommonLibrary
 
 public struct BitcoinState {

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import BitcoinLibrary
 import CommonLibrary
 
 public protocol AppActionAsync: ActionAsync where StateType == AppState {

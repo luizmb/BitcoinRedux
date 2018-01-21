@@ -9,8 +9,8 @@
 import Foundation
 
 public struct NavigationRoute {
-    let origin: NavigationTree
-    let destination: NavigationTree
+    public let origin: NavigationTree
+    public let destination: NavigationTree
 }
 
 extension NavigationRoute: Equatable {

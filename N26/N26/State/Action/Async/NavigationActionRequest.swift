@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import BitcoinLibrary
 import CommonLibrary
 
 public enum NavigationActionRequest: AppActionAsync {
