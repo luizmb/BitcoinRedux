@@ -6,12 +6,15 @@
 //  Copyright © 2018 Luiz Rodrigo Martins Barbosa. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
-import BitcoinLibrary
+#endif
 import CommonLibrary
 
 public enum RouterAction: Action {
+    #if os(iOS)
     case didStart(Application, UINavigationController)
+    #endif
     case willNavigate(NavigationRoute)
     case didNavigate(NavigationTree)
 }
