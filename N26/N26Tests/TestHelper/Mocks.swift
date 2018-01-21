@@ -111,6 +111,23 @@ class MockApplication: NSObject, Application {
     }
 }
 
+class MockRepository: RepositoryProtocol {
+    var calledSave: (Data, String)?
+    var onCallSave: ((Data, String) -> ())?
+    func save(data: Data, name: String) {
+        onCallSave?(data, name)
+        calledSave = (data, name)
+    }
+
+    var calledLoad: String?
+    var onCallLoad: ((String) -> (Result<Data>))?
+    func load(name: String) -> Result<Data> {
+        let result = onCallLoad?(name) ?? .error(AnyError())
+        calledLoad = name
+        return result
+    }
+}
+
 class MockAPI: BitcoinRateAPI {
     var calledRequest: (BitcoinEndpoint, (Result<Data>) -> ())?
     var onCallRequest: ((BitcoinEndpoint, (Result<Data>) -> ()) -> CancelableTask)?

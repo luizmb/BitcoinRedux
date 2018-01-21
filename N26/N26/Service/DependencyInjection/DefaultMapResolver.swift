@@ -14,6 +14,7 @@ public class DefaultMapResolver {
 
         injector.mapper.mapSingleton(ActionDispatcher.self) { return Store.shared }
         injector.mapper.mapSingleton(BitcoinRateAPI.self) { return BitcoinAPIClient.shared }
+        injector.mapper.mapSingleton(RepositoryProtocol.self) { return DiskCache.shared }
         injector.mapper.mapSingleton(StateProvider.self) { Store.shared }
     }
 }

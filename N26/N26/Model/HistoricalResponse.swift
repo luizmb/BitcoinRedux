@@ -9,6 +9,7 @@
 import Foundation
 
 public struct HistoricalResponse {
+    static let cacheFile = "historical_cache"
     let updatedTime: Date
     let disclaimer: String?
     let bpi: [Rate]

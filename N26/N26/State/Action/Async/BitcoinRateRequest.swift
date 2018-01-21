@@ -9,6 +9,8 @@
 import Foundation
 
 enum BitcoinRateRequest: AppActionAsync {
+    case realtimeCache
+    case historicalCache
     case realtimeRefresh
     case historicalDataRefresh
 
@@ -16,6 +18,12 @@ enum BitcoinRateRequest: AppActionAsync {
                  dispatch: @escaping DispatchFunction,
                  dispatchAsync: @escaping (AnyActionAsync<AppState>) -> ()) {
         switch self {
+        case .realtimeCache:
+            let realtime: Result<RealTimeResponse> = self.repository.load(name: RealTimeResponse.cacheFile).flatMap(JsonParser.decode)
+            dispatch(BitcoinRateAction.didRefreshRealTime(realtime))
+        case .historicalCache:
+            let historical: Result<HistoricalResponse> = self.repository.load(name: HistoricalResponse.cacheFile).flatMap(JsonParser.decode)
+            dispatch(BitcoinRateAction.didRefreshHistoricalData(historical))
         case .realtimeRefresh:
             let state = getState()
             if case let .syncing(oldTask, _) = state.bitcoinState.realtimeRate {
@@ -23,8 +31,10 @@ enum BitcoinRateRequest: AppActionAsync {
             }
 
             let task = bitcoinRateAPI.request(.realtime(currency: state.currency.code)) { result in
-                // TODO: Save to file-system
-                let realtime: Result<RealTimeResponse> = result.flatMap(JsonParser.decode)
+                let realtime: Result<RealTimeResponse> = result.flatMap { data in
+                    self.repository.save(data: data, name: RealTimeResponse.cacheFile)
+                    return JsonParser.decode(data)
+                }
                 dispatch(BitcoinRateAction.didRefreshRealTime(realtime))
             }
             dispatch(BitcoinRateAction.willRefreshRealTime(task))
@@ -36,8 +46,10 @@ enum BitcoinRateRequest: AppActionAsync {
 
             let startDate = Date().backToMidnight.addingDays(-state.historicalDays)
             let task = bitcoinRateAPI.request(.historical(currency: state.currency.code, startDate: startDate, endDate: Date() )) { result in
-                // TODO: Save to file-system
-                let historical: Result<HistoricalResponse> = result.flatMap(JsonParser.decode)
+                let historical: Result<HistoricalResponse> = result.flatMap { data in
+                    self.repository.save(data: data, name: HistoricalResponse.cacheFile)
+                    return JsonParser.decode(data)
+                }
                 dispatch(BitcoinRateAction.didRefreshHistoricalData(historical))
             }
             dispatch(BitcoinRateAction.willRefreshHistoricalData(task))
@@ -46,3 +58,4 @@ enum BitcoinRateRequest: AppActionAsync {
 }
 
 extension BitcoinRateRequest: HasBitcoinRateAPI { }
+extension BitcoinRateRequest: HasRepository { }

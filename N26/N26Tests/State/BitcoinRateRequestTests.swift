@@ -11,7 +11,6 @@ import Foundation
 @testable import N26
 
 class BitcoinRateRequestTests: UnitTest {
-
     func testBootstrapRequestRealTime() {
         var state = AppState()
         let oldTask = Cancelable(), newTask = Cancelable()
@@ -27,6 +26,20 @@ class BitcoinRateRequestTests: UnitTest {
         }
         injector.mapper.mapSingleton(BitcoinRateAPI.self) { mockAPI }
 
+        let mockRepository = MockRepository()
+        mockRepository.onCallSave = { [weak self] data, name in
+            XCTAssertEqual(name, "realtime_cache")
+            XCTAssertEqual(data, Data())
+            XCTAssertEqual(actions.count, 1)
+            self?.assertAction(actions.first, shouldBeWillRefreshRealTime: newTask)
+            XCTAssertEqual(asyncActions.count, 0)
+        }
+        mockRepository.onCallLoad = { _ in
+            XCTFail("Should not be loading a file in here")
+            return .error(AnyError())
+        }
+        injector.mapper.mapSingleton(RepositoryProtocol.self) { mockRepository }
+
         BitcoinRateRequest
             .realtimeRefresh
             .execute(getState: { state },
@@ -36,7 +49,7 @@ class BitcoinRateRequestTests: UnitTest {
         XCTAssertEqual(oldTask.cancelCount, 1)
         XCTAssertEqual(actions.count, 1)
         assertAction(actions.first, shouldBeWillRefreshRealTime: newTask)
-        mockAPI.calledRequest?.1(.error(AnyError()))
+        mockAPI.calledRequest?.1(.success(Data()))
 
         XCTAssertEqual(actions.count, 2)
         assertAction(actions.first, shouldBeWillRefreshRealTime: newTask)
@@ -58,6 +71,20 @@ class BitcoinRateRequestTests: UnitTest {
         }
         injector.mapper.mapSingleton(BitcoinRateAPI.self) { mockAPI }
 
+        let mockRepository = MockRepository()
+        mockRepository.onCallSave = { [weak self] data, name in
+            XCTAssertEqual(name, "historical_cache")
+            XCTAssertEqual(data, Data())
+            XCTAssertEqual(actions.count, 1)
+            self?.assertAction(actions.first, shouldBeWillRefreshHistoricalData: newTask)
+            XCTAssertEqual(asyncActions.count, 0)
+        }
+        mockRepository.onCallLoad = { _ in
+            XCTFail("Should not be loading a file in here")
+            return .error(AnyError())
+        }
+        injector.mapper.mapSingleton(RepositoryProtocol.self) { mockRepository }
+
         BitcoinRateRequest
             .historicalDataRefresh
             .execute(getState: { state },
@@ -67,11 +94,67 @@ class BitcoinRateRequestTests: UnitTest {
         XCTAssertEqual(oldTask.cancelCount, 1)
         XCTAssertEqual(actions.count, 1)
         assertAction(actions.first, shouldBeWillRefreshHistoricalData: newTask)
-        mockAPI.calledRequest?.1(.error(AnyError()))
+        mockAPI.calledRequest?.1(.success(Data()))
 
         XCTAssertEqual(actions.count, 2)
         assertAction(actions.first, shouldBeWillRefreshHistoricalData: newTask)
         assertAction(actions[1], shouldBeDidRefreshHistoricalData: .error(AnyError()))
+    }
+
+    func testBootstrapRequestRealTimeCache() {
+        let state = AppState()
+        var actions: [Action] = []
+        var asyncActions: [AnyActionAsync<AppState>] = []
+        let mockRepository = MockRepository()
+        mockRepository.onCallSave = { _, _ in
+            XCTFail("Should not be saving a file in here")
+            return
+        }
+        mockRepository.onCallLoad = { name in
+            XCTAssertEqual(name, "realtime_cache")
+            XCTAssertEqual(actions.count, 0)
+            XCTAssertEqual(asyncActions.count, 0)
+            return .error(AnyError())
+        }
+        injector.mapper.mapSingleton(RepositoryProtocol.self) { mockRepository }
+
+        BitcoinRateRequest
+            .realtimeCache
+            .execute(getState: { state },
+                     dispatch: { actions.append($0) },
+                     dispatchAsync: { asyncActions.append($0) })
+
+        XCTAssertEqual(actions.count, 1)
+        XCTAssertEqual(asyncActions.count, 0)
+        assertAction(actions.first, shouldBeDidRefreshRealTime: .error(AnyError()))
+    }
+
+    func testBootstrapRequestHistoricalDataCache() {
+        let state = AppState()
+        var actions: [Action] = []
+        var asyncActions: [AnyActionAsync<AppState>] = []
+        let mockRepository = MockRepository()
+        mockRepository.onCallSave = { _, _ in
+            XCTFail("Should not be saving a file in here")
+            return
+        }
+        mockRepository.onCallLoad = { name in
+            XCTAssertEqual(name, "historical_cache")
+            XCTAssertEqual(actions.count, 0)
+            XCTAssertEqual(asyncActions.count, 0)
+            return .error(AnyError())
+        }
+        injector.mapper.mapSingleton(RepositoryProtocol.self) { mockRepository }
+
+        BitcoinRateRequest
+            .historicalCache
+            .execute(getState: { state },
+                     dispatch: { actions.append($0) },
+                     dispatchAsync: { asyncActions.append($0) })
+
+        XCTAssertEqual(actions.count, 1)
+        XCTAssertEqual(asyncActions.count, 0)
+        assertAction(actions.first, shouldBeDidRefreshHistoricalData: .error(AnyError()))
     }
 
     private func assertAction(_ action: Action?, shouldBeWillRefreshRealTime task: Cancelable) {
@@ -90,7 +173,12 @@ class BitcoinRateRequestTests: UnitTest {
         let bitcoiRateAction = action as? BitcoinRateAction
         XCTAssertNotNil(bitcoiRateAction)
         if case let .didRefreshRealTime(r) = bitcoiRateAction! {
-            XCTAssertEqual(r, result)
+            switch (r, result) {
+            case (.error, .error): break
+            case (.success(let lhs), .success(let rhs)): XCTAssertEqual(lhs, rhs)
+            default: XCTFail("Results differ")
+            }
+
         } else {
             XCTFail("Wrong action triggered")
         }
@@ -112,7 +200,11 @@ class BitcoinRateRequestTests: UnitTest {
         let bitcoiRateAction = action as? BitcoinRateAction
         XCTAssertNotNil(bitcoiRateAction)
         if case let .didRefreshHistoricalData(r) = bitcoiRateAction! {
-            XCTAssertEqual(r, result)
+            switch (r, result) {
+            case (.error, .error): break
+            case (.success(let lhs), .success(let rhs)): XCTAssertEqual(lhs, rhs)
+            default: XCTFail("Results differ")
+            }
         } else {
             XCTFail("Wrong action triggered")
         }

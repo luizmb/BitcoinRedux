@@ -106,4 +106,12 @@ class CocoaExTests: UnitTest {
                        "http://www.foo.com/resource/test2.json?b=b1&a=a1"].contains(sut2.url!.absoluteString))
         XCTAssertEqual(sut2.httpMethod, "POST")
     }
+
+    func testStringExtension() {
+        XCTAssertEqual("test/of".appendingPathComponent("appending"), "test/of/appending")
+        XCTAssertEqual("test/of".appendingPathExtension("appending"), "test/of.appending")
+        XCTAssertEqual("Hello".leftPadding(toLength: 9, withPad: "x"), "xxxxHello")
+        XCTAssertEqual("Hello".leftPadding(toLength: 10, withPad: "x"), "xxxxxHello")
+        XCTAssertEqual("Hello".leftPadding(toLength: 4, withPad: "x"), "ello")
+    }
 }

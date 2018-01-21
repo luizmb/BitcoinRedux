@@ -11,6 +11,7 @@ import Foundation
 extension InjectorProtocol {
     public var actionDispatcher: ActionDispatcher { return self.mapper.getSingleton()! }
     public var bitcoinRateAPI: BitcoinRateAPI { return self.mapper.getSingleton()! }
+    public var repository: RepositoryProtocol { return self.mapper.getSingleton()! }
     public var stateProvider: StateProvider { return self.mapper.getSingleton()! }
 }
 
@@ -37,6 +38,19 @@ extension HasBitcoinRateAPI {
 
     public var bitcoinRateAPI: BitcoinRateAPI {
         return injector().bitcoinRateAPI
+    }
+}
+
+// MARK: - Repository (Singleton)
+public protocol HasRepository { }
+
+extension HasRepository {
+    public static var repository: RepositoryProtocol {
+        return injector().repository
+    }
+
+    public var repository: RepositoryProtocol {
+        return injector().repository
     }
 }
 
