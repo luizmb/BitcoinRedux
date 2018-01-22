@@ -30,7 +30,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
     }
 
     func applicationDidBecomeActive() {
-        refreshTimer = Timer.scheduledTimer(timeInterval: 6,
+        refreshTimer = Timer.scheduledTimer(timeInterval: 30,
                                             target: self,
                                             selector: #selector(refresh),
                                             userInfo: nil,

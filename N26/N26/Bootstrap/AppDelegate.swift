@@ -35,7 +35,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        refreshTimer = Timer.scheduledTimer(timeInterval: 6,
+        refreshTimer = Timer.scheduledTimer(timeInterval: 30,
                                             target: self,
                                             selector: #selector(refresh),
                                             userInfo: nil,
