@@ -58,9 +58,9 @@ final class HistoricalInterfaceController: WKInterfaceController {
                 self.historicalTable.setNumberOfRows(historicalRate.count,
                                                 withRowType: HistoricalRowController.reuseIdentifier)
 
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateStyle = .short
-                dateFormatter.timeStyle = .none
+//                let dateFormatter = DateFormatter()
+//                dateFormatter.dateStyle = .short
+//                dateFormatter.timeStyle = .none
 
                 let numberFormatter = NumberFormatter()
                 numberFormatter.numberStyle = .currency
@@ -69,7 +69,9 @@ final class HistoricalInterfaceController: WKInterfaceController {
                     guard let controller = self.historicalTable.rowController(at: index) as? HistoricalRowController else { continue }
                     numberFormatter.currencyCode = historicalRate[index].currency.code
                     numberFormatter.currencySymbol = historicalRate[index].currency.symbol
-                    let dateText = dateFormatter.string(from: historicalRate[index].closedDate)
+                    let dateText = historicalRate[index].closedDate
+                        .formattedFromComponents(styleAttitude: .short, year: false, month: true, day: true,
+                                                 hour: false, minute: false, second: false, locale: Locale.current)
                     let rateText = numberFormatter.string(from: NSDecimalNumber(value: historicalRate[index].rate))
                     controller.dateLabel.setText(dateText)
                     controller.rateLabel.setText(rateText)

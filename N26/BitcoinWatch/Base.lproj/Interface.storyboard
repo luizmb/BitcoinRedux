@@ -42,7 +42,7 @@
                                                 <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                             </label>
                                         </items>
-                                        <color key="backgroundColor" name="ListBackground"/>
+                                        <color key="backgroundColor" name="CellBackground"/>
                                     </group>
                                     <connections>
                                         <outlet property="dateLabel" destination="iVO-La-QTy" id="945-Bo-3wd"/>
@@ -71,20 +71,20 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="CellBackground">
+            <color red="0.24705882352941178" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="CellHighlightText">
             <color red="0.96899998188018799" green="1" blue="0.98299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="CellText">
-            <color red="0.74099999666213989" green="0.88899999856948853" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94117647058823528" green="0.49019607843137253" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ChromeBackground">
-            <color red="0.39100000262260437" green="0.19900000095367432" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94117647058823528" green="0.49019607843137253" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ChromeText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="ListBackground">
-            <color red="0.22300000488758087" green="0.11100000143051147" blue="0.58499997854232788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
