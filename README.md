@@ -32,7 +32,7 @@ Everything that can be mutated in your app is part of the app state, and managin
 
 For that reason, when using uni-directional data flow we group the whole app state in a store (state machine) and nobody is allowed to mutate it directly. Instead, we use `Actions` to request changes. An Action is usually a very tiny value object describing the change, which may or may not contain associated values. For that reason, Swift `enum` is the perfect data structure for the job.
 
-In a complex Redux Framework, there's the concept of Middleware, which we will skip now as we don't use it in this project. So the next step is mutating the `AppStat` according to the `Action` and for that we use `Reducers`. In functional programming, a reducer is a function that takes an initial value and an operation, and returns the result value of the same type as the first input. Here we want the same, something that receives the current state, the action, and returns the new state. The `Store` orchestrates this whole symphony, holding both, current state and the list of reducers, receiving the actions from the views and coordinating the workflow.
+In a complex Redux Framework, there's the concept of Middleware, which we will skip now as we don't use it in this project. So the next step is mutating the `AppState` according to the `Action` and for that we use `Reducers`. In functional programming, a reducer is a function that takes an initial value and an operation, and returns the result value of the same type as the first input. Here we want the same, something that receives the current state, the action, and returns the new state. The `Store` orchestrates this whole symphony, holding both, current state and the list of reducers, receiving the actions from the views and coordinating the workflow.
 
 Once all the `Reducers` had the opportunity to reduce the state according to the `Action`, the store will set the current state to the new one. This part is really important: you will **never** end up with intermediate states, as the current state remains unchanged until all the whole process is done. Different from some Reactive Libraries, here you always have a consistent state and don't have to be worried with partially changed objects.
 
@@ -105,6 +105,12 @@ For the iOS project the UI has no Storyboards, but XIBs. This is a personal choi
 For UI, I used XIBs instead of Storyboards, and plain `UIViewController` instead of `UITableViewController`, so I can free the ViewController from the burden of being also the `UITableViewDataSource` for its tableView. All a ViewController does is responding to the state signal changes (updating itself and children) and dispatching `Actions` for user interactions. For color customization and animations I prefer having `UIView` subclasses.
 
 I try to use StackViews as much as I can, or fallback to AutoLayout for design or performance fine-tuning. Size classes when needed and now Safe Area insets to make compatible with iPhone X.
+
+![iPhoneX_1](Docs/screenshot1.png "iPhone X: no internet")
+![iPhoneX_2](Docs/screenshot2.png "iPhone X: portrait")
+![iPhoneX_3](Docs/screenshot3.png "iPhone X: landscape")
+![AppleWatch_1](Docs/screenshot4.png "Apple Watch: list")
+![AppleWatch_2](Docs/screenshot5.png "Apple Watch: Refresh menu")
 
 ---
 ## Unit Tests
