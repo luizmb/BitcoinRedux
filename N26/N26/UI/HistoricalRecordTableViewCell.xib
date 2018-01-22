@@ -6,56 +6,84 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoricalRecordTableViewCell" id="tgZ-3E-NuJ" customClass="HistoricalRecordTableViewCell" customModule="N26" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoricalRecordTableViewCell" rowHeight="60" id="tgZ-3E-NuJ" customClass="HistoricalRecordTableViewCell" customModule="N26" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tgZ-3E-NuJ" id="oRJ-nK-Q68">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09/09/2009" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dl-nL-xTN">
-                        <rect key="frame" x="16" y="14.5" width="68.5" height="14.5"/>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                        <color key="textColor" name="CellText"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.999.999,9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCU-BR-3qX">
-                        <rect key="frame" x="229.5" y="11" width="129.5" height="21"/>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                        <color key="textColor" name="CellHighlightText"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rhj-PW-O7x">
+                        <rect key="frame" x="16" y="4" width="343" height="50.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.999.999,9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCU-BR-3qX">
+                                <rect key="frame" x="197.5" y="15" width="129.5" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" name="CellHighlightText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09/09/2009" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dl-nL-xTN">
+                                <rect key="frame" x="16" y="18" width="68.5" height="14.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" name="CellText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="CellBackground"/>
+                        <constraints>
+                            <constraint firstItem="0Dl-nL-xTN" firstAttribute="leading" secondItem="Rhj-PW-O7x" secondAttribute="leading" constant="16" id="6gI-TG-Uag"/>
+                            <constraint firstItem="0Dl-nL-xTN" firstAttribute="centerY" secondItem="Rhj-PW-O7x" secondAttribute="centerY" id="iSN-gP-y8y"/>
+                            <constraint firstAttribute="trailing" secondItem="SCU-BR-3qX" secondAttribute="trailing" constant="16" id="lRQ-qf-Jdd"/>
+                            <constraint firstItem="SCU-BR-3qX" firstAttribute="centerY" secondItem="Rhj-PW-O7x" secondAttribute="centerY" id="vCP-Xv-Nob"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                <color key="value" red="0.58966159326424872" green="0.58966159326424872" blue="0.58966159326424872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
-                <color key="backgroundColor" name="CellBackground"/>
+                <color key="backgroundColor" name="ListBackground"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="SCU-BR-3qX" secondAttribute="trailing" constant="16" id="Mem-ao-Cg9"/>
-                    <constraint firstItem="0Dl-nL-xTN" firstAttribute="leading" secondItem="oRJ-nK-Q68" secondAttribute="leading" constant="16" id="OKa-Mh-xqe"/>
-                    <constraint firstItem="0Dl-nL-xTN" firstAttribute="centerY" secondItem="oRJ-nK-Q68" secondAttribute="centerY" id="cag-Yl-kdy"/>
-                    <constraint firstItem="SCU-BR-3qX" firstAttribute="centerY" secondItem="oRJ-nK-Q68" secondAttribute="centerY" id="hcJ-08-OBT"/>
+                    <constraint firstItem="Rhj-PW-O7x" firstAttribute="leading" secondItem="oRJ-nK-Q68" secondAttribute="leadingMargin" id="7lF-Od-3cD"/>
+                    <constraint firstItem="Rhj-PW-O7x" firstAttribute="trailing" secondItem="oRJ-nK-Q68" secondAttribute="trailingMargin" id="Dd9-Ce-hUK"/>
+                    <constraint firstItem="Rhj-PW-O7x" firstAttribute="top" secondItem="oRJ-nK-Q68" secondAttribute="top" constant="4" id="wl0-JU-UUL"/>
+                    <constraint firstItem="Rhj-PW-O7x" firstAttribute="bottom" secondItem="oRJ-nK-Q68" secondAttribute="bottom" constant="-4" id="xMO-dB-vvP"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="dateLabel" destination="0Dl-nL-xTN" id="nOw-Hx-67M"/>
                 <outlet property="rateLabel" destination="SCU-BR-3qX" id="ktN-0x-Fdm"/>
             </connections>
-            <point key="canvasLocation" x="-166" y="-17"/>
+            <point key="canvasLocation" x="-166.5" y="-9.5"/>
         </tableViewCell>
     </objects>
     <resources>
         <namedColor name="CellBackground">
-            <color red="1" green="0.72200000286102295" blue="0.13600000739097595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.33500000834465027" green="0.4440000057220459" blue="0.77999997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="CellHighlightText">
-            <color red="0.18799999356269836" green="0.15700000524520874" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96899998188018799" green="1" blue="0.98299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="CellText">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.74099999666213989" green="0.88899999856948853" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ListBackground">
+            <color red="0.22300000488758087" green="0.11100000143051147" blue="0.58499997854232788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
