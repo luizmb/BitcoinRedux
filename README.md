@@ -132,9 +132,8 @@ One important thing about these Unit Tests: please check that I use an alternati
 
 ---
 ## What should come next
-* Rendering Unit Tests using [FBSnapshotTestCase]
+* Rendering Unit Tests using [FBSnapshotTestCase](https://github.com/uber/ios-snapshot-test-case/)
 * UI Tests using [KIF](https://github.com/kif-framework/KIF)
-(https://github.com/uber/ios-snapshot-test-case/)
 * WatchConnectivity to allow the watchOS app to fetch information from the iPhone when available, not only directly from the web
 * Today Extension and AppGroups to share the cache
 * A chart showing the historical rates
