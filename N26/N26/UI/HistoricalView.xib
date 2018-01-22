@@ -28,13 +28,13 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No data available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUo-jK-0u8">
                     <rect key="frame" x="91.5" y="271" width="192" height="31.5"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" name="ChromeText"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check your internet connection and tap the button below to refresh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTk-Um-nvI">
                     <rect key="frame" x="16" y="319" width="343" height="49"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" name="CellHighlightText"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hck-jM-rYW">
@@ -45,17 +45,18 @@
                         <action selector="refreshButtonTap:" destination="-1" eventType="touchUpInside" id="O4p-Xa-KwW"/>
                     </connections>
                 </button>
-                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="34" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="biY-cA-oCd">
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="biY-cA-oCd">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" name="ListBackground"/>
                     <color key="separatorColor" name="ListSeparator"/>
+                    <color key="sectionIndexBackgroundColor" name="ListBackground"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" name="ListBackground"/>
             <constraints>
                 <constraint firstItem="GTk-Um-nvI" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="5Wl-5R-nxS"/>
-                <constraint firstAttribute="trailing" secondItem="biY-cA-oCd" secondAttribute="trailing" id="7OJ-Vq-Khd"/>
-                <constraint firstItem="biY-cA-oCd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="99O-ch-KRA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="biY-cA-oCd" secondAttribute="trailing" id="7OJ-Vq-Khd"/>
+                <constraint firstItem="biY-cA-oCd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="99O-ch-KRA"/>
                 <constraint firstItem="Hck-jM-rYW" firstAttribute="top" secondItem="GTk-Um-nvI" secondAttribute="bottom" constant="32" id="BTT-lm-Fep"/>
                 <constraint firstItem="Hck-jM-rYW" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="DXU-tq-BrB"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GTk-Um-nvI" secondAttribute="trailing" constant="16" id="Jxc-BJ-JVy"/>
@@ -70,11 +71,17 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="CellHighlightText">
+            <color red="0.96899998188018799" green="1" blue="0.98299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ChromeText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="ListBackground">
-            <color red="0.22300000488758087" green="0.11100000143051147" blue="0.58499997854232788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.15686274509803921" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ListSeparator">
-            <color red="0.39100000262260437" green="0.45300000905990601" blue="0.6119999885559082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.92400002479553223" blue="0.064999997615814209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
