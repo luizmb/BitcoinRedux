@@ -32,11 +32,9 @@ final class Theme {
     static func apply() {
         let navigationBarAppearance = UINavigationBar.appearance()
         navigationBarAppearance.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.of(.chromeText)]
-        navigationBarAppearance.barStyle = .black
+        navigationBarAppearance.largeTitleTextAttributes =
+            [NSAttributedStringKey.foregroundColor: UIColor.of(.chromeText)]
+        navigationBarAppearance.prefersLargeTitles = true
         navigationBarAppearance.barTintColor = .of(.chromeBackground)
-        navigationBarAppearance.tintColor = .of(.chromeText)
-        navigationBarAppearance.isTranslucent = false
-        navigationBarAppearance.setBackgroundImage(UIImage(), for: .default)
-        navigationBarAppearance.shadowImage = UIImage()
     }
 }

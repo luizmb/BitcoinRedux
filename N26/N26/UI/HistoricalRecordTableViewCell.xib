@@ -20,11 +20,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rhj-PW-O7x">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rhj-PW-O7x" customClass="BulletBackgroundView" customModule="N26" customModuleProvider="target">
                         <rect key="frame" x="16" y="4" width="343" height="50.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.999.999,9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCU-BR-3qX">
-                                <rect key="frame" x="197.5" y="15" width="129.5" height="21"/>
+                                <rect key="frame" x="197.5" y="15.5" width="129.5" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" name="CellHighlightText"/>
                                 <nil key="highlightedColor"/>
@@ -44,15 +44,14 @@
                             <constraint firstItem="SCU-BR-3qX" firstAttribute="centerY" secondItem="Rhj-PW-O7x" secondAttribute="centerY" id="vCP-Xv-Nob"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="8"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                <integer key="value" value="1"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                <color key="value" red="0.58966159326424872" green="0.58966159326424872" blue="0.58966159326424872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.3594000108" green="0.4209960459" blue="0.4883010787" alpha="0.90274507709999996" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -74,16 +73,16 @@
     </objects>
     <resources>
         <namedColor name="CellBackground">
-            <color red="0.33500000834465027" green="0.4440000057220459" blue="0.77999997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.24705882352941178" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="CellHighlightText">
             <color red="0.96899998188018799" green="1" blue="0.98299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="CellText">
-            <color red="0.74099999666213989" green="0.88899999856948853" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94117647058823528" green="0.49019607843137253" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ListBackground">
-            <color red="0.22300000488758087" green="0.11100000143051147" blue="0.58499997854232788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.15686274509803921" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
