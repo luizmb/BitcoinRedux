@@ -13,7 +13,6 @@
 		D527DC6F2014DA4800D4F2FB /* BitcoinLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = D527DC592014D99800D4F2FB /* BitcoinLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D527DC702014DAE200D4F2FB /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539306E2014B86E00C8D658 /* CommonLibrary.framework */; };
 		D527DC712014DAE800D4F2FB /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539307C2014B87C00C8D658 /* CommonLibrary.framework */; };
-		D527DC722014DAF600D4F2FB /* BitcoinLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D527DC572014D99800D4F2FB /* BitcoinLibrary.framework */; };
 		D527DC742014DB1400D4F2FB /* BitcoinLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D527DC652014D9AC00D4F2FB /* BitcoinLibrary.framework */; };
 		D527DC752014DB1400D4F2FB /* BitcoinLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D527DC652014D9AC00D4F2FB /* BitcoinLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D527DC822014DBB700D4F2FB /* RealTimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D527DC792014DBB700D4F2FB /* RealTimeResponse.swift */; };
@@ -129,7 +128,10 @@
 		D53930E12014BBC400C8D658 /* SyncableResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A82014BBC400C8D658 /* SyncableResult.swift */; };
 		D53930E22014BBC400C8D658 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A92014BBC400C8D658 /* Signal.swift */; };
 		D53930E32014BBC400C8D658 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53930A92014BBC400C8D658 /* Signal.swift */; };
-		D53930E52014BDC300C8D658 /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539306E2014B86E00C8D658 /* CommonLibrary.framework */; };
+		D53B483C2015646A006E45F0 /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539306E2014B86E00C8D658 /* CommonLibrary.framework */; };
+		D53B483D2015646A006E45F0 /* CommonLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D539306E2014B86E00C8D658 /* CommonLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D53B48402015646A006E45F0 /* BitcoinLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D527DC572014D99800D4F2FB /* BitcoinLibrary.framework */; };
+		D53B48412015646A006E45F0 /* BitcoinLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D527DC572014D99800D4F2FB /* BitcoinLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D575ADBB2015093A0038C331 /* ActionDispatcher.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADB9201509230038C331 /* ActionDispatcher.DI.swift */; };
 		D575ADBC2015093B0038C331 /* ActionDispatcher.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADB9201509230038C331 /* ActionDispatcher.DI.swift */; };
 		D575ADBF2015098C0038C331 /* BitcoinRateAPI.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADBD2015096B0038C331 /* BitcoinRateAPI.DI.swift */; };
@@ -215,6 +217,20 @@
 			remoteGlobalIDString = D53930222014B12A00C8D658;
 			remoteInfo = BitcoinWatch;
 		};
+		D53B483E2015646A006E45F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5A4679520129459006AAB58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D539306D2014B86E00C8D658;
+			remoteInfo = "CommonLibrary iOS";
+		};
+		D53B48422015646A006E45F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5A4679520129459006AAB58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D527DC562014D99800D4F2FB;
+			remoteInfo = "BitcoinLibrary iOS";
+		};
 		D5A467B220129459006AAB58 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5A4679520129459006AAB58 /* Project object */;
@@ -257,6 +273,18 @@
 				D539303D2014B12B00C8D658 /* BitcoinWatch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D53B48442015646B006E45F0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D53B483D2015646A006E45F0 /* CommonLibrary.framework in Embed Frameworks */,
+				D53B48412015646A006E45F0 /* BitcoinLibrary.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -429,8 +457,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D527DC722014DAF600D4F2FB /* BitcoinLibrary.framework in Frameworks */,
-				D53930E52014BDC300C8D658 /* CommonLibrary.framework in Frameworks */,
+				D53B483C2015646A006E45F0 /* CommonLibrary.framework in Frameworks */,
+				D53B48402015646A006E45F0 /* BitcoinLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1022,11 +1050,14 @@
 				D5A4679A20129459006AAB58 /* Frameworks */,
 				D5A4679B20129459006AAB58 /* Resources */,
 				D53930472014B12B00C8D658 /* Embed Watch Content */,
+				D53B48442015646B006E45F0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				D539303C2014B12B00C8D658 /* PBXTargetDependency */,
+				D53B483F2015646A006E45F0 /* PBXTargetDependency */,
+				D53B48432015646A006E45F0 /* PBXTargetDependency */,
 			);
 			name = N26;
 			productName = N26;
@@ -1415,6 +1446,16 @@
 			isa = PBXTargetDependency;
 			target = D53930222014B12A00C8D658 /* BitcoinWatch */;
 			targetProxy = D539303B2014B12B00C8D658 /* PBXContainerItemProxy */;
+		};
+		D53B483F2015646A006E45F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D539306D2014B86E00C8D658 /* CommonLibrary iOS */;
+			targetProxy = D53B483E2015646A006E45F0 /* PBXContainerItemProxy */;
+		};
+		D53B48432015646A006E45F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D527DC562014D99800D4F2FB /* BitcoinLibrary iOS */;
+			targetProxy = D53B48422015646A006E45F0 /* PBXContainerItemProxy */;
 		};
 		D5A467B320129459006AAB58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2005,6 +2046,7 @@
 		D5A467BB20129459006AAB58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
@@ -2021,6 +2063,7 @@
 		D5A467BC20129459006AAB58 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
@@ -2132,6 +2175,7 @@
 		D5F6CD802013C4DA0005E972 /* Testing */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;

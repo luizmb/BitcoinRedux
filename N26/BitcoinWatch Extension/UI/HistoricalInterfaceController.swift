@@ -36,43 +36,44 @@ final class HistoricalInterfaceController: WKInterfaceController {
     }
 
     private func update(state: BitcoinState) {
+        DispatchQueue.main.async {
+            if case let .loaded(result) = state.realtimeRate,
+                case let .success(realtimeRate) = result {
 
-        if case let .loaded(result) = state.realtimeRate,
-            case let .success(realtimeRate) = result {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateStyle = .short
+                dateFormatter.timeStyle = .short
 
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .short
-            dateFormatter.timeStyle = .short
+                let numberFormatter = NumberFormatter()
+                numberFormatter.currencyCode = realtimeRate.currency.code
+                numberFormatter.currencySymbol = realtimeRate.currency.symbol
+                numberFormatter.numberStyle = .currency
 
-            let numberFormatter = NumberFormatter()
-            numberFormatter.currencyCode = realtimeRate.currency.code
-            numberFormatter.currencySymbol = realtimeRate.currency.symbol
-            numberFormatter.numberStyle = .currency
+                self.realtimeDateLabel.setText(dateFormatter.string(from: realtimeRate.lastUpdate))
+                self.realtimeRateLabel.setText(numberFormatter.string(from: NSDecimalNumber(value: realtimeRate.rate)) ?? "")
+            }
 
-            realtimeDateLabel.setText(dateFormatter.string(from: realtimeRate.lastUpdate))
-            realtimeRateLabel.setText(numberFormatter.string(from: NSDecimalNumber(value: realtimeRate.rate)) ?? "")
-        }
+            if case let .loaded(result) = state.historicalRates,
+                case let .success(historicalRate) = result {
+                self.historicalTable.setNumberOfRows(historicalRate.count,
+                                                withRowType: HistoricalRowController.reuseIdentifier)
 
-        if case let .loaded(result) = state.historicalRates,
-            case let .success(historicalRate) = result {
-            historicalTable.setNumberOfRows(historicalRate.count,
-                                            withRowType: HistoricalRowController.reuseIdentifier)
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateStyle = .short
+                dateFormatter.timeStyle = .none
 
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .short
-            dateFormatter.timeStyle = .none
+                let numberFormatter = NumberFormatter()
+                numberFormatter.numberStyle = .currency
 
-            let numberFormatter = NumberFormatter()
-            numberFormatter.numberStyle = .currency
-
-            for index in 0..<historicalTable.numberOfRows {
-                guard let controller = historicalTable.rowController(at: index) as? HistoricalRowController else { continue }
-                numberFormatter.currencyCode = historicalRate[index].currency.code
-                numberFormatter.currencySymbol = historicalRate[index].currency.symbol
-                let dateText = dateFormatter.string(from: historicalRate[index].closedDate)
-                let rateText = numberFormatter.string(from: NSDecimalNumber(value: historicalRate[index].rate))
-                controller.dateLabel.setText(dateText)
-                controller.rateLabel.setText(rateText)
+                for index in 0..<self.historicalTable.numberOfRows {
+                    guard let controller = self.historicalTable.rowController(at: index) as? HistoricalRowController else { continue }
+                    numberFormatter.currencyCode = historicalRate[index].currency.code
+                    numberFormatter.currencySymbol = historicalRate[index].currency.symbol
+                    let dateText = dateFormatter.string(from: historicalRate[index].closedDate)
+                    let rateText = numberFormatter.string(from: NSDecimalNumber(value: historicalRate[index].rate))
+                    controller.dateLabel.setText(dateText)
+                    controller.rateLabel.setText(rateText)
+                }
             }
         }
     }
