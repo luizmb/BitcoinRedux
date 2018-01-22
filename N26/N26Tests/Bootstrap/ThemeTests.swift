@@ -28,9 +28,9 @@ class ThemeTests: UnitTest {
 
         XCTAssertEqual(navigationBarAppearance.titleTextAttributes?.count, 1)
         XCTAssertTrue((navigationBarAppearance.titleTextAttributes?.keys.contains(NSAttributedStringKey.foregroundColor))!)
-        XCTAssertEqual(navigationBarAppearance.barStyle, .black)
+        XCTAssertEqual(navigationBarAppearance.largeTitleTextAttributes?.count, 1)
+        XCTAssertTrue((navigationBarAppearance.largeTitleTextAttributes?.keys.contains(NSAttributedStringKey.foregroundColor))!)
         XCTAssertFalse(navigationBarAppearance.isTranslucent)
-        XCTAssertNotNil(navigationBarAppearance.backgroundImage(for: .default))
-        XCTAssertNotNil(navigationBarAppearance.shadowImage)
+        XCTAssertTrue(navigationBarAppearance.prefersLargeTitles)
     }
 }

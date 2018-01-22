@@ -23,6 +23,15 @@ open class StoreBase<StateType: Equatable, ReducerType> where ReducerType: Reduc
         })
     }
 
+    #if TESTING
+    public var currentState: StateType {
+        didSet(oldValue) {
+            DispatchQueue.main.async {
+                self.notifyChanges(oldValue, self.currentState)
+            }
+        }
+    }
+    #else
     private var currentState: StateType {
         didSet(oldValue) {
             DispatchQueue.main.async {
@@ -30,6 +39,7 @@ open class StoreBase<StateType: Equatable, ReducerType> where ReducerType: Reduc
             }
         }
     }
+    #endif
 
     private func reduce(_ action: Action) {
         currentState = reducer.reduce(currentState, action: action)

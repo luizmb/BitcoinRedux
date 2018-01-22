@@ -135,7 +135,6 @@ class ModelTests: UnitTest {
         XCTAssertFalse(historical_a1 == historical_f)
     }
 
-
     func testRealtimeEquatable() {
         let realtime_a1 = RealTimeResponse(updatedTime: Date(timeIntervalSince1970: 0),
                                            disclaimer: "A",
@@ -170,5 +169,13 @@ class ModelTests: UnitTest {
         XCTAssertFalse(realtime_a1 == realtime_d)
         XCTAssertFalse(realtime_a1 == realtime_e)
         XCTAssertFalse(realtime_a1 == realtime_f)
+    }
+
+    func testKnownRouteEquatable() {
+        let a = MockRoute()
+        a.route = NavigationRoute(origin: .root(), destination: .root())
+        let b = MockRoute()
+        b.route = NavigationRoute(origin: .root(), destination: .root())
+        XCTAssertTrue(a == b)
     }
 }

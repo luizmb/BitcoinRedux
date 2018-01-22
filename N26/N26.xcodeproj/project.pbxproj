@@ -132,6 +132,8 @@
 		D53B483D2015646A006E45F0 /* CommonLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D539306E2014B86E00C8D658 /* CommonLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D53B48402015646A006E45F0 /* BitcoinLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D527DC572014D99800D4F2FB /* BitcoinLibrary.framework */; };
 		D53B48412015646A006E45F0 /* BitcoinLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D527DC572014D99800D4F2FB /* BitcoinLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D543B5AD2015F4DF00F84A62 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543B5AC2015F4DF00F84A62 /* StoreTests.swift */; };
+		D550810120162DDB00ACFECC /* HistoricalViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D550810020162DDB00ACFECC /* HistoricalViewControllerTests.swift */; };
 		D575ADBB2015093A0038C331 /* ActionDispatcher.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADB9201509230038C331 /* ActionDispatcher.DI.swift */; };
 		D575ADBC2015093B0038C331 /* ActionDispatcher.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADB9201509230038C331 /* ActionDispatcher.DI.swift */; };
 		D575ADBF2015098C0038C331 /* BitcoinRateAPI.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575ADBD2015096B0038C331 /* BitcoinRateAPI.DI.swift */; };
@@ -182,6 +184,8 @@
 		D5A4687720139CCA006AAB58 /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A4687620139CCA006AAB58 /* SplashView.xib */; };
 		D5D93DF820150796000AF767 /* ActionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D93DF620150756000AF767 /* ActionDispatcher.swift */; };
 		D5D93DF920150797000AF767 /* ActionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D93DF620150756000AF767 /* ActionDispatcher.swift */; };
+		D5DBDDDF2016370900D9B4AD /* BitcoinLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D527DC572014D99800D4F2FB /* BitcoinLibrary.framework */; };
+		D5DBDDE02016370900D9B4AD /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D539306E2014B86E00C8D658 /* CommonLibrary.framework */; };
 		D5F6CD7B2013B7450005E972 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6CD7A2013B7450005E972 /* AppDelegateTests.swift */; };
 		D5F6CD842013CC9A0005E972 /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6CD832013CC9A0005E972 /* UnitTest.swift */; };
 		D5F6CD882013CF2C0005E972 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6CD872013CF2C0005E972 /* main.swift */; };
@@ -354,6 +358,8 @@
 		D53930A72014BBC400C8D658 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		D53930A82014BBC400C8D658 /* SyncableResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncableResult.swift; sourceTree = "<group>"; };
 		D53930A92014BBC400C8D658 /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
+		D543B5AC2015F4DF00F84A62 /* StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
+		D550810020162DDB00ACFECC /* HistoricalViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewControllerTests.swift; sourceTree = "<group>"; };
 		D575ADB9201509230038C331 /* ActionDispatcher.DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDispatcher.DI.swift; sourceTree = "<group>"; };
 		D575ADBD2015096B0038C331 /* BitcoinRateAPI.DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateAPI.DI.swift; sourceTree = "<group>"; };
 		D575ADC120150AC80038C331 /* RepositoryProtocol.DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.DI.swift; sourceTree = "<group>"; };
@@ -466,6 +472,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DBDDDF2016370900D9B4AD /* BitcoinLibrary.framework in Frameworks */,
+				D5DBDDE02016370900D9B4AD /* CommonLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +671,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D543B5AB2015F4CB00F84A62 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				D543B5AC2015F4DF00F84A62 /* StoreTests.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
 		D575ADC920150E7D0038C331 /* ActionRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -689,6 +705,14 @@
 			children = (
 				D53930342014B12B00C8D658 /* HistoricalInterfaceController.swift */,
 				D575ADD9201521F30038C331 /* HistoricalRowController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D583BA062016288900AB775F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D550810020162DDB00ACFECC /* HistoricalViewControllerTests.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -761,6 +785,7 @@
 				D5A468262012CB59006AAB58 /* Model */,
 				D5A467F42012B2CF006AAB58 /* Service */,
 				D53930092013EA4900C8D658 /* State */,
+				D583BA062016288900AB775F /* UI */,
 				D5F6CD822013CC860005E972 /* TestHelper */,
 			);
 			path = N26Tests;
@@ -793,6 +818,7 @@
 		D5A467F42012B2CF006AAB58 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				D543B5AB2015F4CB00F84A62 /* Redux */,
 				D5A468132012C2C1006AAB58 /* Json */,
 				D5A467F92012B346006AAB58 /* WebClient */,
 			);
@@ -1413,11 +1439,13 @@
 				D5F6CD8A2013D5B20005E972 /* ThemeTests.swift in Sources */,
 				D5A467F32012A673006AAB58 /* DataStructureTests.swift in Sources */,
 				D5393013201407D500C8D658 /* NavigationActionRequestTests.swift in Sources */,
+				D550810120162DDB00ACFECC /* HistoricalViewControllerTests.swift in Sources */,
 				D53930192014349A00C8D658 /* BitcoinRateRequestTests.swift in Sources */,
 				D5F6CD842013CC9A0005E972 /* UnitTest.swift in Sources */,
 				D5A4682B2012D0B8006AAB58 /* ModelSerializationTests.swift in Sources */,
 				D53930152014120D00C8D658 /* BootstrapRequestTests.swift in Sources */,
 				D5393011201405CB00C8D658 /* RouterReducerTests.swift in Sources */,
+				D543B5AD2015F4DF00F84A62 /* StoreTests.swift in Sources */,
 				D5A468152012C2CE006AAB58 /* JsonParserTests.swift in Sources */,
 				D539300D2013EAB300C8D658 /* BitcoinRateReducerTests.swift in Sources */,
 				D539300F2013F04B00C8D658 /* Mocks.swift in Sources */,
@@ -1966,7 +1994,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -2025,7 +2052,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -2146,7 +2172,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;

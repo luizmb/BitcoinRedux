@@ -30,34 +30,32 @@ final class HistoricalViewController: UIViewController {
     }
 
     private func update(state: BitcoinState) {
-        DispatchQueue.main.async {
-            var sections: [HistoricalTableViewSection] = []
-
-            if let realtimeSection = state.realtimeRate.possibleValue().flatMap(HistoricalTableViewSection.init) {
-                sections.append(realtimeSection)
-            }
-
-            if let historicalSection = state.historicalRates.possibleValue().flatMap(HistoricalTableViewSection.init) {
-                sections.append(historicalSection)
-            }
-
-            self.dataSource.viewModel = sections
-            if sections.count == 0 {
-                self.tableView.isHidden = true
-                self.noDataLine1Label.isHidden = false
-                self.noDataLine2Label.isHidden = false
-                self.noDataRefreshButton.isHidden = false
-            } else {
-                self.tableView.isHidden = false
-                self.noDataLine1Label.isHidden = true
-                self.noDataLine2Label.isHidden = true
-                self.noDataRefreshButton.isHidden = true
-            }
-
-            switch (state.realtimeRate, state.historicalRates) {
-            case (.syncing, _), (_, .syncing): return
-            default: self.refreshControl.endRefreshing()
-            }
+        var sections: [HistoricalTableViewSection] = []
+        
+        if let realtimeSection = state.realtimeRate.possibleValue().flatMap(HistoricalTableViewSection.init) {
+            sections.append(realtimeSection)
+        }
+        
+        if let historicalSection = state.historicalRates.possibleValue().flatMap(HistoricalTableViewSection.init) {
+            sections.append(historicalSection)
+        }
+        
+        self.dataSource.viewModel = sections
+        if sections.count == 0 {
+            self.tableView.isHidden = true
+            self.noDataLine1Label.isHidden = false
+            self.noDataLine2Label.isHidden = false
+            self.noDataRefreshButton.isHidden = false
+        } else {
+            self.tableView.isHidden = false
+            self.noDataLine1Label.isHidden = true
+            self.noDataLine2Label.isHidden = true
+            self.noDataRefreshButton.isHidden = true
+        }
+        
+        switch (state.realtimeRate, state.historicalRates) {
+        case (.syncing, _), (_, .syncing): return
+        default: self.refreshControl.endRefreshing()
         }
     }
 

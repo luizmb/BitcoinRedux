@@ -60,6 +60,17 @@ class CocoaExTests: UnitTest {
                        Date(timeIntervalSince1970: 388416300 - 7 * 24 * 60 * 60))
     }
 
+    func testDateFormatting() {
+        let refDate = Date(timeIntervalSince1970: 388416300)
+        let en = Locale(identifier: "en")
+        let f1 = refDate.formattedFromComponents(styleAttitude: .short, year: false, month: true, day: true,
+                                                 hour: true, minute: true, second: true, locale: en)
+        let f2 = refDate.formattedFromComponents(styleAttitude: .short, year: true, month: true, day: true,
+                                                 hour: true, minute: true, second: true, locale: en)
+        XCTAssertEqual(f1, "04/23, 15:25:00")
+        XCTAssertEqual(f2, "04/23/82, 15:25:00")
+    }
+
     func testReuseIdentifier() {
         XCTAssertEqual(UICollectionReusableView.reuseIdentifier(), "UICollectionReusableView")
         XCTAssertEqual(AnotherCollectionReusableView.reuseIdentifier(), "AnotherCollectionReusableView")
