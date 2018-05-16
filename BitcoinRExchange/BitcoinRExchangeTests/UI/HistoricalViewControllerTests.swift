@@ -1,8 +1,8 @@
-import XCTest
-import UIKit
-@testable import BitcoinRExchange
 @testable import BitcoinLibrary
+@testable import BitcoinRExchange
 @testable import CommonLibrary
+import UIKit
+import XCTest
 
 class HistoricalViewControllerTests: UnitTest {
     let mockAPIResponse = MockAPIResponse()
@@ -89,7 +89,7 @@ class HistoricalViewControllerTests: UnitTest {
                     hasData.fulfill()
                 }
             }
-            }.addDisposableTo(&bag)
+        }.addDisposableTo(&bag)
         store.async(BitcoinRateRequest.realtimeRefresh(isManual: false))
         store.async(BitcoinRateRequest.historicalDataRefresh(isManual: false))
         wait(for: [hasData], timeout: 5)

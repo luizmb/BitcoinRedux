@@ -18,7 +18,7 @@ public struct AppState: Equatable {
 }
 
 extension AppState {
-    public static func ==(lhs: AppState, rhs: AppState) -> Bool {
+    public static func == (lhs: AppState, rhs: AppState) -> Bool {
         return
             lhs.bitcoinState == rhs.bitcoinState &&
             lhs.currency == rhs.currency &&

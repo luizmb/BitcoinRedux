@@ -1,17 +1,19 @@
-import UIKit
 import BitcoinLibrary
 import CommonLibrary
+import UIKit
 
 final class HistoricalViewController: UIViewController {
     var disposables: [Any] = []
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     private let refreshControl = UIRefreshControl()
     private var dataSource: HistoricalDataSource!
-    @IBOutlet weak var noDataLine1Label: UILabel!
-    @IBOutlet weak var noDataLine2Label: UILabel!
-    @IBOutlet weak var noDataRefreshButton: UIButton!
+    @IBOutlet private weak var noDataLine1Label: UILabel!
+    @IBOutlet private weak var noDataLine2Label: UILabel!
+    @IBOutlet private weak var noDataRefreshButton: UIButton!
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+
         title = "Bitcoin Rates"
         navigationController?.hidesBarsOnSwipe = true
         dataSource = HistoricalDataSource(tableView: tableView)
@@ -34,7 +36,7 @@ final class HistoricalViewController: UIViewController {
         }
 
         self.dataSource.viewModel = sections
-        if sections.count == 0 {
+        if sections.isEmpty {
             self.tableView.isHidden = true
             self.noDataLine1Label.isHidden = false
             self.noDataLine2Label.isHidden = false
@@ -52,7 +54,7 @@ final class HistoricalViewController: UIViewController {
         }
     }
 
-    @IBAction func refreshButtonTap(_ sender: Any) {
+    @IBAction private func refreshButtonTap(_ sender: Any) {
         actionDispatcher.async(BitcoinRateRequest.realtimeRefresh(isManual: true))
         actionDispatcher.async(BitcoinRateRequest.historicalDataRefresh(isManual: true))
     }

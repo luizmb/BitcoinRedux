@@ -6,13 +6,13 @@ public class Injector: InjectorProtocol {
         return global
     }()
 
-    public var mapper: Mapper = Mapper()
+    public var mapper = Mapper()
 }
 
 #if DEBUG || TESTING
     public class MockInjector: InjectorProtocol {
         public static var getInjector: () -> InjectorProtocol? = { nil }
-        public var mapper: Mapper = Mapper()
+        public var mapper = Mapper()
 
         public func injectDefaults() {
             Injector.shared.mapper.dump(to: &mapper)

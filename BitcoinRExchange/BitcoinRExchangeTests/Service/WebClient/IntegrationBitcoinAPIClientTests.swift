@@ -1,8 +1,8 @@
-import XCTest
-import Foundation
-@testable import BitcoinRExchange
 @testable import BitcoinLibrary
+@testable import BitcoinRExchange
 @testable import CommonLibrary
+import Foundation
+import XCTest
 
 class IntegrationBitcoinAPIClientTests: UnitTest {
 
@@ -85,7 +85,7 @@ class IntegrationBitcoinAPIClientTests: UnitTest {
                 XCTAssertEqual(realtimeResponse.bpi.count, 2)
                 let rate = realtimeResponse.bpi[Currency(code: "EUR", name: "")]
                 XCTAssertNotNil(rate)
-                XCTAssertGreaterThan(rate!, 1000)
+                XCTAssertGreaterThan(rate!, 1_000)
                 shouldGetValidResponse.fulfill()
             case .error(let error):
                 XCTFail("Unexpected error: \(error)")
@@ -110,7 +110,7 @@ class IntegrationBitcoinAPIClientTests: UnitTest {
                 historicalResponse.bpi.forEach { day in
                     XCTAssertLessThan(day.date, Date())
                     XCTAssertGreaterThan(day.date, Date().backToMidnight.addingDays(-15))
-                    XCTAssertGreaterThan(day.rate, 1000)
+                    XCTAssertGreaterThan(day.rate, 1_000)
                 }
                 shouldGetValidResponse.fulfill()
             case .error(let error):

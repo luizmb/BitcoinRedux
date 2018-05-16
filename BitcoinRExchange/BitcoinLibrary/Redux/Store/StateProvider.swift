@@ -1,5 +1,5 @@
-import Foundation
 import CommonLibrary
+import Foundation
 
 public protocol StateProvider {
     func map<B>(_ transform: @escaping (AppState) -> B) -> Signal<B>
@@ -7,14 +7,14 @@ public protocol StateProvider {
     subscript<B>(_ keyPath: KeyPath<AppState, B>) -> Signal<B> { get }
 
     func subscribe(`if` condition: @escaping (AppState?, AppState) -> Bool,
-                   _ handler: @escaping (AppState) -> ()) -> Disposable
-    func subscribe(_ handler: @escaping (AppState) -> ()) -> Disposable
+                   _ handler: @escaping (AppState) -> Void) -> Disposable
+    func subscribe(_ handler: @escaping (AppState) -> Void) -> Disposable
 }
 
 // Workaround while waiting for 'SE-0143: Conditional Conformance'
 // https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md
-//extension Signal: StateProvider where A: AppState {
-//}
+// extension Signal: StateProvider where A: AppState {
+// }
 
 // So we wrap the protocol, instead. And we use the Store itself to wrap it, instead
 // of introducing a new type.
@@ -31,11 +31,11 @@ extension Store: StateProvider {
         return stateSignal[keyPath]
     }
 
-    public func subscribe(if condition: @escaping (AppState?, AppState) -> Bool, _ handler: @escaping (AppState) -> ()) -> Disposable {
+    public func subscribe(if condition: @escaping (AppState?, AppState) -> Bool, _ handler: @escaping (AppState) -> Void) -> Disposable {
         return stateSignal.subscribe(if: condition, handler)
     }
 
-    public func subscribe(_ handler: @escaping (AppState) -> ()) -> Disposable {
+    public func subscribe(_ handler: @escaping (AppState) -> Void) -> Disposable {
         return stateSignal.subscribe(handler)
     }
 }

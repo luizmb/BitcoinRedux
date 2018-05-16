@@ -1,15 +1,15 @@
-import UIKit
 import BitcoinLibrary
 import CommonLibrary
+import UIKit
 
 enum BootstrapRequest: AppActionAsync {
     case boot(application: Application, window: Window, launchOptions: [UIApplicationLaunchOptionsKey: Any]?)
 
     func execute(getState: @escaping () -> AppState,
                  dispatch: @escaping DispatchFunction,
-                 dispatchAsync: @escaping (AnyActionAsync<AppState>) -> ()) {
+                 dispatchAsync: @escaping (AnyActionAsync<AppState>) -> Void) {
         switch self {
-        case .boot(let application, let window, _):
+        case let .boot(application, window, _):
             Theme.apply()
             application.keepScreenOn = true
 

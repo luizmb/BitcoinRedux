@@ -1,5 +1,5 @@
-import Foundation
 import CommonLibrary
+import Foundation
 
 public struct BitcoinState {
     public var realtimeRate: SyncableResult<BitcoinRealTimeRate> = .neverLoaded
@@ -11,7 +11,7 @@ public struct BitcoinState {
 }
 
 extension BitcoinState: Equatable {
-    public static func ==(lhs: BitcoinState, rhs: BitcoinState) -> Bool {
+    public static func == (lhs: BitcoinState, rhs: BitcoinState) -> Bool {
         return lhs.realtimeRate == rhs.realtimeRate &&
             lhs.historicalRates == rhs.historicalRates &&
             lhs.localTimeLastUpdateRealTime == rhs.localTimeLastUpdateRealTime &&

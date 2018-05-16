@@ -1,10 +1,11 @@
-import XCTest
-import Foundation
-@testable import BitcoinRExchange
 @testable import BitcoinLibrary
+@testable import BitcoinRExchange
 @testable import CommonLibrary
+import Foundation
+import XCTest
 
 class StoreTests: UnitTest {
+    // swiftlint:disable all
     func testStateProviderMapping() {
         injector.injectDefaults()
         let subscription1TriggerOnSubscribe: XCTestExpectation = expectation(description: "Trigger 1 OnSubscribe")

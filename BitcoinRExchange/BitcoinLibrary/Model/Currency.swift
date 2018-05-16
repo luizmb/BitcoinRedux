@@ -3,7 +3,7 @@ import Foundation
 public struct Currency: Codable {
     public let code: String
     public let name: String
-    public var symbol: String? = nil
+    public var symbol: String?
 
     enum CodingKeys: String, CodingKey {
         case code
@@ -23,7 +23,7 @@ extension Currency: Hashable {
         return code.hashValue
     }
 
-    public static func ==(lhs: Currency, rhs: Currency) -> Bool {
+    public static func == (lhs: Currency, rhs: Currency) -> Bool {
         return lhs.code == rhs.code
     }
 }

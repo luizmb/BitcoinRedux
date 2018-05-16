@@ -1,11 +1,3 @@
-//
-//  CommonLibrary.h
-//  CommonLibrary
-//
-//  Created by Luiz Rodrigo Martins Barbosa on 21.01.18.
-//  Copyright © 2018 Luiz Rodrigo Martins Barbosa. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 //! Project version number for CommonLibrary.

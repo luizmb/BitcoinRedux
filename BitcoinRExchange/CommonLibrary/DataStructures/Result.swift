@@ -24,11 +24,11 @@ extension Result {
 
 // MARK: - Equatable
 extension Result: Equatable {
-    public static func ==<T>(lhs: Result<T>, rhs: Result<T>) -> Bool {
+    public static func == <T>(lhs: Result<T>, rhs: Result<T>) -> Bool {
         switch (lhs, rhs) {
-        case (.error(let errorLeft), .error(let errorRight)):
+        case let (.error(errorLeft), .error(errorRight)):
             return errorLeft.localizedDescription == errorRight.localizedDescription
-        case (.success(let valueLeft), .success(let valueRight)):
+        case let (.success(valueLeft), .success(valueRight)):
             return valueLeft == valueRight
         default: return false
         }
@@ -64,11 +64,11 @@ extension ResultArray {
 
 // MARK: - Equatable
 extension ResultArray: Equatable {
-    public static func ==<T>(lhs: ResultArray<T>, rhs: ResultArray<T>) -> Bool {
+    public static func == <T>(lhs: ResultArray<T>, rhs: ResultArray<T>) -> Bool {
         switch (lhs, rhs) {
-        case (.error(let errorLeft), .error(let errorRight)):
+        case let (.error(errorLeft), .error(errorRight)):
             return errorLeft.localizedDescription == errorRight.localizedDescription
-        case (.success(let valueLeft), .success(let valueRight)):
+        case let (.success(valueLeft), .success(valueRight)):
             return valueLeft == valueRight
         default: return false
         }

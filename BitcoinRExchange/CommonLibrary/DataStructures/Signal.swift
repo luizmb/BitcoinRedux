@@ -19,7 +19,7 @@ public class Signal<A>: SignalProtocol {
     }
 
     private lazy var addSubscriber: (@escaping (OldValue<A>, NewValue<A>) -> Bool,
-        _ handler: @escaping (NewValue<A>) -> ()) -> Disposable = { [weak self] condition, handler in
+        _ handler: @escaping (NewValue<A>) -> Void) -> Disposable = { [weak self] condition, handler in
             guard let strongSelf = self else { return Disposable { } }
 
             let token = UUID()
@@ -59,8 +59,7 @@ extension Signal {
         signal.addSubscriber = { [weak self] condition, handler in
             guard let strongSelf = self else { return Disposable { } }
             return strongSelf.subscribe(
-                if: { condition($0.flatMap(transform), transform($1)) },
-                { handler(transform($0)) }
+                if: { condition($0.flatMap(transform), transform($1)) }, { handler(transform($0)) }
             )
         }
         return signal
@@ -70,7 +69,7 @@ extension Signal {
 // MARK: - Subscribe
 extension Signal {
     public func subscribe(`if` condition: @escaping (OldValue<A>, NewValue<A>) -> Bool,
-                          _ handler: @escaping (NewValue<A>) -> ()) -> Disposable {
+                          _ handler: @escaping (NewValue<A>) -> Void) -> Disposable {
         return addSubscriber(condition, handler)
     }
 }

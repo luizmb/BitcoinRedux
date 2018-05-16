@@ -1,6 +1,6 @@
-import UIKit
 import BitcoinLibrary
 import CommonLibrary
+import UIKit
 
 final class HistoricalDataSource: NSObject, UITableViewDataSource {
     private weak var tableView: UITableView?
@@ -42,8 +42,7 @@ final class HistoricalDataSource: NSObject, UITableViewDataSource {
             return cell
         }
 
-        historicalRecordTableViewCell.dateLabel.text = cellModel.date
-        historicalRecordTableViewCell.rateLabel.text = cellModel.rate
+        historicalRecordTableViewCell.update(viewModel: cellModel)
         return historicalRecordTableViewCell
     }
 }

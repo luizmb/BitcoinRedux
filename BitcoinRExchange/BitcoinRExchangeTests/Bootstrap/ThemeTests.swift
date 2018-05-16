@@ -1,7 +1,7 @@
-import XCTest
-import Foundation
 @testable import BitcoinRExchange
 @testable import CommonLibrary
+import Foundation
+import XCTest
 
 class ThemeTests: UnitTest {
     func testNamedColors() {

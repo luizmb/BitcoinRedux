@@ -1,5 +1,5 @@
-import Foundation
 import CommonLibrary
+import Foundation
 
 public enum NavigationActionRequest: AppActionAsync {
     public typealias StateType = AppState
@@ -8,7 +8,7 @@ public enum NavigationActionRequest: AppActionAsync {
 
     public func execute(getState: @escaping () -> AppState,
                         dispatch: @escaping DispatchFunction,
-                        dispatchAsync: @escaping (AnyActionAsync<StateType>) -> ()) {
+                        dispatchAsync: @escaping (AnyActionAsync<StateType>) -> Void) {
         let currentState = getState()
         #if os(iOS)
         guard let navigationController = currentState.navigationController else { return }

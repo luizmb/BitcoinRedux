@@ -11,7 +11,7 @@ public struct Rate: Codable {
 }
 
 extension Rate: Equatable {
-    public static func ==(lhs: Rate, rhs: Rate) -> Bool {
+    public static func == (lhs: Rate, rhs: Rate) -> Bool {
         return lhs.date == rhs.date && lhs.rate == rhs.rate
     }
 }

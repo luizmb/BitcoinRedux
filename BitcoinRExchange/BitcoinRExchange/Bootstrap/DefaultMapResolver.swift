@@ -1,6 +1,6 @@
-import Foundation
 import BitcoinLibrary
 import CommonLibrary
+import Foundation
 
 public class DefaultMapResolver {
     private static let diskCache = DiskCache()

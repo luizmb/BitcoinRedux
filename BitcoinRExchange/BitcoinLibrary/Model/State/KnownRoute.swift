@@ -5,13 +5,13 @@ import UIKit
 public protocol KnownRoute {
     var route: NavigationRoute { get }
     #if os(iOS)
-    func navigate(_ navigationController: UINavigationController, completion: @escaping () -> ())
+    func navigate(_ navigationController: UINavigationController, completion: @escaping () -> Void)
     #else
-    func navigate(completion: @escaping () -> ())
+    func navigate(completion: @escaping () -> Void)
     #endif
 }
 
-public func ==(lhs: KnownRoute, rhs: KnownRoute) -> Bool {
+public func == (lhs: KnownRoute, rhs: KnownRoute) -> Bool {
     guard lhs.route == rhs.route else { return false }
     return true
 }

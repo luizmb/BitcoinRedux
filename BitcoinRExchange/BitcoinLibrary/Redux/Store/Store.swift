@@ -1,5 +1,5 @@
-import Foundation
 import CommonLibrary
+import Foundation
 
 public protocol AppActionAsync: ActionAsync where StateType == AppState {
 }

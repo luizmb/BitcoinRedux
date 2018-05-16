@@ -14,7 +14,7 @@ public struct RealTimeResponse {
 }
 
 extension RealTimeResponse: Equatable {
-    public static func ==(lhs: RealTimeResponse, rhs: RealTimeResponse) -> Bool {
+    public static func == (lhs: RealTimeResponse, rhs: RealTimeResponse) -> Bool {
         return lhs.updatedTime == rhs.updatedTime && lhs.disclaimer == rhs.disclaimer && lhs.bpi == rhs.bpi
     }
 }

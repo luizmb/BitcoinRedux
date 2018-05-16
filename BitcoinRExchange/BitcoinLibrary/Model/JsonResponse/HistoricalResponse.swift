@@ -14,7 +14,7 @@ public struct HistoricalResponse {
 }
 
 extension HistoricalResponse: Equatable {
-    public static func ==(lhs: HistoricalResponse, rhs: HistoricalResponse) -> Bool {
+    public static func == (lhs: HistoricalResponse, rhs: HistoricalResponse) -> Bool {
         return lhs.updatedTime == rhs.updatedTime && lhs.disclaimer == rhs.disclaimer && lhs.bpi == rhs.bpi
     }
 }

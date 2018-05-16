@@ -23,13 +23,13 @@ public struct Mapper {
 
     public func getFactory<T>() -> (() -> T)? {
         guard let any = dictionary[String(describing: T.self)] as? ConstructorType<T> else { return nil }
-        guard case .factory(let factory) = any else { return nil}
+        guard case .factory(let factory) = any else { return nil }
         return factory()
     }
 
     public func getSingleton<T>() -> T? {
         guard let any = dictionary[String(describing: T.self)] as? ConstructorType<T> else { return nil }
-        guard case .singleton(let factory) = any else { return nil}
+        guard case .singleton(let factory) = any else { return nil }
         return factory()
     }
 

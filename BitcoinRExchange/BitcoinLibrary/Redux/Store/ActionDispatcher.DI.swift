@@ -1,5 +1,5 @@
-import Foundation
 import CommonLibrary
+import Foundation
 
 extension InjectorProtocol {
     public var actionDispatcher: ActionDispatcher { return self.mapper.getSingleton()! }

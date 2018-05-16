@@ -182,6 +182,7 @@
 		D5A4686B201377D1006AAB58 /* HistoricalRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4686A201377D1006AAB58 /* HistoricalRecordTableViewCell.swift */; };
 		D5A4686D201377F7006AAB58 /* HistoricalRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A4686C201377F7006AAB58 /* HistoricalRecordTableViewCell.xib */; };
 		D5A4687720139CCA006AAB58 /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A4687620139CCA006AAB58 /* SplashView.xib */; };
+		D5B93F2B20ACCF3B002ACEBF /* HistoricalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B93F2A20ACCF3B002ACEBF /* HistoricalViewModel.swift */; };
 		D5D93DF820150796000AF767 /* ActionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D93DF620150756000AF767 /* ActionDispatcher.swift */; };
 		D5D93DF920150797000AF767 /* ActionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D93DF620150756000AF767 /* ActionDispatcher.swift */; };
 		D5DBDDDF2016370900D9B4AD /* BitcoinLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D527DC572014D99800D4F2FB /* BitcoinLibrary.framework */; };
@@ -412,6 +413,7 @@
 		D5A4687220138777006AAB58 /* BitcoinRateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateRequest.swift; sourceTree = "<group>"; };
 		D5A4687620139CCA006AAB58 /* SplashView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
 		D5A4687820139E2C006AAB58 /* BitcoinRateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateReducer.swift; sourceTree = "<group>"; };
+		D5B93F2A20ACCF3B002ACEBF /* HistoricalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewModel.swift; sourceTree = "<group>"; };
 		D5D93DF620150756000AF767 /* ActionDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDispatcher.swift; sourceTree = "<group>"; };
 		D5F6CD7A2013B7450005E972 /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		D5F6CD832013CC9A0005E972 /* UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTest.swift; sourceTree = "<group>"; };
@@ -705,6 +707,7 @@
 			children = (
 				D53930342014B12B00C8D658 /* HistoricalInterfaceController.swift */,
 				D575ADD9201521F30038C331 /* HistoricalRowController.swift */,
+				D5B93F2A20ACCF3B002ACEBF /* HistoricalViewModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -963,6 +966,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D527DC5C2014D99800D4F2FB /* Build configuration list for PBXNativeTarget "BitcoinLibrary iOS" */;
 			buildPhases = (
+				D5E6197C20ACC7160084E7E5 /* Make */,
 				D527DC522014D99800D4F2FB /* Sources */,
 				D527DC532014D99800D4F2FB /* Frameworks */,
 				D527DC542014D99800D4F2FB /* Headers */,
@@ -981,6 +985,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D527DC6A2014D9AC00D4F2FB /* Build configuration list for PBXNativeTarget "BitcoinLibrary watchOS" */;
 			buildPhases = (
+				D5E6197D20ACC72E0084E7E5 /* Make */,
 				D527DC602014D9AC00D4F2FB /* Sources */,
 				D527DC612014D9AC00D4F2FB /* Frameworks */,
 				D527DC622014D9AC00D4F2FB /* Headers */,
@@ -1016,6 +1021,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D539303E2014B12B00C8D658 /* Build configuration list for PBXNativeTarget "BitcoinWatch Extension" */;
 			buildPhases = (
+				D5E6197920ACC6C20084E7E5 /* Make */,
 				D539302B2014B12A00C8D658 /* Sources */,
 				D539302C2014B12A00C8D658 /* Frameworks */,
 				D539302D2014B12A00C8D658 /* Resources */,
@@ -1036,6 +1042,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D53930762014B86E00C8D658 /* Build configuration list for PBXNativeTarget "CommonLibrary iOS" */;
 			buildPhases = (
+				D5E6197A20ACC6DC0084E7E5 /* Make */,
 				D53930692014B86E00C8D658 /* Sources */,
 				D539306A2014B86E00C8D658 /* Frameworks */,
 				D539306B2014B86E00C8D658 /* Headers */,
@@ -1054,6 +1061,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D53930812014B87D00C8D658 /* Build configuration list for PBXNativeTarget "CommonLibrary watchOS" */;
 			buildPhases = (
+				D5E6197B20ACC6FD0084E7E5 /* Make */,
 				D53930772014B87C00C8D658 /* Sources */,
 				D53930782014B87C00C8D658 /* Frameworks */,
 				D53930792014B87C00C8D658 /* Headers */,
@@ -1072,6 +1080,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5A467BA20129459006AAB58 /* Build configuration list for PBXNativeTarget "BitcoinRExchange" */;
 			buildPhases = (
+				D5E6197820ACC67A0084E7E5 /* Make */,
 				D5A4679920129459006AAB58 /* Sources */,
 				D5A4679A20129459006AAB58 /* Frameworks */,
 				D5A4679B20129459006AAB58 /* Resources */,
@@ -1244,6 +1253,93 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D5E6197820ACC67A0084E7E5 /* Make */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Make;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make prebuild-ios";
+		};
+		D5E6197920ACC6C20084E7E5 /* Make */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Make;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make prebuild-watchos";
+		};
+		D5E6197A20ACC6DC0084E7E5 /* Make */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Make;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make prebuild-ios";
+		};
+		D5E6197B20ACC6FD0084E7E5 /* Make */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Make;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make prebuild-watchos";
+		};
+		D5E6197C20ACC7160084E7E5 /* Make */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Make;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make prebuild-ios";
+		};
+		D5E6197D20ACC72E0084E7E5 /* Make */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Make;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make prebuild-watchos";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D527DC522014D99800D4F2FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1329,6 +1425,7 @@
 				D53930372014B12B00C8D658 /* ExtensionDelegate.swift in Sources */,
 				D53930352014B12B00C8D658 /* HistoricalInterfaceController.swift in Sources */,
 				D575ADDA201521F30038C331 /* HistoricalRowController.swift in Sources */,
+				D5B93F2B20ACCF3B002ACEBF /* HistoricalViewModel.swift in Sources */,
 				D575ADD4201514C10038C331 /* DefaultMapResolver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,7 +1,7 @@
-import UIKit
-@testable import BitcoinRExchange
 @testable import BitcoinLibrary
+@testable import BitcoinRExchange
 @testable import CommonLibrary
+import UIKit
 
 private func defaultDate() -> Date { return Date(timeIntervalSinceReferenceDate: 0) }
 private func defaultCurrency() -> Currency { return Currency(code: "EUR", name: "Euro", symbol: "€") }
@@ -21,7 +21,7 @@ extension NavigationRoute {
 }
 
 extension RealTimeResponse {
-    static var mock: RealTimeResponse {return RealTimeResponse(updatedTime: defaultDate(), disclaimer: "", bpi:  [defaultCurrency(): 1]) }
+    static var mock: RealTimeResponse { return RealTimeResponse(updatedTime: defaultDate(), disclaimer: "", bpi: [defaultCurrency(): 1]) }
 }
 
 extension BitcoinRealTimeRate {
@@ -41,7 +41,7 @@ extension HistoricalResponse {
                                     Rate(date: defaultDate().addingDays(1), rate: 2),
                                     Rate(date: defaultDate().addingDays(2), rate: 3),
                                     Rate(date: defaultDate().addingDays(3), rate: 4)
-            ])
+                                  ])
     }
 }
 
@@ -66,11 +66,11 @@ extension Array where Element == BitcoinHistoricalRate {
 
 // Mock
 class MockRoute: KnownRoute {
-    var route: NavigationRoute = NavigationRoute.mock
+    var route = NavigationRoute.mock
 
-    var calledNavigate: (UINavigationController, () -> ())?
-    var onCallNavigate: ((UINavigationController, () -> ()) -> ())?
-    func navigate(_ navigationController: UINavigationController, completion: @escaping () -> ()) {
+    var calledNavigate: (UINavigationController, () -> Void)?
+    var onCallNavigate: ((UINavigationController, () -> Void) -> Void)?
+    func navigate(_ navigationController: UINavigationController, completion: @escaping () -> Void) {
         onCallNavigate?(navigationController, completion)
         calledNavigate = (navigationController, completion)
     }
@@ -91,11 +91,11 @@ class MockWindow: NSObject, Window {
 
     var frame: CGRect = .zero
     var isKeyWindow: Bool = false
-    var rootViewController: UIViewController? = nil
+    var rootViewController: UIViewController?
 }
 
 class MockApplication: NSObject, Application {
-    var keepScreenOnChanged: ((Bool) -> ())?
+    var keepScreenOnChanged: ((Bool) -> Void)?
     var keepScreenOn: Bool = false {
         didSet {
             keepScreenOnChanged?(keepScreenOn)
@@ -105,7 +105,7 @@ class MockApplication: NSObject, Application {
 
 class MockRepository: RepositoryProtocol {
     var calledSave: (Data, String)?
-    var onCallSave: ((Data, String) -> ())?
+    var onCallSave: ((Data, String) -> Void)?
     func save(data: Data, filename: String) {
         onCallSave?(data, filename)
         calledSave = (data, filename)
@@ -121,9 +121,9 @@ class MockRepository: RepositoryProtocol {
 }
 
 class MockAPI: BitcoinRateAPI {
-    var calledRequest: (BitcoinEndpoint, (Result<Data>) -> ())?
-    var onCallRequest: ((BitcoinEndpoint, (Result<Data>) -> ()) -> CancelableTask)?
-    func request(_ endpoint: BitcoinEndpoint, completion: @escaping (Result<Data>) -> ()) -> CancelableTask {
+    var calledRequest: (BitcoinEndpoint, (Result<Data>) -> Void)?
+    var onCallRequest: ((BitcoinEndpoint, (Result<Data>) -> Void) -> CancelableTask)?
+    func request(_ endpoint: BitcoinEndpoint, completion: @escaping (Result<Data>) -> Void) -> CancelableTask {
         let result = onCallRequest?(endpoint, completion) ?? Cancelable()
         calledRequest = (endpoint, completion)
         return result
@@ -134,7 +134,7 @@ class MockAPIResponse: BitcoinRateAPI {
     init() { }
     var returnError = false
 
-    func request(_ endpoint: BitcoinEndpoint, completion: @escaping (Result<Data>) -> ()) -> CancelableTask {
+    func request(_ endpoint: BitcoinEndpoint, completion: @escaping (Result<Data>) -> Void) -> CancelableTask {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             let retValue: Result<Data>
             switch (self.returnError, endpoint) {
@@ -165,6 +165,7 @@ class MockActionDispatcher: ActionDispatcher {
     }
 }
 
+// swiftlint:disable line_length
 class MockJson {
     static let realTimeResponse = """
         {

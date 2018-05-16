@@ -6,11 +6,11 @@ public enum NavigationState {
 }
 
 extension NavigationState: Equatable {
-    public static func ==(lhs: NavigationState, rhs: NavigationState) -> Bool {
+    public static func == (lhs: NavigationState, rhs: NavigationState) -> Bool {
         switch (lhs, rhs) {
-        case (.still(let lhs), .still(let rhs)):
+        case let (.still(lhs), .still(rhs)):
             return lhs == rhs
-        case (.navigating(let lhs), .navigating(let rhs)):
+        case let (.navigating(lhs), .navigating(rhs)):
             return lhs == rhs
         default: return false
         }

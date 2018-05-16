@@ -1,5 +1,5 @@
-import Foundation
 import CommonLibrary
+import Foundation
 
 public enum BitcoinRateAction: Action {
     case willRefreshRealTime(CancelableTask)

@@ -1,5 +1,5 @@
-import Foundation
 import CommonLibrary
+import Foundation
 
 extension BitcoinEndpoint {
     private var httpMethod: String {
@@ -17,7 +17,7 @@ extension BitcoinEndpoint: URLEndpoint {
             return URLRequest.createRequest(url: "https://api.coindesk.com/v1/bpi/currentprice/\(currency).json",
                                             httpMethod: httpMethod)
         case let .historical(currency, startDate, endDate):
-            let dateFormatter: DateFormatter = DateFormatter()
+            let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "YYYY-MM-dd"
             return URLRequest.createRequest(url: "https://api.coindesk.com/v1/bpi/historical/close.json",
                                             httpMethod: httpMethod,

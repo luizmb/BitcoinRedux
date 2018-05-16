@@ -7,7 +7,7 @@ import UIKit
     @objc var hashValue: Int { get }
 }
 
-public func ==(lhs: Application, rhs: Application) -> Bool {
+public func == (lhs: Application, rhs: Application) -> Bool {
     return lhs.hashValue == rhs.hashValue
 }
 

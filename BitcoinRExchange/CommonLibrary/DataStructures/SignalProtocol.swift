@@ -5,11 +5,11 @@ public protocol SignalProtocol {
 
     func map<B>(_ transform: @escaping (SignalType) -> B) -> Signal<B>
     func subscribe(`if` condition: @escaping (SignalType?, SignalType) -> Bool,
-                   _ handler: @escaping (SignalType) -> ()) -> Disposable
+                   _ handler: @escaping (SignalType) -> Void) -> Disposable
 }
 
 extension SignalProtocol where SignalType: Sequence, SignalType.Element: Equatable {
-    public func subscribe(_ handler: @escaping (SignalType) -> ()) -> Disposable {
+    public func subscribe(_ handler: @escaping (SignalType) -> Void) -> Disposable {
         return subscribe(if: {
             guard let old = $0 else { return true }
             return !old.elementsEqual($1)
@@ -18,7 +18,7 @@ extension SignalProtocol where SignalType: Sequence, SignalType.Element: Equatab
 }
 
 extension SignalProtocol where SignalType: Equatable {
-    public func subscribe(_ handler: @escaping (SignalType) -> ()) -> Disposable {
+    public func subscribe(_ handler: @escaping (SignalType) -> Void) -> Disposable {
         return subscribe(if: !=, handler)
     }
 }

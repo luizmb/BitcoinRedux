@@ -1,14 +1,6 @@
-//
-//  DefaultMapResolver.swift
-//  BitcoinWatch Extension
-//
-//  Created by Luiz Rodrigo Martins Barbosa on 21.01.18.
-//  Copyright © 2018 Luiz Rodrigo Martins Barbosa. All rights reserved.
-//
-
-import Foundation
 import BitcoinLibrary
 import CommonLibrary
+import Foundation
 
 public class DefaultMapResolver {
     private static let diskCache = DiskCache()

@@ -13,7 +13,7 @@ public struct BitcoinHistoricalRate {
 }
 
 extension BitcoinHistoricalRate: Equatable {
-    public static func ==(lhs: BitcoinHistoricalRate, rhs: BitcoinHistoricalRate) -> Bool {
+    public static func == (lhs: BitcoinHistoricalRate, rhs: BitcoinHistoricalRate) -> Bool {
         return lhs.currency == rhs.currency &&
             lhs.closedDate == rhs.closedDate &&
             lhs.rate == rhs.rate

@@ -1,4 +1,5 @@
 import BitcoinLibrary
+import CommonLibrary
 import Foundation
 
 struct HistoricalViewModel {
@@ -30,8 +31,8 @@ extension HistoricalTableViewSection {
 extension HistoricalTableViewRow {
     init(_ state: BitcoinRealTimeRate) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .medium
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
 
         let numberFormatter = NumberFormatter()
         numberFormatter.currencyCode = state.currency.code
@@ -52,7 +53,15 @@ extension HistoricalTableViewRow {
         numberFormatter.currencySymbol = state.currency.symbol
         numberFormatter.numberStyle = .currency
 
-        self.date = dateFormatter.string(from: state.closedDate)
+        self.date = state.closedDate.formattedFromComponents(styleAttitude: .short,
+                                                             year: false,
+                                                             month: true,
+                                                             day: true,
+                                                             hour: false,
+                                                             minute: false,
+                                                             second: false,
+                                                             locale: Locale.current)
+
         self.rate = numberFormatter.string(from: NSDecimalNumber(value: state.rate)) ?? ""
     }
 }

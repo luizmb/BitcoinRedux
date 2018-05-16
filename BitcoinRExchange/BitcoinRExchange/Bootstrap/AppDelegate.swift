@@ -1,6 +1,6 @@
-import UIKit
 import BitcoinLibrary
 import CommonLibrary
+import UIKit
 
 final class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?

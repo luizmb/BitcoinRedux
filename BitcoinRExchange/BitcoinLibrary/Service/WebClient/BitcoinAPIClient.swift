@@ -1,5 +1,5 @@
-import Foundation
 import CommonLibrary
+import Foundation
 
 public class BitcoinAPIClient: BitcoinRateAPI {
     public static let shared: BitcoinRateAPI = {
@@ -18,7 +18,7 @@ public class BitcoinAPIClient: BitcoinRateAPI {
         self.session = session
     }
 
-    @discardableResult public func request(_ endpoint: BitcoinEndpoint, completion: @escaping (Result<Data>) -> ()) -> CancelableTask {
+    @discardableResult public func request(_ endpoint: BitcoinEndpoint, completion: @escaping (Result<Data>) -> Void) -> CancelableTask {
         let task = session.dataTask(with: endpoint.urlRequest) { data, response, error in
             switch (error, response as? HTTPURLResponse) {
             case (.some(let err), _): completion(.error(err)); return

@@ -6,7 +6,7 @@ public struct NavigationRoute {
 }
 
 extension NavigationRoute: Equatable {
-    public static func ==(lhs: NavigationRoute, rhs: NavigationRoute) -> Bool {
+    public static func == (lhs: NavigationRoute, rhs: NavigationRoute) -> Bool {
         return lhs.origin == rhs.origin && lhs.destination == rhs.destination
     }
 }

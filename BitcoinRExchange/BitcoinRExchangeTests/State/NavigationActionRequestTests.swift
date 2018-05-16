@@ -1,8 +1,8 @@
-import XCTest
-import Foundation
-@testable import BitcoinRExchange
 @testable import BitcoinLibrary
+@testable import BitcoinRExchange
 @testable import CommonLibrary
+import Foundation
+import XCTest
 
 class NavigationActionRequestTests: UnitTest {
     let navigationController = UINavigationController()
@@ -77,4 +77,3 @@ class NavigationActionRequestTests: UnitTest {
         }
     }
 }
-

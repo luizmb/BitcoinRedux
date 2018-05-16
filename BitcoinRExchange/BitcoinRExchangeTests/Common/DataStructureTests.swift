@@ -1,6 +1,6 @@
-import XCTest
-import Foundation
 @testable import CommonLibrary
+import Foundation
+import XCTest
 
 class DataStructureTests: UnitTest {
     func testAtomic() {
@@ -147,4 +147,3 @@ class DataStructureTests: UnitTest {
         XCTAssertEqual(errorInt.flatMap(errorFunc), .error(e))
     }
 }
-

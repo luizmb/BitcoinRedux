@@ -1,8 +1,8 @@
-import XCTest
-import Foundation
-@testable import BitcoinRExchange
 @testable import BitcoinLibrary
+@testable import BitcoinRExchange
 @testable import CommonLibrary
+import Foundation
+import XCTest
 
 class BitcoinRateRequestTests: UnitTest {
     func testBootstrapRequestRealTime() {
@@ -57,10 +57,11 @@ class BitcoinRateRequestTests: UnitTest {
         var actions: [Action] = []
         var asyncActions: [AnyActionAsync<AppState>] = []
         let mockAPI = MockAPI()
+        let expectedUrl = "https://api.coindesk.com/v1/bpi/historical/close.json?"
         mockAPI.onCallRequest = { endpoint, completion in
             XCTAssertEqual(actions.count, 0)
             XCTAssertEqual(asyncActions.count, 0)
-            XCTAssertTrue(endpoint.urlRequest.url?.absoluteString.starts(with: "https://api.coindesk.com/v1/bpi/historical/close.json?") ?? false)
+            XCTAssertTrue(endpoint.urlRequest.url?.absoluteString.starts(with: expectedUrl) ?? false)
             return newTask
         }
         injector.mapper.mapSingleton(BitcoinRateAPI.self) { mockAPI }
@@ -169,7 +170,7 @@ class BitcoinRateRequestTests: UnitTest {
         if case let .didRefreshRealTime(r) = bitcoiRateAction! {
             switch (r, result) {
             case (.error, .error): break
-            case (.success(let lhs), .success(let rhs)): XCTAssertEqual(lhs, rhs)
+            case let (.success(lhs), .success(rhs)): XCTAssertEqual(lhs, rhs)
             default: XCTFail("Results differ")
             }
 
@@ -196,7 +197,7 @@ class BitcoinRateRequestTests: UnitTest {
         if case let .didRefreshHistoricalData(r) = bitcoiRateAction! {
             switch (r, result) {
             case (.error, .error): break
-            case (.success(let lhs), .success(let rhs)): XCTAssertEqual(lhs, rhs)
+            case let (.success(lhs), .success(rhs)): XCTAssertEqual(lhs, rhs)
             default: XCTFail("Results differ")
             }
         } else {

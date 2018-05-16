@@ -1,5 +1,5 @@
-import Foundation
 import CommonLibrary
+import Foundation
 
 public struct RouterReducer: Reducer {
     public func reduce(_ currentState: AppState, action: Action) -> AppState {
@@ -9,22 +9,22 @@ public struct RouterReducer: Reducer {
 
         #if os(iOS)
             switch routerAction {
-            case .didStart(let application, let navigationController):
+            case let .didStart(application, navigationController):
                 stateCopy.application = application
                 stateCopy.navigation = .still(at: .root())
                 stateCopy.navigationController = navigationController
-            case .willNavigate(let route):
+            case let .willNavigate(route):
                 stateCopy.navigation = .navigating(route)
-            case .didNavigate(let destination):
+            case let .didNavigate(destination):
                 stateCopy.navigation = .still(at: destination)
             }
         #else
             switch routerAction {
             case .didStart:
                 stateCopy.navigation = .still(at: .root())
-            case .willNavigate(let route):
+            case let .willNavigate(route):
                 stateCopy.navigation = .navigating(route)
-            case .didNavigate(let destination):
+            case let .didNavigate(destination):
                 stateCopy.navigation = .still(at: destination)
             }
         #endif

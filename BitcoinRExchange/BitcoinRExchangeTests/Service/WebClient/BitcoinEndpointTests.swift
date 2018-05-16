@@ -1,8 +1,8 @@
-import XCTest
-import Foundation
-@testable import BitcoinRExchange
 @testable import BitcoinLibrary
+@testable import BitcoinRExchange
 @testable import CommonLibrary
+import Foundation
+import XCTest
 
 class BitcoinEndpointTests: UnitTest {
     func testURLEndpoint_URLRequestFactory() {
@@ -25,7 +25,7 @@ class BitcoinEndpointTests: UnitTest {
             "https://api.coindesk.com/v1/bpi/historical/close.json?start=1970-01-01&currency=EUR&end=2001-01-01",
             "https://api.coindesk.com/v1/bpi/historical/close.json?start=1970-01-01&end=2001-01-01&currency=EUR",
             "https://api.coindesk.com/v1/bpi/historical/close.json?end=2001-01-01&currency=EUR&start=1970-01-01",
-            "https://api.coindesk.com/v1/bpi/historical/close.json?end=2001-01-01&start=1970-01-01&currency=EUR",
-            ].contains(historicalEuro.url!.absoluteString))
+            "https://api.coindesk.com/v1/bpi/historical/close.json?end=2001-01-01&start=1970-01-01&currency=EUR"
+        ].contains(historicalEuro.url!.absoluteString))
     }
 }

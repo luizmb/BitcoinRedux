@@ -1,7 +1,7 @@
-import XCTest
-import Foundation
 @testable import BitcoinRExchange
 @testable import CommonLibrary
+import Foundation
+import XCTest
 
 class AnotherCollectionReusableView: UICollectionReusableView { }
 class AnotherTableViewCell: UITableViewCell { }
@@ -35,8 +35,8 @@ class CocoaExTests: UnitTest {
 
         XCTAssertEqual(f.date(from: "2010-09-15 09:20:10")!.backToMidnight,
                        f.date(from: "2010-09-15 00:00:00")!)
-        XCTAssertEqual(Date(timeIntervalSince1970: 388416300).backToMidnight,
-                       Date(timeIntervalSince1970: 388360800))
+        XCTAssertEqual(Date(timeIntervalSince1970: 388_416_300).backToMidnight,
+                       Date(timeIntervalSince1970: 388_360_800))
     }
 
     func testDateAddingDays() {
@@ -46,19 +46,31 @@ class CocoaExTests: UnitTest {
                        f.date(from: "2010-09-22 09:20:10")!)
         XCTAssertEqual(f.date(from: "2010-09-15 09:20:10")!.addingDays(-14),
                        f.date(from: "2010-09-01 09:20:10")!)
-        XCTAssertEqual(Date(timeIntervalSince1970: 388416300).addingDays(2),
-                       Date(timeIntervalSince1970: 388416300 + 2 * 24 * 60 * 60))
-        XCTAssertEqual(Date(timeIntervalSince1970: 388416300).addingDays(-7),
-                       Date(timeIntervalSince1970: 388416300 - 7 * 24 * 60 * 60))
+        XCTAssertEqual(Date(timeIntervalSince1970: 388_416_300).addingDays(2),
+                       Date(timeIntervalSince1970: 388_416_300 + 2 * 24 * 60 * 60))
+        XCTAssertEqual(Date(timeIntervalSince1970: 388_416_300).addingDays(-7),
+                       Date(timeIntervalSince1970: 388_416_300 - 7 * 24 * 60 * 60))
     }
 
     func testDateFormatting() {
-        let refDate = Date(timeIntervalSince1970: 388416300)
+        let refDate = Date(timeIntervalSince1970: 388_416_300)
         let en = Locale(identifier: "en")
-        let f1 = refDate.formattedFromComponents(styleAttitude: .short, year: false, month: true, day: true,
-                                                 hour: true, minute: true, second: true, locale: en)
-        let f2 = refDate.formattedFromComponents(styleAttitude: .short, year: true, month: true, day: true,
-                                                 hour: true, minute: true, second: true, locale: en)
+        let f1 = refDate.formattedFromComponents(styleAttitude: .short,
+                                                 year: false,
+                                                 month: true,
+                                                 day: true,
+                                                 hour: true,
+                                                 minute: true,
+                                                 second: true,
+                                                 locale: en)
+        let f2 = refDate.formattedFromComponents(styleAttitude: .short,
+                                                 year: true,
+                                                 month: true,
+                                                 day: true,
+                                                 hour: true,
+                                                 minute: true,
+                                                 second: true,
+                                                 locale: en)
         XCTAssertEqual(f1, "04/23, 15:25:00")
         XCTAssertEqual(f2, "04/23/82, 15:25:00")
     }

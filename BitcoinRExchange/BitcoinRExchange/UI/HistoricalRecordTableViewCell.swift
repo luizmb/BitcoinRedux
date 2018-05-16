@@ -1,8 +1,13 @@
 import UIKit
 
 final class HistoricalRecordTableViewCell: UITableViewCell {
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var rateLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var rateLabel: UILabel!
+
+    func update(viewModel: HistoricalTableViewRow) {
+        dateLabel.text = viewModel.date
+        rateLabel.text = viewModel.rate
+    }
 }
 
 final class BulletBackgroundView: UIView {

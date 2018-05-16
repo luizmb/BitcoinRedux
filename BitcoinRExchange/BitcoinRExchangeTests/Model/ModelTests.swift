@@ -1,9 +1,10 @@
-import XCTest
-import Foundation
-@testable import BitcoinRExchange
 @testable import BitcoinLibrary
+@testable import BitcoinRExchange
 @testable import CommonLibrary
+import Foundation
+import XCTest
 
+// swiftlint:disable all
 class ModelTests: UnitTest {
     func testBitcoinRealTimeRateEquatable() {
         let dateA = Date()

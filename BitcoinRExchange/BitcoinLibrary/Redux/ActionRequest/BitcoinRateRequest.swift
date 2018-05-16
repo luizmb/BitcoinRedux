@@ -1,5 +1,5 @@
-import Foundation
 import CommonLibrary
+import Foundation
 
 public enum BitcoinRateRequest: AppActionAsync {
     case realtimeCache
@@ -8,8 +8,8 @@ public enum BitcoinRateRequest: AppActionAsync {
     case historicalDataRefresh(isManual: Bool)
 
     public func execute(getState: @escaping () -> AppState,
-                 dispatch: @escaping DispatchFunction,
-                 dispatchAsync: @escaping (AnyActionAsync<AppState>) -> ()) {
+                        dispatch: @escaping DispatchFunction,
+                        dispatchAsync: @escaping (AnyActionAsync<AppState>) -> Void) {
         switch self {
         case .realtimeCache:
             let realtime: Result<RealTimeResponse> = self.repository.load(filename: RealTimeResponse.cacheFile).flatMap(JsonParser.decode)
