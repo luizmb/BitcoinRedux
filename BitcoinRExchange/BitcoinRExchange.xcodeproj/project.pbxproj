@@ -183,6 +183,16 @@
 		D5A4686D201377F7006AAB58 /* HistoricalRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A4686C201377F7006AAB58 /* HistoricalRecordTableViewCell.xib */; };
 		D5A4687720139CCA006AAB58 /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A4687620139CCA006AAB58 /* SplashView.xib */; };
 		D5B93F2B20ACCF3B002ACEBF /* HistoricalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B93F2A20ACCF3B002ACEBF /* HistoricalViewModel.swift */; };
+		D5B93F2E20ACE4C1002ACEBF /* SwiftRex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B93F2C20ACE4C1002ACEBF /* SwiftRex.framework */; };
+		D5B93F2F20ACE4C1002ACEBF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B93F2D20ACE4C1002ACEBF /* RxSwift.framework */; };
+		D5B93F3220ACE4E1002ACEBF /* SwiftRex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B93F3020ACE4E1002ACEBF /* SwiftRex.framework */; };
+		D5B93F3320ACE4E1002ACEBF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B93F3120ACE4E1002ACEBF /* RxSwift.framework */; };
+		D5B93F3420ACE528002ACEBF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B93F2D20ACE4C1002ACEBF /* RxSwift.framework */; };
+		D5B93F3520ACE528002ACEBF /* SwiftRex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B93F2C20ACE4C1002ACEBF /* SwiftRex.framework */; };
+		D5B93F3620ACE53D002ACEBF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B93F3120ACE4E1002ACEBF /* RxSwift.framework */; };
+		D5B93F3720ACE53D002ACEBF /* SwiftRex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B93F3020ACE4E1002ACEBF /* SwiftRex.framework */; };
+		D5B93F3820ACE631002ACEBF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B93F2D20ACE4C1002ACEBF /* RxSwift.framework */; };
+		D5B93F3920ACE631002ACEBF /* SwiftRex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B93F2C20ACE4C1002ACEBF /* SwiftRex.framework */; };
 		D5D93DF820150796000AF767 /* ActionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D93DF620150756000AF767 /* ActionDispatcher.swift */; };
 		D5D93DF920150797000AF767 /* ActionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D93DF620150756000AF767 /* ActionDispatcher.swift */; };
 		D5DBDDDF2016370900D9B4AD /* BitcoinLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D527DC572014D99800D4F2FB /* BitcoinLibrary.framework */; };
@@ -414,6 +424,10 @@
 		D5A4687620139CCA006AAB58 /* SplashView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
 		D5A4687820139E2C006AAB58 /* BitcoinRateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRateReducer.swift; sourceTree = "<group>"; };
 		D5B93F2A20ACCF3B002ACEBF /* HistoricalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewModel.swift; sourceTree = "<group>"; };
+		D5B93F2C20ACE4C1002ACEBF /* SwiftRex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftRex.framework; path = Carthage/Build/iOS/SwiftRex.framework; sourceTree = "<group>"; };
+		D5B93F2D20ACE4C1002ACEBF /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		D5B93F3020ACE4E1002ACEBF /* SwiftRex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftRex.framework; path = Carthage/Build/watchOS/SwiftRex.framework; sourceTree = "<group>"; };
+		D5B93F3120ACE4E1002ACEBF /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/watchOS/RxSwift.framework; sourceTree = "<group>"; };
 		D5D93DF620150756000AF767 /* ActionDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDispatcher.swift; sourceTree = "<group>"; };
 		D5F6CD7A2013B7450005E972 /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		D5F6CD832013CC9A0005E972 /* UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTest.swift; sourceTree = "<group>"; };
@@ -426,6 +440,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B93F3420ACE528002ACEBF /* RxSwift.framework in Frameworks */,
+				D5B93F3520ACE528002ACEBF /* SwiftRex.framework in Frameworks */,
 				D527DC702014DAE200D4F2FB /* CommonLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +450,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B93F3620ACE53D002ACEBF /* RxSwift.framework in Frameworks */,
+				D5B93F3720ACE53D002ACEBF /* SwiftRex.framework in Frameworks */,
 				D527DC712014DAE800D4F2FB /* CommonLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +460,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B93F3220ACE4E1002ACEBF /* SwiftRex.framework in Frameworks */,
+				D5B93F3320ACE4E1002ACEBF /* RxSwift.framework in Frameworks */,
 				D527DC4D2014D81B00D4F2FB /* CommonLibrary.framework in Frameworks */,
 				D527DC742014DB1400D4F2FB /* BitcoinLibrary.framework in Frameworks */,
 			);
@@ -465,6 +485,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B93F2E20ACE4C1002ACEBF /* SwiftRex.framework in Frameworks */,
+				D5B93F2F20ACE4C1002ACEBF /* RxSwift.framework in Frameworks */,
 				D53B483C2015646A006E45F0 /* CommonLibrary.framework in Frameworks */,
 				D53B48402015646A006E45F0 /* BitcoinLibrary.framework in Frameworks */,
 			);
@@ -474,6 +496,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B93F3820ACE631002ACEBF /* RxSwift.framework in Frameworks */,
+				D5B93F3920ACE631002ACEBF /* SwiftRex.framework in Frameworks */,
 				D5DBDDDF2016370900D9B4AD /* BitcoinLibrary.framework in Frameworks */,
 				D5DBDDE02016370900D9B4AD /* CommonLibrary.framework in Frameworks */,
 			);
@@ -669,6 +693,10 @@
 		D53930E42014BDC300C8D658 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5B93F3120ACE4E1002ACEBF /* RxSwift.framework */,
+				D5B93F3020ACE4E1002ACEBF /* SwiftRex.framework */,
+				D5B93F2D20ACE4C1002ACEBF /* RxSwift.framework */,
+				D5B93F2C20ACE4C1002ACEBF /* SwiftRex.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1294,7 +1322,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make prebuild-ios";
+			shellScript = "make lint-autocorrect lint-check";
 		};
 		D5E6197B20ACC6FD0084E7E5 /* Make */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1308,7 +1336,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make prebuild-watchos";
+			shellScript = "make lint-autocorrect lint-check";
 		};
 		D5E6197C20ACC7160084E7E5 /* Make */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1613,6 +1641,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1642,6 +1674,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "BitcoinLibrary/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1667,6 +1703,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "BitcoinLibrary/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1693,6 +1733,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1725,6 +1769,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "BitcoinLibrary/Info-watchOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1753,6 +1801,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "BitcoinLibrary/Info-watchOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1775,6 +1827,10 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1798,6 +1854,10 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/BitcoinWatch Extension/Bootstrap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.BitcoinRExchange.watchkitapp.watchkitextension;
@@ -1817,6 +1877,10 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/BitcoinWatch Extension/Bootstrap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.BitcoinRExchange.watchkitapp.watchkitextension;
@@ -2175,13 +2239,19 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/BitcoinRExchange/Bootstrap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.BitcoinRExchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2192,12 +2262,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/BitcoinRExchange/Bootstrap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.BitcoinRExchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2210,6 +2286,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = BitcoinRExchangeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2228,6 +2308,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = BitcoinRExchangeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2305,13 +2389,19 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/BitcoinRExchange/Bootstrap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.developercity.BitcoinRExchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2324,6 +2414,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BK8NL3DYL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = BitcoinRExchangeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

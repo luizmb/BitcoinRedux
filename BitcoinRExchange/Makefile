@@ -15,13 +15,11 @@ carthage-copy:
 	export SCRIPT_INPUT_FILE_0=$(SRCROOT)/Carthage/Build/${PLATFORM}/RxSwift.framework \
 	export SCRIPT_INPUT_FILE_1=$(SRCROOT)/Carthage/Build/${PLATFORM}/RxCocoa.framework \
 	export SCRIPT_INPUT_FILE_2=$(SRCROOT)/Carthage/Build/${PLATFORM}/SwiftRex.framework \
-	export SCRIPT_INPUT_FILE_3=$(SRCROOT)/Carthage/Build/${PLATFORM}/SwiftRexMonitorMiddleware.framework \
-	export SCRIPT_INPUT_FILE_COUNT=4 \
+	export SCRIPT_INPUT_FILE_COUNT=3 \
 	export SCRIPT_OUTPUT_FILE_0=$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework \
 	export SCRIPT_OUTPUT_FILE_1=$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework \
 	export SCRIPT_OUTPUT_FILE_2=$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftRex.framework \
-	export SCRIPT_OUTPUT_FILE_3=$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftRexMonitorMiddleware.framework \
-	export SCRIPT_OUTPUT_FILE_COUNT=4; \
+	export SCRIPT_OUTPUT_FILE_COUNT=3; \
 	carthage copy-frameworks
 
 carthage-copy-mac: PLATFORM = Mac
@@ -38,13 +36,13 @@ carthage-copy-tvos: carthage-copy
 
 # Pre-Build
 
-prebuild-mac: lint-autocorrect lint-check # carthage-copy-mac
+prebuild-mac: lint-autocorrect lint-check carthage-copy-mac
 
-prebuild-ios: lint-autocorrect lint-check # carthage-copy-ios
+prebuild-ios: lint-autocorrect lint-check carthage-copy-ios
 
-prebuild-watchos: lint-autocorrect lint-check # carthage-copy-watchos
+prebuild-watchos: lint-autocorrect lint-check carthage-copy-watchos
 
-prebuild-tvos: lint-autocorrect lint-check # carthage-copy-tvos
+prebuild-tvos: lint-autocorrect lint-check carthage-copy-tvos
 
 # Validate pre-reqs
 
