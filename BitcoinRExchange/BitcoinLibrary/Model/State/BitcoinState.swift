@@ -3,7 +3,7 @@ import Foundation
 
 public struct BitcoinState {
     public var realtimeRate: SyncableResult<BitcoinRealTimeRate> = .neverLoaded
-    public var historicalRates: SyncableArrayResult<BitcoinHistoricalRate> = .neverLoaded
+    public var historicalRates: SyncableResult<[BitcoinHistoricalRate]> = .neverLoaded
     public var localTimeLastUpdateRealTime = Date.distantPast
     public var localTimeLastUpdateHistorical = Date.distantPast
     public var realtimeRateRefreshTime: TimeInterval = 60
