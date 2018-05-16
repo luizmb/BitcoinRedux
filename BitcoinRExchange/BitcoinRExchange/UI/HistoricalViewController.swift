@@ -12,7 +12,8 @@ final class HistoricalViewController: UIViewController {
     @IBOutlet weak var noDataRefreshButton: UIButton!
 
     override func viewDidLoad() {
-        self.title = "Bitcoin Rates"
+        title = "Bitcoin Rates"
+        navigationController?.hidesBarsOnSwipe = true
         dataSource = HistoricalDataSource(tableView: tableView)
         stateProvider[\.bitcoinState].subscribe { [weak self] state in
             self?.update(state: state)
@@ -59,6 +60,14 @@ final class HistoricalViewController: UIViewController {
     @objc private func pullToRefresh() {
         actionDispatcher.async(BitcoinRateRequest.realtimeRefresh(isManual: true))
         actionDispatcher.async(BitcoinRateRequest.historicalDataRefresh(isManual: true))
+    }
+
+    override var prefersStatusBarHidden: Bool {
+        return navigationController?.isNavigationBarHidden == true
+    }
+
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return UIStatusBarAnimation.slide
     }
 }
 
