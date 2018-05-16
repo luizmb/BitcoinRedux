@@ -3,20 +3,11 @@
 import Foundation
 import XCTest
 
-struct Sample: Codable {
+struct Sample: Codable, Equatable {
     let string: String
     let int: Int
     let float: Float
     let bool: Bool
-}
-
-extension Sample: Equatable {
-    static func == (lhs: Sample, rhs: Sample) -> Bool {
-        return lhs.string == rhs.string &&
-            lhs.int == rhs.int &&
-            lhs.float == rhs.float &&
-            lhs.bool == rhs.bool
-    }
 }
 
 class JsonParserTests: UnitTest {

@@ -1,6 +1,6 @@
 import Foundation
 
-public struct HistoricalResponse {
+public struct HistoricalResponse: Equatable {
     public static let cacheFile = "historical_cache.bin"
     public let updatedTime: Date
     public let disclaimer: String?
@@ -10,11 +10,5 @@ public struct HistoricalResponse {
         self.updatedTime = updatedTime
         self.disclaimer = disclaimer
         self.bpi = bpi
-    }
-}
-
-extension HistoricalResponse: Equatable {
-    public static func == (lhs: HistoricalResponse, rhs: HistoricalResponse) -> Bool {
-        return lhs.updatedTime == rhs.updatedTime && lhs.disclaimer == rhs.disclaimer && lhs.bpi == rhs.bpi
     }
 }
