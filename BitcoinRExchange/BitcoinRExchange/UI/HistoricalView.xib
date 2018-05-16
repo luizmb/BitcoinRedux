@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoricalViewController" customModule="BitcoinRExchange" customModuleProvider="target">
+            <connections>
+                <outlet property="noDataLine1Label" destination="tUo-jK-0u8" id="7Et-Jp-jtf"/>
+                <outlet property="noDataLine2Label" destination="GTk-Um-nvI" id="0V0-7b-2Ie"/>
+                <outlet property="noDataRefreshButton" destination="Hck-jM-rYW" id="I1A-a8-oOT"/>
+                <outlet property="tableView" destination="biY-cA-oCd" id="dXq-Wq-1h2"/>
+                <outlet property="view" destination="iN0-l3-epB" id="3N9-Lp-Ru3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HistoricalView" customModule="BitcoinRExchange" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No data available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUo-jK-0u8">
+                    <rect key="frame" x="91.5" y="271" width="192" height="31.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <color key="textColor" name="ChromeText"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check your internet connection and tap the button below to refresh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTk-Um-nvI">
+                    <rect key="frame" x="16" y="319" width="343" height="49"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                    <color key="textColor" name="CellHighlightText"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hck-jM-rYW">
+                    <rect key="frame" x="144" y="400" width="87" height="44"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <state key="normal" title="Refresh"/>
+                    <connections>
+                        <action selector="refreshButtonTap:" destination="-1" eventType="touchUpInside" id="O4p-Xa-KwW"/>
+                    </connections>
+                </button>
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="biY-cA-oCd">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" name="ListBackground"/>
+                    <color key="separatorColor" name="ListSeparator"/>
+                    <color key="sectionIndexBackgroundColor" name="ListBackground"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" name="ListBackground"/>
+            <constraints>
+                <constraint firstItem="GTk-Um-nvI" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="5Wl-5R-nxS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="biY-cA-oCd" secondAttribute="trailing" id="7OJ-Vq-Khd"/>
+                <constraint firstItem="biY-cA-oCd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="99O-ch-KRA"/>
+                <constraint firstItem="Hck-jM-rYW" firstAttribute="top" secondItem="GTk-Um-nvI" secondAttribute="bottom" constant="32" id="BTT-lm-Fep"/>
+                <constraint firstItem="Hck-jM-rYW" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="DXU-tq-BrB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GTk-Um-nvI" secondAttribute="trailing" constant="16" id="Jxc-BJ-JVy"/>
+                <constraint firstAttribute="bottom" secondItem="biY-cA-oCd" secondAttribute="bottom" id="O1a-YL-gs8"/>
+                <constraint firstItem="GTk-Um-nvI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="bcK-cP-jel"/>
+                <constraint firstItem="biY-cA-oCd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dQa-sK-LPo"/>
+                <constraint firstItem="GTk-Um-nvI" firstAttribute="top" secondItem="tUo-jK-0u8" secondAttribute="bottom" constant="16" id="gqk-Xn-MJi"/>
+                <constraint firstItem="tUo-jK-0u8" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="iPC-3A-Ub3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="73.5"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="CellHighlightText">
+            <color red="0.96899998188018799" green="1" blue="0.98299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ChromeText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ListBackground">
+            <color red="0.15686274509803921" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ListSeparator">
+            <color red="1" green="0.92400002479553223" blue="0.064999997615814209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

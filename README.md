@@ -1,19 +1,13 @@
 # Bitcoin Redux
-Code challenge for N26
 
 ---
 ## Introduction
-This project was written by me, Luiz Rodrigo, in 3 days as part of my N26 code challenge.
-I will shortly explain some architectural decisions, some that would be different in a real life scenario.
-
-First of all, I haven't used third-party libraries. Any. Normally I tend to use as fewer as possible, but in the case of this code challenge I tried to show what I can achieve by my own code. Evidently, some of the classes used in this project were adapted from other personal projects that I wrote in the past. Which, I'll explain further in the Architecture chapter, but please keep in mind that they are less than 20% of the final project and most of them had to be adapted somehow.
-
-So let's check the project.
+This is a sample project for demonstrating SwiftRex framework.
 
 ---
 ## Running
 
-Running this project should be as simple as downloading the source code, opening `N26/N26.xcodeproj` on Xcode 9.2, selecting the correct Scheme (`N26`) and typing `Cmd+R`. As no third-party libraries were used, and the internal frameworks are part of the project (not integrated via package managers), no other action is required.
+Running this project should be as simple as downloading the source code, opening `BitcoinRExchange/BitcoinRExchange.xcodeproj` on Xcode 9.2, selecting the correct Scheme (`BitcoinRExchange`) and typing `Cmd+R`. As no third-party libraries were used, and the internal frameworks are part of the project (not integrated via package managers), no other action is required.
 
 ---
 ## Playground First
@@ -78,7 +72,7 @@ The last line adds the `apiClient` property to `MyClass`.
 ### Project structure
 
 Executables:
-* N26: the iOS app package (Resources and code)
+* BitcoinRExchange: the iOS app package (Resources and code)
 * BitcoinWatch: the watchOS app (Resources Bundle)
 * BitcoinWatch Extension: the watchOS app extension (code)
 
