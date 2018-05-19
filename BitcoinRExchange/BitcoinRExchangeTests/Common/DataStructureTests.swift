@@ -3,19 +3,6 @@ import Foundation
 import XCTest
 
 class DataStructureTests: UnitTest {
-    func testAtomic() {
-        let array = Atomic<[String]>([])
-        XCTAssertTrue(array.atomicProperty.isEmpty)
-
-        array.mutate { s in s.append("a") }
-        XCTAssertEqual(array.atomicProperty.count, 1)
-        XCTAssertEqual(array.atomicProperty, ["a"])
-
-        array.mutate { s in s.append("b") }
-        XCTAssertEqual(array.atomicProperty.count, 2)
-        XCTAssertEqual(array.atomicProperty, ["a", "b"])
-    }
-
     func testSyncableResult() {
         let neverLoaded1: SyncableResult<String> = .neverLoaded
         let neverLoaded2: SyncableResult<String> = .neverLoaded
@@ -57,61 +44,6 @@ class DataStructureTests: UnitTest {
         XCTAssertFalse(loadedA1 == loadedB1)
         XCTAssertFalse(loadedA1 == loadedError1)
         XCTAssertFalse(loadedB1 == loadedError1)
-    }
-
-    func testDisposable() {
-        let shouldDispose: XCTestExpectation = expectation(description: "Disposed")
-        var count = 0
-        func scoped() {
-            XCTAssertEqual(count, 0)
-            let disposables = Disposable {
-                count += 1
-                shouldDispose.fulfill()
-            }
-            let anotherPointer = disposables
-            _ = anotherPointer
-            XCTAssertEqual(count, 0)
-        }
-        XCTAssertEqual(count, 0)
-        scoped()
-        wait(for: [shouldDispose], timeout: 1)
-        XCTAssertEqual(count, 1)
-    }
-
-    func testDisposableBagToNil() {
-        let shouldDispose: XCTestExpectation = expectation(description: "Disposed")
-        var count = 0
-
-        var bag: [Any]? = []
-        Disposable {
-            count += 1
-            shouldDispose.fulfill()
-        }.addDisposableTo(&bag!)
-
-        XCTAssertEqual(bag!.count, 1)
-        XCTAssertEqual(count, 0)
-
-        bag = nil
-        wait(for: [shouldDispose], timeout: 1)
-        XCTAssertEqual(count, 1)
-    }
-
-    func testDisposableBagToEmpty() {
-        let shouldDispose: XCTestExpectation = expectation(description: "Disposed")
-        var count = 0
-
-        var bag: [Any] = []
-        Disposable {
-            count += 1
-            shouldDispose.fulfill()
-        }.addDisposableTo(&bag)
-
-        XCTAssertEqual(bag.count, 1)
-        XCTAssertEqual(count, 0)
-
-        bag.removeAll()
-        wait(for: [shouldDispose], timeout: 1)
-        XCTAssertEqual(count, 1)
     }
 
     func testResultMap() {

@@ -11,14 +11,11 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
     }
 
     @objc func refresh() {
-        actionDispatcher.async(BitcoinRateRequest.realtimeRefresh(isManual: false))
-        actionDispatcher.async(BitcoinRateRequest.historicalDataRefresh(isManual: false))
+        eventHandler.dispatch(BitcoinRateEvent.automaticRefresh)
     }
 
     func applicationDidFinishLaunching() {
-        actionDispatcher.async(BootstrapRequest.boot)
-        actionDispatcher.async(BitcoinRateRequest.realtimeCache)
-        actionDispatcher.async(BitcoinRateRequest.historicalCache)
+        eventHandler.dispatch(ApplicationEvent.boot)
     }
 
     func applicationDidBecomeActive() {
@@ -27,7 +24,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
                                             selector: #selector(refresh),
                                             userInfo: nil,
                                             repeats: true)
-        refreshTimer?.fire()
     }
 
     func applicationWillResignActive() {
@@ -61,4 +57,4 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
     }
 }
 
-extension ExtensionDelegate: HasActionDispatcher { }
+extension ExtensionDelegate: HasEventHandler { }

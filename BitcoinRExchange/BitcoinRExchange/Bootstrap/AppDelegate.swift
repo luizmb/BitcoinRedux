@@ -12,16 +12,15 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     @objc func refresh() {
-        actionDispatcher.async(BitcoinRateRequest.realtimeRefresh(isManual: false))
-        actionDispatcher.async(BitcoinRateRequest.historicalDataRefresh(isManual: false))
+        eventHandler.dispatch(BitcoinRateEvent.automaticRefresh)
     }
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow.create() as? UIWindow
-        actionDispatcher.async(BootstrapRequest.boot(application: application, window: window!, launchOptions: launchOptions))
-        actionDispatcher.async(BitcoinRateRequest.realtimeCache)
-        actionDispatcher.async(BitcoinRateRequest.historicalCache)
+        eventHandler.dispatch(ApplicationEvent.boot(application: application,
+                                                    window: window!,
+                                                    launchOptions: launchOptions))
 
         return true
     }
@@ -32,7 +31,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
                                             selector: #selector(refresh),
                                             userInfo: nil,
                                             repeats: true)
-        refreshTimer?.fire()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -40,4 +38,4 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-extension AppDelegate: HasActionDispatcher { }
+extension AppDelegate: HasEventHandler { }

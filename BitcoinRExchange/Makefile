@@ -34,15 +34,29 @@ carthage-copy-watchos: carthage-copy
 carthage-copy-tvos: PLATFORM = tvOS
 carthage-copy-tvos: carthage-copy
 
+carthage-copy-test: PLATFORM = iOS
+carthage-copy-test:
+	export SCRIPT_INPUT_FILE_0=$(SRCROOT)/Carthage/Build/${PLATFORM}/RxBlocking.framework \
+	export SCRIPT_INPUT_FILE_1=$(SRCROOT)/Carthage/Build/${PLATFORM}/RxTest.framework \
+	export SCRIPT_INPUT_FILE_COUNT=2 \
+	export SCRIPT_OUTPUT_FILE_0=$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxBlocking.framework \
+	export SCRIPT_OUTPUT_FILE_1=$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxTest.framework \
+	export SCRIPT_OUTPUT_FILE_COUNT=2; \
+	carthage copy-frameworks
+
 # Pre-Build
 
 prebuild-mac: lint-autocorrect lint-check carthage-copy-mac
 
-prebuild-ios: lint-autocorrect lint-check carthage-copy-ios
+prebuild-ios: carthage-copy-ios
+# prebuild-ios: lint-autocorrect lint-check carthage-copy-ios
 
-prebuild-watchos: lint-autocorrect lint-check carthage-copy-watchos
+prebuild-watchos: carthage-copy-watchos
+# prebuild-watchos: lint-autocorrect lint-check carthage-copy-watchos
 
 prebuild-tvos: lint-autocorrect lint-check carthage-copy-tvos
+
+prebuild-test: carthage-copy-ios carthage-copy-test
 
 # Validate pre-reqs
 

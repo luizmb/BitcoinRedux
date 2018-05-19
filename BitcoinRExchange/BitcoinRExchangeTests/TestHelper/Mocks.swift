@@ -1,13 +1,15 @@
 @testable import BitcoinLibrary
 @testable import BitcoinRExchange
 @testable import CommonLibrary
+import SwiftRex
 import UIKit
 
 private func defaultDate() -> Date { return Date(timeIntervalSinceReferenceDate: 0) }
 private func defaultCurrency() -> Currency { return Currency(code: "EUR", name: "Euro", symbol: "€") }
 
 // Empty protocols
-enum FooAction: Action { case foo }
+enum FooEvent: EventProtocol { case foo }
+enum FooAction: ActionProtocol { case foo }
 struct AnyError: Error { }
 class Cancelable: CancelableTask {
     let id = UUID()
@@ -121,11 +123,11 @@ class MockRepository: RepositoryProtocol {
 }
 
 class MockAPI: BitcoinRateAPI {
-    var calledRequest: (BitcoinEndpoint, (Result<Data>) -> Void)?
+    var pendingRequests: [UUID: (BitcoinEndpoint, (Result<Data>) -> Void)] = [:]
     var onCallRequest: ((BitcoinEndpoint, (Result<Data>) -> Void) -> CancelableTask)?
     func request(_ endpoint: BitcoinEndpoint, completion: @escaping (Result<Data>) -> Void) -> CancelableTask {
         let result = onCallRequest?(endpoint, completion) ?? Cancelable()
-        calledRequest = (endpoint, completion)
+        pendingRequests[UUID()] = (endpoint, completion)
         return result
     }
 }
@@ -152,16 +154,19 @@ class MockAPIResponse: BitcoinRateAPI {
     }
 }
 
-class MockActionDispatcher: ActionDispatcher {
-    var actions: [Action] = []
-    var asyncActions: [Any] = []
+class MockEventHandler: EventHandler {
+    var events: [EventProtocol] = []
 
-    func dispatch(_ action: Action) {
-        actions.append(action)
+    func dispatch(_ event: EventProtocol) {
+        events.append(event)
     }
+}
 
-    func async<AppActionAsyncType: AppActionAsync>(_ action: AppActionAsyncType) {
-        asyncActions.append(action)
+class MockActionHandler: ActionHandler {
+    var actions: [ActionProtocol] = []
+
+    func trigger(_ action: ActionProtocol) {
+        actions.append(action)
     }
 }
 

@@ -1,12 +1,14 @@
 import BitcoinLibrary
 import CommonLibrary
+import RxSwift
+import SwiftRex
 import UIKit
 
 final class HistoricalViewController: UIViewController {
-    var disposables: [Any] = []
-    @IBOutlet private weak var tableView: UITableView!
+    private let disposeBag = DisposeBag()
     private let refreshControl = UIRefreshControl()
     private var dataSource: HistoricalDataSource!
+    @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var noDataLine1Label: UILabel!
     @IBOutlet private weak var noDataLine2Label: UILabel!
     @IBOutlet private weak var noDataRefreshButton: UIButton!
@@ -17,9 +19,9 @@ final class HistoricalViewController: UIViewController {
         title = "Bitcoin Rates"
         navigationController?.hidesBarsOnSwipe = true
         dataSource = HistoricalDataSource(tableView: tableView)
-        stateProvider[\.bitcoinState].subscribe { [weak self] state in
+        stateProvider[\.bitcoinState].subscribe(onNext: { [weak self] state in
             self?.update(state: state)
-        }.bind(to: self)
+        }).disposed(by: disposeBag)
         tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
     }
@@ -55,13 +57,11 @@ final class HistoricalViewController: UIViewController {
     }
 
     @IBAction private func refreshButtonTap(_ sender: Any) {
-        actionDispatcher.async(BitcoinRateRequest.realtimeRefresh(isManual: true))
-        actionDispatcher.async(BitcoinRateRequest.historicalDataRefresh(isManual: true))
+        eventHandler.dispatch(BitcoinRateEvent.manualRefresh)
     }
 
     @objc private func pullToRefresh() {
-        actionDispatcher.async(BitcoinRateRequest.realtimeRefresh(isManual: true))
-        actionDispatcher.async(BitcoinRateRequest.historicalDataRefresh(isManual: true))
+        eventHandler.dispatch(BitcoinRateEvent.manualRefresh)
     }
 
     override var prefersStatusBarHidden: Bool {
@@ -73,7 +73,6 @@ final class HistoricalViewController: UIViewController {
     }
 }
 
-extension HistoricalViewController: HasActionDispatcher { }
-extension HistoricalViewController: HasStateProvider { }
+extension HistoricalViewController: HasBitcoinStateProvider { }
+extension HistoricalViewController: HasEventHandler { }
 extension HistoricalViewController: Startable { }
-extension HistoricalViewController: HasDisposableBag { }

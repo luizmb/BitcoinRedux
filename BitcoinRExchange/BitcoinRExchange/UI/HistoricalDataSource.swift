@@ -1,5 +1,6 @@
 import BitcoinLibrary
 import CommonLibrary
+import SwiftRex
 import UIKit
 
 final class HistoricalDataSource: NSObject, UITableViewDataSource {
@@ -47,5 +48,5 @@ final class HistoricalDataSource: NSObject, UITableViewDataSource {
     }
 }
 
-extension HistoricalDataSource: HasActionDispatcher { }
-extension HistoricalDataSource: HasStateProvider { }
+extension HistoricalDataSource: HasBitcoinStateProvider { }
+extension HistoricalDataSource: HasEventHandler { }

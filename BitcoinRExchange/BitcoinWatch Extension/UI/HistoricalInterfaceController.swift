@@ -1,10 +1,11 @@
 import BitcoinLibrary
 import CommonLibrary
+import RxSwift
+import SwiftRex
 import WatchKit
 
 final class HistoricalInterfaceController: WKInterfaceController {
-    var disposables: [Any] = []
-
+    private let disposeBag = DisposeBag()
     @IBOutlet private var realtimeDateLabel: WKInterfaceLabel!
     @IBOutlet private var realtimeRateLabel: WKInterfaceLabel!
     @IBOutlet private var historicalTable: WKInterfaceTable!
@@ -13,9 +14,9 @@ final class HistoricalInterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         self.setTitle("Bitcoin Rates")
 
-        stateProvider[\.bitcoinState].subscribe { [weak self] state in
+        stateProvider[\.bitcoinState].subscribe(onNext: { [weak self] state in
             self?.update(state: state)
-        }.bind(to: self)
+        }).disposed(by: disposeBag)
     }
 
     private func update(state: BitcoinState) {
@@ -45,11 +46,9 @@ final class HistoricalInterfaceController: WKInterfaceController {
     }
 
     @IBAction private func refreshMenuItemTap() {
-        actionDispatcher.async(BitcoinRateRequest.realtimeRefresh(isManual: true))
-        actionDispatcher.async(BitcoinRateRequest.historicalDataRefresh(isManual: true))
+        eventHandler.dispatch(BitcoinRateEvent.manualRefresh)
     }
 }
 
-extension HistoricalInterfaceController: HasActionDispatcher { }
-extension HistoricalInterfaceController: HasStateProvider { }
-extension HistoricalInterfaceController: HasDisposableBag { }
+extension HistoricalInterfaceController: HasBitcoinStateProvider { }
+extension HistoricalInterfaceController: HasEventHandler { }

@@ -1,6 +1,7 @@
 import BitcoinLibrary
 import CommonLibrary
 import Foundation
+import SwiftRex
 
 public class DefaultMapResolver {
     private static let diskCache = DiskCache()
@@ -8,10 +9,10 @@ public class DefaultMapResolver {
     public static func mapServices() {
         guard let injector = (Injector.shared as? Injector) else { return }
 
-        injector.mapper.mapSingleton(ActionDispatcher.self) { return Store.shared }
-        injector.mapper.mapSingleton(BitcoinRateAPI.self) { return BitcoinAPIClient.shared }
-        injector.mapper.mapSingleton(RepositoryProtocol.self) { return diskCache }
-        injector.mapper.mapSingleton(StateProvider.self) { Store.shared }
+        injector.mapper.mapSingleton(EventHandler.self) { BitcoinStore.shared }
+        injector.mapper.mapSingleton(BitcoinRateAPI.self) { BitcoinAPIClient.shared }
+        injector.mapper.mapSingleton(RepositoryProtocol.self) { diskCache }
+        injector.mapper.mapSingleton(BitcoinStateProvider.self) { BitcoinStore.shared }
     }
 }
 

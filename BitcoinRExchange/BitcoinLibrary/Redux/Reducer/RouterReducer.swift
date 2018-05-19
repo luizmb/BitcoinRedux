@@ -1,34 +1,33 @@
 import CommonLibrary
 import Foundation
+import SwiftRex
 
-public struct RouterReducer: Reducer {
-    public func reduce(_ currentState: AppState, action: Action) -> AppState {
-        guard let routerAction = action as? RouterAction else { return currentState }
+public let routerReducer = Reducer<ApplicationState> { state, action in
+    guard let routerAction = action as? RouterAction else { return state }
 
-        var stateCopy = currentState
+    var applicationState = state
 
-        #if os(iOS)
-            switch routerAction {
-            case let .didStart(application, navigationController):
-                stateCopy.application = application
-                stateCopy.navigation = .still(at: .root())
-                stateCopy.navigationController = navigationController
-            case let .willNavigate(route):
-                stateCopy.navigation = .navigating(route)
-            case let .didNavigate(destination):
-                stateCopy.navigation = .still(at: destination)
-            }
-        #else
-            switch routerAction {
-            case .didStart:
-                stateCopy.navigation = .still(at: .root())
-            case let .willNavigate(route):
-                stateCopy.navigation = .navigating(route)
-            case let .didNavigate(destination):
-                stateCopy.navigation = .still(at: destination)
-            }
-        #endif
-
-        return stateCopy
+    #if os(iOS)
+    switch routerAction {
+    case let .didStart(application, navigationController):
+        applicationState.application = application
+        applicationState.navigation = .still(at: .root())
+        applicationState.navigationController = navigationController
+    case let .navigationStarted(_, route):
+        applicationState.navigation = .navigating(route)
+    case let .didNavigate(destination):
+        applicationState.navigation = .still(at: destination)
     }
+    #else
+    switch routerAction {
+    case .didStart:
+        applicationState.navigation = .still(at: .root())
+    case let .navigationStarted(route):
+        applicationState.navigation = .navigating(route)
+    case let .didNavigate(destination):
+        applicationState.navigation = .still(at: destination)
+    }
+    #endif
+
+    return applicationState
 }

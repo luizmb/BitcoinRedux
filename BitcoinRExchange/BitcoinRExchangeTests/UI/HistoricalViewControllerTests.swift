@@ -1,6 +1,8 @@
 @testable import BitcoinLibrary
 @testable import BitcoinRExchange
 @testable import CommonLibrary
+import RxSwift
+import SwiftRex
 import UIKit
 import XCTest
 
@@ -9,18 +11,12 @@ class HistoricalViewControllerTests: UnitTest {
 
     override func setUp() {
         super.setUp()
-        Store.shared.currentState = AppState()
-        // Mock
+        let store = BitcoinStore()
+
         injector.mapper.mapSingleton(BitcoinRateAPI.self) { return self.mockAPIResponse }
         injector.mapper.mapSingleton(RepositoryProtocol.self) { return MockRepository() }
-        // Real
-        injector.mapper.mapSingleton(ActionDispatcher.self) { return Store.shared }
-        injector.mapper.mapSingleton(StateProvider.self) { Store.shared }
-    }
-
-    override func tearDown() {
-        super.tearDown()
-        Store.shared.currentState = AppState()
+        injector.mapper.mapSingleton(EventHandler.self) { return store }
+        injector.mapper.mapSingleton(BitcoinStateProvider.self) { store }
     }
 
     func testHistoricalViewControllerNoDataAvailable() {
@@ -28,23 +24,24 @@ class HistoricalViewControllerTests: UnitTest {
         let sut = HistoricalViewController.start()!
         _ = UINavigationController(rootViewController: sut)
         sut.loadViewIfNeeded()
-        XCTAssertTrue(sut.tableView.isHidden)
-        XCTAssertFalse(sut.noDataLine1Label.isHidden)
-        XCTAssertEqual(sut.noDataLine1Label.text, "No data available")
-        XCTAssertFalse(sut.noDataLine2Label.isHidden)
-        XCTAssertEqual(sut.noDataLine2Label.text, "Please check your internet connection and tap the button below to refresh")
-        XCTAssertFalse(sut.noDataRefreshButton.isHidden)
-        XCTAssertEqual(sut.noDataRefreshButton.titleLabel?.text, "Refresh")
+        XCTAssertTrue(sut.tableView().isHidden)
+        XCTAssertFalse(sut.noDataLine1Label().isHidden)
+        XCTAssertEqual(sut.noDataLine1Label().text, "No data available")
+        XCTAssertFalse(sut.noDataLine2Label().isHidden)
+        XCTAssertEqual(sut.noDataLine2Label().text, "Please check your internet connection and tap the button below to refresh")
+        XCTAssertFalse(sut.noDataRefreshButton().isHidden)
+        XCTAssertEqual(sut.noDataRefreshButton().titleLabel?.text, "Refresh")
     }
 
     func testHistoricalViewController_DataLoadedBeforeVc() {
         Theme.apply()
 
-        var bag: [Any] = []
-        let store = Store.shared
+        let bag = DisposeBag()
+        let eventHandler: EventHandler = injector.mapper.getSingleton()!
+        let stateProvider: BitcoinStateProvider = injector.mapper.getSingleton()!
         let hasData = expectation(description: "Data Loaded")
         var hasDataFulfilled = false
-        store[\.bitcoinState].subscribe { state in
+        stateProvider[\.bitcoinState].subscribe(onNext: { state in
             if case .loaded = state.realtimeRate {
                 if !hasDataFulfilled {
                     // This is safe, no calls out of main thread
@@ -52,22 +49,21 @@ class HistoricalViewControllerTests: UnitTest {
                     hasData.fulfill()
                 }
             }
-        }.addDisposableTo(&bag)
-        store.async(BitcoinRateRequest.realtimeRefresh(isManual: false))
-        store.async(BitcoinRateRequest.historicalDataRefresh(isManual: false))
+        }).disposed(by: bag)
+        eventHandler.dispatch(BitcoinRateEvent.automaticRefresh)
         wait(for: [hasData], timeout: 5)
 
         let sut = HistoricalViewController.start()!
 
         _ = UINavigationController(rootViewController: sut)
         sut.loadViewIfNeeded()
-        XCTAssertFalse(sut.tableView.isHidden)
-        XCTAssertTrue(sut.noDataLine1Label.isHidden)
-        XCTAssertTrue(sut.noDataLine2Label.isHidden)
-        XCTAssertTrue(sut.noDataRefreshButton.isHidden)
-        XCTAssertEqual(sut.tableView.numberOfSections, 2)
-        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 1)
-        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 1), 14)
+        XCTAssertFalse(sut.tableView().isHidden)
+        XCTAssertTrue(sut.noDataLine1Label().isHidden)
+        XCTAssertTrue(sut.noDataLine2Label().isHidden)
+        XCTAssertTrue(sut.noDataRefreshButton().isHidden)
+        XCTAssertEqual(sut.tableView().numberOfSections, 2)
+        XCTAssertEqual(sut.tableView().numberOfRows(inSection: 0), 1)
+        XCTAssertEqual(sut.tableView().numberOfRows(inSection: 1), 14)
     }
 
     func testHistoricalViewController_DataLoadedAfterVc() {
@@ -75,13 +71,14 @@ class HistoricalViewControllerTests: UnitTest {
         let sut = HistoricalViewController.start()!
         _ = UINavigationController(rootViewController: sut)
         sut.loadViewIfNeeded()
-        XCTAssertTrue(sut.tableView.isHidden)
+        XCTAssertTrue(sut.tableView().isHidden)
 
-        var bag: [Any] = []
-        let store = Store.shared
+        let bag = DisposeBag()
+        let eventHandler: EventHandler = injector.mapper.getSingleton()!
+        let stateProvider: BitcoinStateProvider = injector.mapper.getSingleton()!
         let hasData = expectation(description: "Data Loaded")
         var hasDataFulfilled = false
-        store[\.bitcoinState].subscribe { state in
+        stateProvider[\.bitcoinState].subscribe(onNext: { state in
             if case .loaded = state.realtimeRate {
                 if !hasDataFulfilled {
                     // This is safe, no calls out of main thread
@@ -89,20 +86,45 @@ class HistoricalViewControllerTests: UnitTest {
                     hasData.fulfill()
                 }
             }
-        }.addDisposableTo(&bag)
-        store.async(BitcoinRateRequest.realtimeRefresh(isManual: false))
-        store.async(BitcoinRateRequest.historicalDataRefresh(isManual: false))
+        }).disposed(by: bag)
+        eventHandler.dispatch(BitcoinRateEvent.automaticRefresh)
         wait(for: [hasData], timeout: 5)
 
         DispatchQueue.main.async {
             // Give TableView one runloop cycle to refresh its datasource
-            XCTAssertFalse(sut.tableView.isHidden)
-            XCTAssertTrue(sut.noDataLine1Label.isHidden)
-            XCTAssertTrue(sut.noDataLine2Label.isHidden)
-            XCTAssertTrue(sut.noDataRefreshButton.isHidden)
-            XCTAssertEqual(sut.tableView.numberOfSections, 2)
-            XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 1)
-            XCTAssertEqual(sut.tableView.numberOfRows(inSection: 1), 14)
+            XCTAssertFalse(sut.tableView().isHidden)
+            XCTAssertTrue(sut.noDataLine1Label().isHidden)
+            XCTAssertTrue(sut.noDataLine2Label().isHidden)
+            XCTAssertTrue(sut.noDataRefreshButton().isHidden)
+            XCTAssertEqual(sut.tableView().numberOfSections, 2)
+            XCTAssertEqual(sut.tableView().numberOfRows(inSection: 0), 1)
+            XCTAssertEqual(sut.tableView().numberOfRows(inSection: 1), 14)
         }
+    }
+}
+
+extension HistoricalViewController {
+    func tableView() -> UITableView {
+        return view
+            .subviews
+            .first(where: { $0 is UITableView }) as! UITableView
+    }
+
+    func noDataLine1Label() -> UILabel {
+        return view
+            .subviews
+            .first(where: { $0.accessibilityLabel == "noDataLine1Label" }) as! UILabel
+    }
+
+    func noDataLine2Label() -> UILabel {
+        return view
+            .subviews
+            .first(where: { $0.accessibilityLabel == "noDataLine2Label" }) as! UILabel
+    }
+
+    func noDataRefreshButton() -> UIButton {
+        return view
+            .subviews
+            .first(where: { $0.accessibilityLabel == "noDataRefreshButton" }) as! UIButton
     }
 }

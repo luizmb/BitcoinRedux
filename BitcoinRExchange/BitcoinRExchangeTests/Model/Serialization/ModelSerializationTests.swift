@@ -96,9 +96,10 @@ class ModelSerializationTests: UnitTest {
 
     func testDecodeInvalidHistorical() {
         let result: Result<HistoricalResponse> =
-            JsonParser.decode(MockJson.historicalResponse
-                                      .replacingOccurrences(of: "time", "timee")
-                                      .data(using: .utf8)!)
+            JsonParser
+                .decode(MockJson.historicalResponse
+                .replacingOccurrences(of: "time", with: "timee")
+                .data(using: .utf8)!)
         guard case let .error(error) = result else {
             XCTFail("Unexpected success while parsing wrong historical json")
             return
